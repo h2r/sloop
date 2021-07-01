@@ -1,5 +1,6 @@
 # Project specific ignores
 *.DS_Store
+sloop/datasets/SL-OSM-Dataset
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -29,13 +29,37 @@ Run the following bash script from the root of the repository to download the SL
 bash download-osm-data.sh
 ```
 
+Next, we download the OO-POMDP resources. Again, running this script from the repo's root will allow you to place it in the right location.
+
+WARNING/TODO: NEED TO UPDATE OOPOMDP RESOURCE LINK, for now do not attempt to run this script
+```
+bash download-oopomdp-data.sh
+```
+
 ## Troubleshoot
 
-Now, test the setup by running `interface.py`:
-```
-cd spatial_foref/oopomdp/experiments
-python interface.py
-```
+1. Test map_info_dataset.py
+    ```
+    TODO
+    ```
+
+2. Test parsing
+    ```
+    TODO
+    ```
+
+3. Test filepaths
+    ```
+    TODO
+    ```
+
+4. Test interface
+
+    Now, test the setup by running `interface.py`:
+    ```
+    cd spatial_foref/oopomdp/experiments
+    python interface.py
+    ```
 
 ## System Parameters
-TODO: something along the lines of what the user can do with interface.py
+TODO: something about the extent of what the user can do with interface.py

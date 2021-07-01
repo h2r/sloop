@@ -17,12 +17,25 @@ pip install -r requirements.txt
 
 Install [pomdp-py](https://h2r.github.io/pomdp-py/html/installation.html) by following the steps in the linked website. Following these steps is important for the POMDP to work.
 
-
 Finally, install the repository as a package. Assuming you are at the root directory of this repository,
 ```
 pip install -e .
 ```
 
 ## Downloading Data
+Run the following bash script from the root of the repository to download the SL-OSM (Spatial Language - Open Street Map) dataset in the correct location. This may take a minute or two as the file is around 4GB.
 
-## Training
+```
+bash download-osm-data.sh
+```
+
+## Troubleshoot
+
+Now, test the setup by running `interface.py`:
+```
+cd spatial_foref/oopomdp/experiments
+python interface.py
+```
+
+## System Parameters
+TODO: something along the lines of what the user can do with interface.py

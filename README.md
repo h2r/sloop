@@ -4,7 +4,7 @@ Code repository to reproduce Spatial Language Object-Oriented POMDPs from [Spati
 ## Installation
 The required python version is Python 3.6+. Once you've installed the correct version, clone the repository and create and virtual environment with the following lines:
 ```
-git@github.com:h2r/sloop.git
+git clone git@github.com:h2r/sloop.git
 virtualenv -p $(which python3) sloop
 source sloop/bin/activate
 ```

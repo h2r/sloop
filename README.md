@@ -31,7 +31,6 @@ bash download-osm-data.sh
 
 Next, we download the OO-POMDP resources. Again, running this script from the repo's root will allow you to place it in the right location.
 
-WARNING/TODO: NEED TO UPDATE OOPOMDP RESOURCE LINK, for now do not attempt to run this script
 ```
 bash download-oopomdp-data.sh
 ```

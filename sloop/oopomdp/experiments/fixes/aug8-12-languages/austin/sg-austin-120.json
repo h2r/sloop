@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LavacaSt",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "1180",
+    "index": 679,
+    "lang": "The RedHonda is along West6thSt while . The RedHonda is along West6thSt while . the GreenToyota is behind LavacaSt.",
+    "lang_original": "The red Honda car is along the west 6th street while the green Toyota car is behind the lavaca street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=134skeqsCN0O69twuF63Mib4JR0p6th0A",
+    "map_name": "austin",
+    "map_num": "9",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "626",
+    "relations": [
+        [
+            "RedHonda",
+            "West6thSt",
+            "along"
+        ],
+        [
+            "GreenToyota",
+            "LavacaSt",
+            "behind"
+        ]
+    ]
+}

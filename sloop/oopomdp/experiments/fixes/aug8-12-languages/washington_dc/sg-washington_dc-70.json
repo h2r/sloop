@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1444",
+    "entities": [
+        "CourtyardMarriottFoggyBottom",
+        "RedBike",
+        "RedHonda",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "-1",
+    "index": 897,
+    "lang": "The RedBike is located at CourtyardMarriottFoggyBottom while . the RedHonda is located in front of TheFStreetHouse.",
+    "lang_original": "The red bike is located at the Courtyard foggy bottom while the red car is located in front of The F street house.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Vl396wVsN2zqRnU2aOFbZyoNJGtu8hME",
+    "map_name": "washington_dc",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "460",
+    "relations": [
+        [
+            "RedBike",
+            "CourtyardMarriottFoggyBottom",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "TheFStreetHouse",
+            "front"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "CafeAria",
+        "DeeJKellyLawLearningCenter",
+        "GreenToyota",
+        "RedHonda",
+        "SupportBuildingServiceRoad"
+    ],
+    "gcar_loc": "241",
+    "index": 828,
+    "lang": "The RedHonda is located at CafeAria whereas . the GreenToyota is located at DeeJKellyLawLearningCenter on SupportBuildingServiceRoad.",
+    "lang_original": "The red car is located at Cafe Aria whereas the green car is located at Dee J kelley Learning center on Support building service road.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1N5E3IR42D8pjW3Il4fnztlTvZ5p47RLM",
+    "map_name": "washington_dc",
+    "map_num": "6",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "753",
+    "relations": [
+        [
+            "RedHonda",
+            "CafeAria",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "DeeJKellyLawLearningCenter",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "SupportBuildingServiceRoad",
+            "on"
+        ]
+    ]
+}

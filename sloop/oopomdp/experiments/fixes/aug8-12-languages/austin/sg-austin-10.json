@@ -1,0 +1,37 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "ClaudiaTaylorJohnsonHall",
+        "GreenToyota",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "501",
+    "index": 298,
+    "lang": "The GreenToyota is parked on West6thSt at ClaudiaTaylorJohnsonHall while . The GreenToyota is parked on West6thSt at ClaudiaTaylorJohnsonHall while . the RedHonda is parked directly with north of it.",
+    "lang_original": "The green Toyota is parked on West 6th Street at Taylor Johnson Hall while the red Honda is parked directly North of it.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1lpzpYcFJIWFsju2k16CKTrsV4LO7szlR",
+    "map_name": "austin",
+    "map_num": "7",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "346",
+    "relations": [
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "ClaudiaTaylorJohnsonHall",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "ClaudiaTaylorJohnsonHall",
+            "north"
+        ]
+    ]
+}

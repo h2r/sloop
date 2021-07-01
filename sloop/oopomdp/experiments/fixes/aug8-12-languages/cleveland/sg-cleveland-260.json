@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1460",
+    "entities": [
+        "JohnsonCourt",
+        "LegalAidSocietyofCleveland",
+        "RedBike",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 598,
+    "lang": "The RedBike is with southwest of the corner of Johnson Corner and West6thSt . and the RedHonda is at the with northwest of end of LegalAidSocietyofCleveland of Cleveland.",
+    "lang_original": "The red bicycle is southwest of the corner of Johnson Corner and West 6th Street and the red Honda is at the northwest end of Legal Aid Society of Cleveland.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1YqY4egG_Ng_Y2IdbQsF5lgKBJnYbAWwJ",
+    "map_name": "cleveland",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "252",
+    "relations": [
+        [
+            "RedBike",
+            "JohnsonCourt",
+            "southwest"
+        ],
+        [
+            "RedBike",
+            "West6thSt",
+            "southwest"
+        ],
+        [
+            "RedHonda",
+            "LegalAidSocietyofCleveland",
+            "northwest"
+        ]
+    ]
+}

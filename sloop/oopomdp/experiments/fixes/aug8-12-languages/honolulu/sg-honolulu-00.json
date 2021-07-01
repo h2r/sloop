@@ -1,0 +1,44 @@
+{
+    "bike_loc": "548",
+    "entities": [
+        "MerchantSt",
+        "PioneerPlaza",
+        "RedBike",
+        "RedHonda",
+        "SouthKingSt",
+        "Walmart"
+    ],
+    "gcar_loc": "-1",
+    "index": 574,
+    "lang": "The RedHonda is parked on MerchantSt in front of PioneerPlaza while . the RedBike is parked on SouthKingSt in front of Walmart.",
+    "lang_original": "The red Honda is parked on Merchant Street in front of Pioneer Plaza while the red bike is parked on South King Street in front of Walmart.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1ck876gOczb8rFncWfWW9JQELpIOfGohw",
+    "map_name": "honolulu",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1058",
+    "relations": [
+        [
+            "RedHonda",
+            "MerchantSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "PioneerPlaza",
+            "front"
+        ],
+        [
+            "RedBike",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "Walmart",
+            "front"
+        ]
+    ]
+}

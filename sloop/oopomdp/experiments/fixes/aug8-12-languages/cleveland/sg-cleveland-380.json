@@ -1,0 +1,44 @@
+{
+    "bike_loc": "172",
+    "entities": [
+        "BallBuilding",
+        "GreenToyota",
+        "Hanabi",
+        "RedBike",
+        "StoneBlock",
+        "West6thSt"
+    ],
+    "gcar_loc": "1232",
+    "index": 1331,
+    "lang": "The RedBike is is in StoneBlock near BallBuilding.  . The GreenToyota is on West6thSt . in front of Hanabi.",
+    "lang_original": "The red bike is is in Stone Block near Ball Building.  The green Toyota is on West 6th Street in front of Hanabi.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1QS2kC6LU_igdmG0YTQ6tS240lCiMI-bZ",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "StoneBlock",
+            "in"
+        ],
+        [
+            "RedBike",
+            "BallBuilding",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "Hanabi",
+            "front"
+        ]
+    ]
+}

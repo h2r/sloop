@@ -1,0 +1,49 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "DennisSheedyMansion",
+        "East12thAvenue",
+        "GrantSt",
+        "GreenToyota",
+        "NancyLeeApartments",
+        "RedHonda"
+    ],
+    "gcar_loc": "566",
+    "index": 1469,
+    "lang": "The RedHonda is in the parking lot of DennisSheedyMansion on GrantSt, . the GreenToyota is at NancyLeeApartments near GrantSt & East12thAvenue.",
+    "lang_original": "The red Honda car is in the parking lot of the Dennis Sheedy Mansion on Grant Street, and the green Toyota car is at the Nancy Lee Apartments near Grant Street & 12th Avenue.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1RMuTMgef2eM7vXZk-XUCjaLFSxOwqglX",
+    "map_name": "denver",
+    "map_num": "1",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1140",
+    "relations": [
+        [
+            "RedHonda",
+            "DennisSheedyMansion",
+            "in"
+        ],
+        [
+            "RedHonda",
+            "GrantSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "NancyLeeApartments",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "GrantSt",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "East12thAvenue",
+            "near"
+        ]
+    ]
+}

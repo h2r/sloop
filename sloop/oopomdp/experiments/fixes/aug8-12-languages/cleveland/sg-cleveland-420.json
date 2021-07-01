@@ -1,0 +1,44 @@
+{
+    "bike_loc": "748",
+    "entities": [
+        "BoltonPrattBuilding",
+        "RedBike",
+        "RedHonda",
+        "Rumor",
+        "West4thSt",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1136,
+    "lang": "The RedBike is in the parking lot next to BoltonPrattBuilding on West4thSt while . the RedHonda is in front of Rumor by West6thSt.",
+    "lang_original": "The red bike is in the parking lot next to the Bolton-Pratt building on West 4th street while the red Honda car is in front of Rumor by West 6th street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1igFtow6mnymbl594_SssZOyB2AaSimWb",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "810",
+    "relations": [
+        [
+            "RedBike",
+            "BoltonPrattBuilding",
+            "next"
+        ],
+        [
+            "RedBike",
+            "West4thSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "Rumor",
+            "front"
+        ],
+        [
+            "RedHonda",
+            "West6thSt",
+            "beside"
+        ]
+    ]
+}

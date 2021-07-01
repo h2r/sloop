@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LibertyTextilesBuilding",
+        "RedHonda",
+        "VelvetDog",
+        "West6thSt"
+    ],
+    "gcar_loc": "1420",
+    "index": 608,
+    "lang": "The RedHonda is on West6thSt . in front of LibertyTextilesBuilding.. The GreenToyota is behind VelvetDog.",
+    "lang_original": "The red Honda car is on West 6th Street in front of the Liberty Textiles building.The green Toyota car is behind the Velvet Dog.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=10WrfMW0IJtGZWJUamdKMtn9rro2IQ69H",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "900",
+    "relations": [
+        [
+            "RedHonda",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "LibertyTextilesBuilding",
+            "front"
+        ],
+        [
+            "GreenToyota",
+            "VelvetDog",
+            "behind"
+        ]
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "bike_loc": "728",
+    "entities": [
+        "Carvings",
+        "FrancisScottKeyHall",
+        "GreenToyota",
+        "RedBike"
+    ],
+    "gcar_loc": "735",
+    "index": 617,
+    "lang": "The GreenToyota is in front of FrancisScottKeyHall . the RedBike is in front of Carvings.",
+    "lang_original": "The green Toyota is in front of Francis Scott Key Hall and the red Bike is in front of Carvings.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1VHGVZivufccDPcFY9h7DHvBjMbzO8gzF",
+    "map_name": "washington_dc",
+    "map_num": "2",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "FrancisScottKeyHall",
+            "front"
+        ],
+        [
+            "RedBike",
+            "Carvings",
+            "front"
+        ]
+    ]
+}

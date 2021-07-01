@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1391",
+    "entities": [
+        "GothamCityCondos",
+        "GrantSt",
+        "GreenToyota",
+        "RedBike",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "665",
+    "index": 16,
+    "lang": "The GreenToyota is in the parking lot of the Gisham City Condos while . the RedBike is on GrantSt near StradaCondominiums",
+    "lang_original": "The green toyota is in the parking lot of the Gisham City Condos while the red bike is on Grant Street near the Strada Condominiums",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1PYMdxig8iv_4czIADZKBgN8Cg5XXDCtU",
+    "map_name": "denver",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "GothamCityCondos",
+            "in"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "StradaCondominiums",
+            "near"
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "bike_loc": "407",
+    "entities": [
+        "20thStreetNorthwest",
+        "GreenToyota",
+        "HotelParking",
+        "PotomacHouse",
+        "RedBike",
+        "SupportBuildingServiceRoad"
+    ],
+    "gcar_loc": "1474",
+    "index": 803,
+    "lang": "The GreenToyota is located at HotelParking on 20thStreetNorthwest while . the RedBike is at PotomacHouse on SupportBuildingServiceRoad.",
+    "lang_original": "The green car is located at the Hotel Parking on 20th street while the red bike is at Potomac House on support building service road.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Usoh1Br2JocNSmTN3IZV3wukd-uEKBbA",
+    "map_name": "washington_dc",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "HotelParking",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "20thStreetNorthwest",
+            "on"
+        ],
+        [
+            "RedBike",
+            "PotomacHouse",
+            "at"
+        ],
+        [
+            "RedBike",
+            "SupportBuildingServiceRoad",
+            "on"
+        ]
+    ]
+}

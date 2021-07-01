@@ -1,0 +1,44 @@
+{
+    "bike_loc": "1353",
+    "entities": [
+        "ChaseTowerParkingGarage",
+        "Facebook",
+        "LavacaSt",
+        "RedBike",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1645,
+    "lang": "The RedBike is in ChaseTowerParkingGarage, . the RedHonda is at the corner of West6thSt and LavacaSt near Facebook.. the RedHonda is at the corner of West6thSt and LavacaSt near Facebook.",
+    "lang_original": "The red bike is in the Chase Tower Parking Garage, and the red Honda car is at the corner of West 6th Street and Lavaca Street near Facebook.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1tbX5CuAsB1LkeqkkgXwjUov16wwlHvuZ",
+    "map_name": "austin",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "455",
+    "relations": [
+        [
+            "RedBike",
+            "ChaseTowerParkingGarage",
+            "in"
+        ],
+        [
+            "RedHonda",
+            "West6thSt",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "LavacaSt",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "Facebook",
+            "near"
+        ]
+    ]
+}

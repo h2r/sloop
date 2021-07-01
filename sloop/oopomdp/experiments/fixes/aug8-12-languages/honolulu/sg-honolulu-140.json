@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1274",
+    "entities": [
+        "AmericanSavingsBank",
+        "FortStreetMall",
+        "RedBike",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1288,
+    "lang": "The RedHonda is at the intersection of SouthKingSt and FortStreetMall. . The RedBike is near the American savings building.",
+    "lang_original": "The red car is at the intersection of South King Street and Fort Street Mall. The red bike is near the American savings building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1cIADSm4GrkBSenZphuSEhGlWIjj8xE5O",
+    "map_name": "honolulu",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "950",
+    "relations": [
+        [
+            "RedHonda",
+            "SouthKingSt",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "FortStreetMall",
+            "at"
+        ],
+        [
+            "RedBike",
+            "AmericanSavingsBank",
+            "near"
+        ]
+    ]
+}

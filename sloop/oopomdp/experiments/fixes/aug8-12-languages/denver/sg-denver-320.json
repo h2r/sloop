@@ -1,0 +1,32 @@
+{
+    "bike_loc": "187",
+    "entities": [
+        "GreenToyota",
+        "Oblio'sCapHillTavern",
+        "RedBike",
+        "StAnneApartments"
+    ],
+    "gcar_loc": "976",
+    "index": 130,
+    "lang": "The GreenToyota is next to StAnneApartments, . the RedBike is with west of Oblio'sCapHillTavern.",
+    "lang_original": "The green Toyota is next to St. Anne Apartments, and the red bike is west of Oblio's Gap Hill Tavern.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1R6rto5XNFjzGZYpv5ueQcb4BfXphwqbN",
+    "map_name": "denver",
+    "map_num": "6",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "StAnneApartments",
+            "next"
+        ],
+        [
+            "RedBike",
+            "Oblio'sCapHillTavern",
+            "west"
+        ]
+    ]
+}

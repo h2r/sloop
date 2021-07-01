@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1186",
+    "entities": [
+        "PeabodyWhiteheadMansion",
+        "RedBike",
+        "RedHonda",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "-1",
+    "index": 1556,
+    "lang": "The RedHonda is to the with right of PeabodyWhiteheadMansion.. The RedBike is on the corner of StradaCondominiums.",
+    "lang_original": "The red Honda is to the right of the Peabody Whitehead Mansion.The red bike is on the corner of Strada Condominiums.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1QLHNbvdUkozUmXv82fTD599vMTGTuT7e",
+    "map_name": "denver",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1071",
+    "relations": [
+        [
+            "RedHonda",
+            "PeabodyWhiteheadMansion",
+            "right"
+        ],
+        [
+            "RedBike",
+            "StradaCondominiums",
+            "on"
+        ]
+    ]
+}

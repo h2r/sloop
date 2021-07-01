@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1131",
+    "entities": [
+        "BankofHawaiiHeadquartersMainBranch",
+        "GreenToyota",
+        "HarbourCourt",
+        "RedBike",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "1158",
+    "index": 1256,
+    "lang": "The RedBike is parked at HarbourCourt . the GreenToyota is by SouthKingSt near the bank of hawaii",
+    "lang_original": "The bike is parked at the Harbour courtWhile the green toyota is by the south king street near the bank of hawaii",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1czPnsNXlte_zb7oWk55JH_95AH9ceCSR",
+    "map_name": "honolulu",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "HarbourCourt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "beside"
+        ],
+        [
+            "GreenToyota",
+            "BankofHawaiiHeadquartersMainBranch",
+            "near"
+        ]
+    ]
+}

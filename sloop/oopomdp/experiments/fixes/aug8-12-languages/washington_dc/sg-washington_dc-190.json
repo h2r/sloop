@@ -1,0 +1,38 @@
+{
+    "bike_loc": "432",
+    "entities": [
+        "CafeAria",
+        "FStreetNorthwest",
+        "PotomacHouse",
+        "RedBike",
+        "RedHonda"
+    ],
+    "gcar_loc": "-1",
+    "index": 1140,
+    "lang": "The RedHonda is located on F street with northwest of at PotomacHouse whereas . the RedBike is located at CafeAria.",
+    "lang_original": "The red car is located on F street northwest at the Potomac house whereas the red bike is located at Cafe Aria.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1W1BMluvDVi-bD_O3oW8pxqYXIxSG_-1Q",
+    "map_name": "washington_dc",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "487",
+    "relations": [
+        [
+            "RedHonda",
+            "FStreetNorthwest",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "PotomacHouse",
+            "northwest"
+        ],
+        [
+            "RedBike",
+            "CafeAria",
+            "at"
+        ]
+    ]
+}

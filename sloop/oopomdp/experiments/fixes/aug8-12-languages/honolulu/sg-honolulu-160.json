@@ -1,0 +1,44 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "BankohParkingCenter",
+        "GreenToyota",
+        "McCandlessBuilding",
+        "RedHonda",
+        "SouthKingSt",
+        "Walmart"
+    ],
+    "gcar_loc": "383",
+    "index": 197,
+    "lang": "The RedHonda is just with south of McCandlessBuilding near BankohParkingCenter. . The GreenToyota is Outside of Walmart  nearest to SouthKingSt.",
+    "lang_original": "The red car is just south of the McCandless Building near the Bankoh Parking Center. The green car is Outside of Walmart  nearest to South King Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dYhsbitouiGi3cVGTnAM3nsp9-x8azDD",
+    "map_name": "honolulu",
+    "map_num": "1",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "692",
+    "relations": [
+        [
+            "RedHonda",
+            "McCandlessBuilding",
+            "south"
+        ],
+        [
+            "RedHonda",
+            "BankohParkingCenter",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "Walmart",
+            "outside"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "near"
+        ]
+    ]
+}

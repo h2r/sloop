@@ -1,0 +1,60 @@
+{
+    "bike_loc": "933",
+    "entities": [
+        "GrantSt",
+        "LoganSt",
+        "LoganStreetApartments",
+        "PeabodyWhiteheadMansion",
+        "RedBike",
+        "RedHonda",
+        "StAnneApartments"
+    ],
+    "gcar_loc": "-1",
+    "index": 1392,
+    "lang": "the RedBike is at StAnneApartments  . StAnneApartments alongside GrantSt while the RedHonda is between Logan Street StAnneApartments and PeabodyWhiteheadMansion alongside Logan and GrantSts",
+    "lang_original": "the red bike is at St. Anne  apartments alongside Grant street while the red Hyundai is between Logan Street apartments and Peabody whitehead mansion alongside Logan and Grant streets",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SB2MvtAXW2bdt0JVrfjyGMjkNABaylHv",
+    "map_name": "denver",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1114",
+    "relations": [
+        [
+            "RedBike",
+            "StAnneApartments",
+            "at"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "along"
+        ],
+        [
+            "RedHonda",
+            "LoganSt",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "PeabodyWhiteheadMansion",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "LoganStreetApartments",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "GrantSt",
+            "along"
+        ],
+        [
+            "RedHonda",
+            "LoganSt",
+            "along"
+        ]
+    ]
+}

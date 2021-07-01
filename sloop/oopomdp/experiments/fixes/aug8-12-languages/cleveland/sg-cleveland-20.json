@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1138",
+    "entities": [
+        "GreenToyota",
+        "InsomniaCookies",
+        "RedBike",
+        "VelvetDog",
+        "West6thSt"
+    ],
+    "gcar_loc": "407",
+    "index": 1604,
+    "lang": "The RedBike is in VelvetDog, while . the GreenToyota is with right of outside of Insomnio Cookies on West6thSt.",
+    "lang_original": "The red bike is in the Velvet Dog building, while the green toyota is right outside of Insomnio Cookies on West 6th Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1j7dCEn4lWYzOo0AeLEhoPmH03lp7t90t",
+    "map_name": "cleveland",
+    "map_num": "5",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "VelvetDog",
+            "in"
+        ],
+        [
+            "GreenToyota",
+            "InsomniaCookies",
+            "outside"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ]
+    ]
+}

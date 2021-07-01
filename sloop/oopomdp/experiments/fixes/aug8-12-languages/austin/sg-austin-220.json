@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1031",
+    "entities": [
+        "ChaseBankTower",
+        "GreenToyota",
+        "LavacaSt",
+        "RedBike",
+        "West5thSt"
+    ],
+    "gcar_loc": "1424",
+    "index": 92,
+    "lang": "The GreenToyota is parked at the intersection between West5thSt and LavacaSt.. The RedBike is parked with south of with east of ChaseBankTower.",
+    "lang_original": "The Green Toyota is parked at the intersection between West 5th Street and Lavaca Street.The Red Bike is parked South East of Chase Bank Tower.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1iOu2e3_-sijs99wdvxheCFx3tlY9BIWQ",
+    "map_name": "austin",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "West5thSt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "LavacaSt",
+            "at"
+        ],
+        [
+            "RedBike",
+            "ChaseBankTower",
+            "southeast"
+        ]
+    ]
+}

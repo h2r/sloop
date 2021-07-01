@@ -1,0 +1,38 @@
+{
+    "bike_loc": "224",
+    "entities": [
+        "AmericanSavingsBank",
+        "BethelSt",
+        "GreenToyota",
+        "RedBike",
+        "Walmart"
+    ],
+    "gcar_loc": "1393",
+    "index": 847,
+    "lang": "The GreenToyota is at AmericanSavingsBank while . the RedBike is at Walmart on BethelSt.",
+    "lang_original": "The green car is at American Savings while the red bike is at Walmart on Bethel street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1bYAbaKNjKoKIYeMW8oBFMeFAvMKp9t5Q",
+    "map_name": "honolulu",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "AmericanSavingsBank",
+            "at"
+        ],
+        [
+            "RedBike",
+            "Walmart",
+            "at"
+        ],
+        [
+            "RedBike",
+            "BethelSt",
+            "on"
+        ]
+    ]
+}

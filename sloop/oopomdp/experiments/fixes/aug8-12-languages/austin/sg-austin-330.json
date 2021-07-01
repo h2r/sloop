@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "ChaseTowerParkingGarage",
+        "GreenToyota",
+        "NorwoodTower",
+        "RedHonda"
+    ],
+    "gcar_loc": "176",
+    "index": 49,
+    "lang": "The RedHonda is near . ChaseTowerParkingGarage and the GreenToyota is in front of NorwoodTower.",
+    "lang_original": "The red Honda car is near Chase Tower Parking Garage and the green Toyota car is in front of Northwood Tower.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1JqRY3yko3xsJ-nMhxqO5rGwuYH3Hr_8D",
+    "map_name": "austin",
+    "map_num": "6",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1359",
+    "relations": [
+        [
+            "RedHonda",
+            "ChaseTowerParkingGarage",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "NorwoodTower",
+            "front"
+        ]
+    ]
+}

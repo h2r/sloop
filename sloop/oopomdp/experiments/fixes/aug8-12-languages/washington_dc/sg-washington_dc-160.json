@@ -1,0 +1,44 @@
+{
+    "bike_loc": "407",
+    "entities": [
+        "20thStreetNorthwest",
+        "GreenToyota",
+        "HotelParking",
+        "PotomacHouse",
+        "RedBike",
+        "alley"
+    ],
+    "gcar_loc": "1474",
+    "index": 265,
+    "lang": "The GreenToyota is on 20thStreetNorthwest with northwest of by HotelParking, while . the RedBike is in alley near PotomacHouse.",
+    "lang_original": "The green toyota is on 20th street northwest by hotel parking, while the red bike is in the parking alley near Potomac House.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Usoh1Br2JocNSmTN3IZV3wukd-uEKBbA",
+    "map_name": "washington_dc",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "20thStreetNorthwest",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "HotelParking",
+            "beside"
+        ],
+        [
+            "RedBike",
+            "alley",
+            "at"
+        ],
+        [
+            "RedBike",
+            "PotomacHouse",
+            "near"
+        ]
+    ]
+}

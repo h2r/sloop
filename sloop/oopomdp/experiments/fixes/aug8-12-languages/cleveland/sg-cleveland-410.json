@@ -1,0 +1,32 @@
+{
+    "bike_loc": "265",
+    "entities": [
+        "BarleyHouse",
+        "ErieBuildingLofts",
+        "RedBike",
+        "RedHonda"
+    ],
+    "gcar_loc": "-1",
+    "index": 501,
+    "lang": "The RedHonda is near BarleyHouse . the RedBike is in front of ErieBuildingLofts.",
+    "lang_original": "The red Honda is near Barley House and the red Bike is in front of Erie Building Lofts.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1a3WivRbgBzhNEm8yQyhBd27l53v0HCVq",
+    "map_name": "cleveland",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "538",
+    "relations": [
+        [
+            "RedHonda",
+            "BarleyHouse",
+            "near"
+        ],
+        [
+            "RedBike",
+            "ErieBuildingLofts",
+            "front"
+        ]
+    ]
+}

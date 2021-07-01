@@ -1,0 +1,32 @@
+{
+    "bike_loc": "302",
+    "entities": [
+        "ErieBuildingLofts",
+        "GreenToyota",
+        "RedBike",
+        "TheHatFactory"
+    ],
+    "gcar_loc": "373",
+    "index": 577,
+    "lang": "The RedBike is in front of ErieBuildingLofts. . The GreenToyota is to the with left of TheHatFactory.",
+    "lang_original": "The red bike is in front of the Erie Building. The green car is to the left of the Hat Factory.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1HnV5hQ8C1tQdF1KV_d3NgBP1V6slf8B6",
+    "map_name": "cleveland",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "ErieBuildingLofts",
+            "front"
+        ],
+        [
+            "GreenToyota",
+            "TheHatFactory",
+            "left"
+        ]
+    ]
+}

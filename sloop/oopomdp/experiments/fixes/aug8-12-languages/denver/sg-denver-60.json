@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GrantMansionCondos",
+        "GreenToyota",
+        "NancyLeeApartments",
+        "RedHonda"
+    ],
+    "gcar_loc": "867",
+    "index": 581,
+    "lang": "The RedHonda is above NancyLeeApartments . the GreenToyota is in front of GrantMansionCondos.",
+    "lang_original": "The red Honda car is above Nancy Lee Apartments and the green Toyota car is in front of Grant mansion Condos.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1TEZCw9TXKPki1zFQ5zxF__x3KwC_u-11",
+    "map_name": "denver",
+    "map_num": "3",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "364",
+    "relations": [
+        [
+            "RedHonda",
+            "NancyLeeApartments",
+            "above"
+        ],
+        [
+            "GreenToyota",
+            "GrantMansionCondos",
+            "front"
+        ]
+    ]
+}

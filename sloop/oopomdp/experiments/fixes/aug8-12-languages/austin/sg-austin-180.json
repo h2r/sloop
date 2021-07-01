@@ -1,0 +1,42 @@
+{
+    "bike_loc": "1060",
+    "entities": [
+        "LavacaSt",
+        "MaikoSushi",
+        "RedBike",
+        "RedHonda"
+    ],
+    "gcar_loc": "-1",
+    "index": 285,
+    "lang": "The RedHonda is to the with left of Maiko restaurant . the RedBike is about halfway up LavacaSt on the with right of side heading north.",
+    "lang_original": "The red Honda car is to the left of Maiko restaurant and the red bike is about halfway up Lavaca street on the right side heading north.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1X6jJBLoaoJ7FD96wMdXDunCILG5n8kEu",
+    "map_name": "austin",
+    "map_num": "6",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "644",
+    "relations": [
+        [
+            "RedHonda",
+            "MaikoSushi",
+            "left"
+        ],
+        [
+            "RedBike",
+            "LavacaSt",
+            "up"
+        ],
+        [
+            "RedBike",
+            "LavacaSt",
+            "right"
+        ],
+        [
+            "RedBike",
+            "LavacaSt",
+            "north"
+        ]
+    ]
+}

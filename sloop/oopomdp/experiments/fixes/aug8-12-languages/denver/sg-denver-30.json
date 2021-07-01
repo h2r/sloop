@@ -1,0 +1,37 @@
+{
+    "bike_loc": "1265",
+    "entities": [
+        "DennisSheedyMansion",
+        "RedBike",
+        "RedHonda",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "-1",
+    "index": 1207,
+    "lang": "The RedHonda is just with east of StradaCondominiums.  . The RedBike is between StradaCondominiums and DennisSheedyMansion on the road.",
+    "lang_original": "The red Honda car is just east of Strada Condominiums.  The bike is between Strada Condominiums and Dennis Sheedy Mansion on the road.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1S3eLlDghCrMbcG8ZudKPLouRRRxRgjsR",
+    "map_name": "denver",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1317",
+    "relations": [
+        [
+            "RedHonda",
+            "StradaCondominiums",
+            "east"
+        ],
+        [
+            "RedBike",
+            "StradaCondominiums",
+            "between"
+        ],
+        [
+            "RedBike",
+            "DennisSheedyMansion",
+            "between"
+        ]
+    ]
+}

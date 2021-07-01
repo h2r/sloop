@@ -1,0 +1,38 @@
+{
+    "bike_loc": "95",
+    "entities": [
+        "CourtyardMarriottFoggyBottom",
+        "OldMain",
+        "OscarWUnderwoodHouse",
+        "RedBike",
+        "RedHonda"
+    ],
+    "gcar_loc": "-1",
+    "index": 215,
+    "lang": "The RedBike is in the building next to OscarWUnderwoodHouse, . the RedHonda is in OldMain with right of by CourtyardMarriottFoggyBottom.",
+    "lang_original": "The red bike is in the building next to the Oscar W. Underwood House, and the red Honda car is in the Old Main building right by the Courtyard Marriot Foggy Bottom.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Vz2qFBmzWKg2lAKhh5Y_Vtnzm3ZbyiEv",
+    "map_name": "washington_dc",
+    "map_num": "2",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1359",
+    "relations": [
+        [
+            "RedBike",
+            "OscarWUnderwoodHouse",
+            "next"
+        ],
+        [
+            "RedHonda",
+            "OldMain",
+            "in"
+        ],
+        [
+            "RedHonda",
+            "CourtyardMarriottFoggyBottom",
+            "beside"
+        ]
+    ]
+}

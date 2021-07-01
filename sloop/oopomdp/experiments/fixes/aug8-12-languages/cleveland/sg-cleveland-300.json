@@ -1,0 +1,37 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "HoytBlock",
+        "RedHonda",
+        "Rumor"
+    ],
+    "gcar_loc": "1051",
+    "index": 784,
+    "lang": "The RedHonda is on the upper with left of corner of HoytBlock, . the GreenToyota is to the with west of Rumor.",
+    "lang_original": "The red Honda is on the upper left corner of Hoyt Block, and the green Toyota is to the west of Rumor.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1GQXP5U29TMqYLhxz9IXjcpu-WqI5dA1a",
+    "map_name": "cleveland",
+    "map_num": "5",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1388",
+    "relations": [
+        [
+            "RedHonda",
+            "HoytBlock",
+            "top"
+        ],
+        [
+            "RedHonda",
+            "HoytBlock",
+            "left"
+        ],
+        [
+            "GreenToyota",
+            "Rumor",
+            "west"
+        ]
+    ]
+}

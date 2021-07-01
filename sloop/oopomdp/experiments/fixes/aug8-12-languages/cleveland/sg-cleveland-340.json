@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LegalAidSocietyofCleveland",
+        "RedHonda",
+        "TheHatFactory"
+    ],
+    "gcar_loc": "179",
+    "index": 532,
+    "lang": "The RedHonda is behind LegalAidSocietyofCleveland of Cleveland . the GreenToyota is just above TheHatFactory.",
+    "lang_original": "The red Honda car is behind Legal Aid Society of Cleveland and the green Toyota car is just above The Hat Factory.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1QkGO_VDyvq129QGYg2wsI5eUy6x23mz6",
+    "map_name": "cleveland",
+    "map_num": "2",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "214",
+    "relations": [
+        [
+            "RedHonda",
+            "LegalAidSocietyofCleveland",
+            "behind"
+        ],
+        [
+            "GreenToyota",
+            "TheHatFactory",
+            "above"
+        ]
+    ]
+}

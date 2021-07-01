@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "MyNameIsJoeCoffee",
+        "NorwoodTower",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "493",
+    "index": 1549,
+    "lang": "The RedHonda is to with north of MyNameIsJoeCoffee is ice coffee while . the GreenToyota is to the with southeast of NorwoodTower on West6thSt.",
+    "lang_original": "The red car is to north of my name is ice coffee while the green car is to the southeast of the Norwood Tower on the West 6th Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1iiiALQUhm1o_V1OQvyOab1hDMzzGgefP",
+    "map_name": "austin",
+    "map_num": "3",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1532",
+    "relations": [
+        [
+            "RedHonda",
+            "MyNameIsJoeCoffee",
+            "north"
+        ],
+        [
+            "GreenToyota",
+            "NorwoodTower",
+            "southeast"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ]
+    ]
+}

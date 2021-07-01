@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1354",
+    "entities": [
+        "GreenToyota",
+        "HotelParking",
+        "RedBike",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "742",
+    "index": 272,
+    "lang": "The GreenToyota is in front of TheFStreetHouse . the RedBike is near HotelParking.",
+    "lang_original": "The green Toyota is in front of The F Street House and the red Bike is near Hotel Parking.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1UhYvXsTXRChZVM1gJEojcNMWrpVyMBqH",
+    "map_name": "washington_dc",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "TheFStreetHouse",
+            "front"
+        ],
+        [
+            "RedBike",
+            "HotelParking",
+            "near"
+        ]
+    ]
+}

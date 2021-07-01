@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GrantSt",
+        "GreenToyota",
+        "LoganStreetApartments",
+        "RedHonda",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "1240",
+    "index": 1111,
+    "lang": "The GreenToyota is inside LoganStreetApartments, while . the RedHonda is with with right of outside of StradaCondominiums to the with with right of of GrantSt.",
+    "lang_original": "The Green Toyota is inside the Logan Street Apartments, while the red car is right outside of the Strada Condominiums to the right of Grant Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SnGUXyRXhmTrhoP6wkW1zH6Dx_yAT23L",
+    "map_name": "denver",
+    "map_num": "8",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1520",
+    "relations": [
+        [
+            "GreenToyota",
+            "LoganStreetApartments",
+            "in"
+        ],
+        [
+            "RedHonda",
+            "StradaCondominiums",
+            "outside"
+        ],
+        [
+            "RedHonda",
+            "GrantSt",
+            "right"
+        ]
+    ]
+}

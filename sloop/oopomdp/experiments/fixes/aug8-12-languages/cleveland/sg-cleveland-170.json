@@ -1,0 +1,49 @@
+{
+    "bike_loc": "462",
+    "entities": [
+        "ErieBuildingLofts",
+        "MarionBuilding",
+        "RedBike",
+        "RedHonda",
+        "TheHatFactory",
+        "West4thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1148,
+    "lang": "The RedBike is between TheHatFactory and ErieBuildingLofts on the with southeast of side, while . the RedHonda is with south of the Maroon Building on West4thSt.",
+    "lang_original": "The bike is between The Hat Factory and the Erie Building Lofts on the southeast side, while the Red Honda is south of the Maroon Building on West 4th Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1NjcGuGRqCzeS1M7z5BNbtmGUj_w2IXYm",
+    "map_name": "cleveland",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "515",
+    "relations": [
+        [
+            "RedBike",
+            "TheHatFactory",
+            "between"
+        ],
+        [
+            "RedBike",
+            "ErieBuildingLofts",
+            "between"
+        ],
+        [
+            "RedBike",
+            "ErieBuildingLofts",
+            "southeast"
+        ],
+        [
+            "RedHonda",
+            "MarionBuilding",
+            "south"
+        ],
+        [
+            "RedHonda",
+            "West4thSt",
+            "on"
+        ]
+    ]
+}

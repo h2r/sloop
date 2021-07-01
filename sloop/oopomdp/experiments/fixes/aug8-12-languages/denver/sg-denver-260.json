@@ -1,0 +1,48 @@
+{
+    "bike_loc": "332",
+    "entities": [
+        "DennisSheedyMansion",
+        "East12thAvenue",
+        "GrantSt",
+        "GreenToyota",
+        "RedBike"
+    ],
+    "gcar_loc": "1341",
+    "index": 829,
+    "lang": "The RedBike is near the with southwest of corner of East12thAvenue and GrantSt, while . the GreenToyota is in the with north of section of the Sheedy Mansion.",
+    "lang_original": "The red bicycle is near the southwest corner of East 12th Ave and Grant St, while the green Toyota is in the north section of the Sheedy Mansion.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1QsOl3YICa1BjMILgGsgRQ1dtIiGYWdxA",
+    "map_name": "denver",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "East12thAvenue",
+            "near"
+        ],
+        [
+            "RedBike",
+            "East12thAvenue",
+            "southwest"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "near"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "southwest"
+        ],
+        [
+            "GreenToyota",
+            "DennisSheedyMansion",
+            "north"
+        ]
+    ]
+}

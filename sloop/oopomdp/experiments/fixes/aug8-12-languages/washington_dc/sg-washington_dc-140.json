@@ -1,0 +1,31 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "RedHonda",
+        "StatesmanApartments"
+    ],
+    "gcar_loc": "929",
+    "index": 3,
+    "lang": "The GreenToyota is parked a short distance, with north of with west of StatesmanApartments.. The RedHonda is parked a short distance with north of os Statesman Apartments.",
+    "lang_original": "The Green Toyata is parked a short distance, North West of Statesman Apartments.The Red Honda is parked a short distance North os Statesman Apartments.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1NHB3DiYUZtpIdgLnftnr8fU8Ur7Pk0Tm",
+    "map_name": "washington_dc",
+    "map_num": "2",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1254",
+    "relations": [
+        [
+            "GreenToyota",
+            "StatesmanApartments",
+            "northwest"
+        ],
+        [
+            "RedHonda",
+            "StatesmanApartments",
+            "north"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "bike_loc": "1520",
+    "entities": [
+        "CourtyardMarriottFoggyBottom",
+        "GreenToyota",
+        "HotelParking",
+        "RedBike"
+    ],
+    "gcar_loc": "1446",
+    "index": 1381,
+    "lang": "The GreenToyota is at the with northeast of corner of CourtyardMarriottFoggyBottom . the RedBike is in HotelParking.",
+    "lang_original": "The green Toyota car is at the northeast corner of Courtyard Mariott Foggy Bottom and the red bike is in Hotel Parking.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1VN66WDp1U96jxjBP9IbENwC7eP8QCYOl",
+    "map_name": "washington_dc",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "CourtyardMarriottFoggyBottom",
+            "northeast"
+        ],
+        [
+            "GreenToyota",
+            "CourtyardMarriottFoggyBottom",
+            "at"
+        ],
+        [
+            "RedBike",
+            "HotelParking",
+            "in"
+        ]
+    ]
+}

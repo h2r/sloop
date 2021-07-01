@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "ColoradoSt",
+        "GreenToyota",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "493",
+    "index": 647,
+    "lang": "The GreenToyota is driving on West6thSt, . the RedHonda is to the with east of ColoradoSt.",
+    "lang_original": "The green car is driving on 6th street, and the red car is to the east of Colorado.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1iiiALQUhm1o_V1OQvyOab1hDMzzGgefP",
+    "map_name": "austin",
+    "map_num": "3",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1532",
+    "relations": [
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "ColoradoSt",
+            "east"
+        ]
+    ]
+}

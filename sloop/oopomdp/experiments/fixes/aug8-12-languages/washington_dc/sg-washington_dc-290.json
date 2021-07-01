@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "20thStreetNorthwest",
+        "FStreetNorthwest",
+        "GreenToyota",
+        "RedHonda",
+        "TheYork"
+    ],
+    "gcar_loc": "1345",
+    "index": 1029,
+    "lang": "The RedHonda is at the with southeast of corner of FStreetNorthwest.. The GreenToyota is with south of TheYork\".",
+    "lang_original": "The red Honda car is at the southeast corner of F Street Northwest and 20th Street Northwest.The green Toyota car is south of \"The York\".",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1N5zklkWwXLFFiu-switGj0I9wxa2uo5L",
+    "map_name": "washington_dc",
+    "map_num": "5",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "903",
+    "relations": [
+        [
+            "RedHonda",
+            "FStreetNorthwest",
+            "southeast"
+        ],
+        [
+            "RedHonda",
+            "20thStreetNorthwest",
+            "southeast"
+        ],
+        [
+            "GreenToyota",
+            "TheYork",
+            "south"
+        ]
+    ]
+}

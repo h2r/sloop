@@ -1,0 +1,32 @@
+{
+    "bike_loc": "843",
+    "entities": [
+        "East12thAvenue",
+        "GreenToyota",
+        "RedBike",
+        "TheRooseveltBuilding"
+    ],
+    "gcar_loc": "363",
+    "index": 1079,
+    "lang": "The GreenToyota is on East12thAvenue.. The RedBike is beside TheRooseveltBuilding.",
+    "lang_original": "The green Toyota is on East 12th Avenue.The red bike is beside the Roosevelt Building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1PM7iXbDtJLuNl67syiakgeMuaoTFdsCo",
+    "map_name": "denver",
+    "map_num": "2",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "East12thAvenue",
+            "on"
+        ],
+        [
+            "RedBike",
+            "TheRooseveltBuilding",
+            "beside"
+        ]
+    ]
+}

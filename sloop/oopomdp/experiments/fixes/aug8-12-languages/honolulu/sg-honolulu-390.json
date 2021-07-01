@@ -1,0 +1,44 @@
+{
+    "bike_loc": "1274",
+    "entities": [
+        "AmericanSavingsBank",
+        "BankofHawaiiHeadquartersMainBranch",
+        "FortStreetMall",
+        "RedBike",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 386,
+    "lang": "The RedBike is located between American Savings and Bank of Hawaii Headquarters main branch. . The RedHonda is located on the with northwest of corner of SouthKingSt and FortStreetMall.",
+    "lang_original": "The bicycle is located between American Savings and Bank of Hawaii Headquarters main branch. The red car is located on the northwest corner of South King Street and Fort Street Mall.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1cIADSm4GrkBSenZphuSEhGlWIjj8xE5O",
+    "map_name": "honolulu",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "950",
+    "relations": [
+        [
+            "RedBike",
+            "AmericanSavingsBank",
+            "between"
+        ],
+        [
+            "RedBike",
+            "BankofHawaiiHeadquartersMainBranch",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "SouthKingSt",
+            "northwest"
+        ],
+        [
+            "RedHonda",
+            "FortStreetMall",
+            "northwest"
+        ]
+    ]
+}

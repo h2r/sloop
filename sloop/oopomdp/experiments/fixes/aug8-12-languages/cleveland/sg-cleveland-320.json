@@ -1,0 +1,32 @@
+{
+    "bike_loc": "748",
+    "entities": [
+        "LibertyTextilesBuilding",
+        "RedBike",
+        "RedHonda",
+        "Rumor"
+    ],
+    "gcar_loc": "-1",
+    "index": 236,
+    "lang": "The RedBike is behind LibertyTextilesBuilding . the RedHonda is near Rumor.",
+    "lang_original": "The red Bike is behind Liberty Textiles Building and the red Honda is near Rumor.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1igFtow6mnymbl594_SssZOyB2AaSimWb",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "810",
+    "relations": [
+        [
+            "RedBike",
+            "LibertyTextilesBuilding",
+            "behind"
+        ],
+        [
+            "RedHonda",
+            "Rumor",
+            "near"
+        ]
+    ]
+}

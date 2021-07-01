@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1131",
+    "entities": [
+        "BankofHawaiiHeadquartersMainBranch",
+        "GreenToyota",
+        "HarbourCourt",
+        "RedBike"
+    ],
+    "gcar_loc": "1158",
+    "index": 356,
+    "lang": "The RedBike is inside HarbourCourt, while . the GreenToyota is in front of the Bank of Hawaii.",
+    "lang_original": "The red bike is inside Harbour Court, while the green car is in front of the Bank of Hawaii.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1czPnsNXlte_zb7oWk55JH_95AH9ceCSR",
+    "map_name": "honolulu",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "HarbourCourt",
+            "in"
+        ],
+        [
+            "GreenToyota",
+            "BankofHawaiiHeadquartersMainBranch",
+            "front"
+        ]
+    ]
+}

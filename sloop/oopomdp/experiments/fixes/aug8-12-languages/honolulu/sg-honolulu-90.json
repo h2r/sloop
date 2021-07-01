@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "KumuKahuaTheatre",
+        "RedHonda",
+        "SouthKingSt",
+        "Walmart"
+    ],
+    "gcar_loc": "379",
+    "index": 778,
+    "lang": "The RedHonda is at KumuKahuaTheatre while . the GreenToyota is on the opposite side on SouthKingSt close to Walmart.",
+    "lang_original": "The red car is at Kahua Theater while the green car is on the opposite side on South King street close to Walmart.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dRSqEy559LD1ZT__F8tcp0YvPsBS5AWI",
+    "map_name": "honolulu",
+    "map_num": "2",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "567",
+    "relations": [
+        [
+            "RedHonda",
+            "KumuKahuaTheatre",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "Walmart",
+            "close"
+        ]
+    ]
+}

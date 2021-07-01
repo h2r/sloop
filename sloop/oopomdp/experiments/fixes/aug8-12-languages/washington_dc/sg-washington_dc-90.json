@@ -1,0 +1,38 @@
+{
+    "bike_loc": "812",
+    "entities": [
+        "CafeAria",
+        "EmpireApartments",
+        "FStreetNorthwest",
+        "GreenToyota",
+        "RedBike"
+    ],
+    "gcar_loc": "591",
+    "index": 962,
+    "lang": "The RedBike is in front of EmpireApartments on FStreetNorthwest. . The GreenToyota is in the building next to CafeAria.",
+    "lang_original": "The bike is in front of the empire apartments on F street Northwest. The green car is in the building next to Cafe Aria.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1UnFKoQBiQmoNt2UFIGU1J-ubvYGAjeIO",
+    "map_name": "washington_dc",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "EmpireApartments",
+            "front"
+        ],
+        [
+            "RedBike",
+            "FStreetNorthwest",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "CafeAria",
+            "next"
+        ]
+    ]
+}

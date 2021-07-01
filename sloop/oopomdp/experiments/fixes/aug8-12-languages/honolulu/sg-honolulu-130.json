@@ -1,0 +1,50 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "BethelSt",
+        "GreenToyota",
+        "KumuKahuaTheatre",
+        "McCandlessBuilding",
+        "MerchantSt",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "379",
+    "index": 141,
+    "lang": "The RedHonda is at the corner of BethelSt and MerchantSt, near KumuKahuaTheatre while . the GreenToyota is on SouthKingSt, near McCandlessBuilding.",
+    "lang_original": "The red car is at the corner of Bethel Street and Merchant Street, near the Kahua Theatre while the green car is on South King Street, near the McCandless Building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dRSqEy559LD1ZT__F8tcp0YvPsBS5AWI",
+    "map_name": "honolulu",
+    "map_num": "2",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "567",
+    "relations": [
+        [
+            "RedHonda",
+            "BethelSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "MerchantSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "KumuKahuaTheatre",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "McCandlessBuilding",
+            "near"
+        ]
+    ]
+}

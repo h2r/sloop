@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "RedHonda",
+        "StatesmanApartments",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "545",
+    "index": 204,
+    "lang": "The RedHonda is behind StatesmanApartments, while . the GreenToyota is behind TheFStreetHouse.",
+    "lang_original": "The Red Honda is behind Statesman Apartments, while the Green Toyota is behind The F Street House.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1MviCAeW5j0nQ2g6vkJ7zw93iksNuX4jf",
+    "map_name": "washington_dc",
+    "map_num": "8",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1463",
+    "relations": [
+        [
+            "RedHonda",
+            "StatesmanApartments",
+            "behind"
+        ],
+        [
+            "GreenToyota",
+            "TheFStreetHouse",
+            "behind"
+        ]
+    ]
+}

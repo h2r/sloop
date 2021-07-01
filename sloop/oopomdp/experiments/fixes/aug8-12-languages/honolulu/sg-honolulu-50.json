@@ -1,0 +1,42 @@
+{
+    "bike_loc": "1472",
+    "entities": [
+        "AmericanSavingsBank",
+        "GreenToyota",
+        "MerchantSt",
+        "RedBike"
+    ],
+    "gcar_loc": "1189",
+    "index": 1310,
+    "lang": "The RedBike is on MerchantSt just with southwest of AmericanSavingsBank, . the GreenToyota is in the with northeast of corner of the american savings building.",
+    "lang_original": "The red bike is on Merchant Street just southwest of american savings, and the green Toyota car is in the northern corner of the american savings building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1baHBGQuFlLeGl9ZgBgDa3uJItB2sPTYg",
+    "map_name": "honolulu",
+    "map_num": "3",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "MerchantSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "AmericanSavingsBank",
+            "southwest"
+        ],
+        [
+            "GreenToyota",
+            "AmericanSavingsBank",
+            "north"
+        ],
+        [
+            "GreenToyota",
+            "AmericanSavingsBank",
+            "in"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "bike_loc": "849",
+    "entities": [
+        "20thStreetNorthwest",
+        "EmpireApartments",
+        "RedBike",
+        "RedHonda",
+        "SupportBuildingServiceRoad"
+    ],
+    "gcar_loc": "-1",
+    "index": 1532,
+    "lang": "The RedBike is near EmpireApartments. . The RedHonda is at the intersection of SupportBuildingServiceRoad and 20thStreetNorthwest Northwest.",
+    "lang_original": "The red bike is near the Empire Apartments. The red car is at the intersection of the support building service road and 20th street Northwest.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1W4LWx88N1xYo4rBZLCCpdLnvP5afWvGQ",
+    "map_name": "washington_dc",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "300",
+    "relations": [
+        [
+            "RedBike",
+            "EmpireApartments",
+            "near"
+        ],
+        [
+            "RedHonda",
+            "SupportBuildingServiceRoad",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "20thStreetNorthwest",
+            "at"
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LoganStreetApartments",
+        "RedHonda",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "1240",
+    "index": 211,
+    "lang": "The GreenToyota is in front of LoganStreetApartments while . the RedHonda is on the with south of end of StradaCondominiums.",
+    "lang_original": "The green Toyota is in front of the Logan Street Apartments while the red Honda is on the south end of the Strada Condominiums.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SnGUXyRXhmTrhoP6wkW1zH6Dx_yAT23L",
+    "map_name": "denver",
+    "map_num": "8",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1520",
+    "relations": [
+        [
+            "GreenToyota",
+            "LoganStreetApartments",
+            "front"
+        ],
+        [
+            "RedHonda",
+            "StradaCondominiums",
+            "south"
+        ],
+        [
+            "RedHonda",
+            "StradaCondominiums",
+            "on"
+        ]
+    ]
+}

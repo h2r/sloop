@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1354",
+    "entities": [
+        "GreenToyota",
+        "OldMain",
+        "RedBike",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "742",
+    "index": 1174,
+    "lang": "The RedBike is with west of OldMain . the GreenToyota is directly with south of TheFStreetHouse.",
+    "lang_original": "The red bike is west of Old Main and the green Toyota car is directly south of The F Street House.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1UhYvXsTXRChZVM1gJEojcNMWrpVyMBqH",
+    "map_name": "washington_dc",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "OldMain",
+            "west"
+        ],
+        [
+            "GreenToyota",
+            "TheFStreetHouse",
+            "south"
+        ]
+    ]
+}

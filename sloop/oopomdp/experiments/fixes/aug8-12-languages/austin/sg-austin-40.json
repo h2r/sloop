@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LavacaPlaza",
+        "MaikoSushi",
+        "RedHonda"
+    ],
+    "gcar_loc": "725",
+    "index": 878,
+    "lang": "The RedHonda is at LavacaPlaza and the GreenToyota would be at MaikoSushi .",
+    "lang_original": "The red car is at Lavaca plaza and the green car would be at Maiko sushi .",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1GaCXAzrSJIAU6UUNNDzI5W0zeosJg5A5",
+    "map_name": "austin",
+    "map_num": "4",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1216",
+    "relations": [
+        [
+            "RedHonda",
+            "LavacaPlaza",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "MaikoSushi",
+            "at"
+        ]
+    ]
+}

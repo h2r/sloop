@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "RedHonda",
+        "SandvickArchitects",
+        "VelvetDog",
+        "West6thSt"
+    ],
+    "gcar_loc": "1420",
+    "index": 606,
+    "lang": "- the RedHonda is in West6thSt in front of SandvickArchitects , while . - the RedHonda is in West6thSt in front of SandvickArchitects , while . the GreenToyota is behind VelvetDog",
+    "lang_original": "- the red honda car is in west 6th street in front of sandvick architects , while the green toyota is behind velvet dog",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=10WrfMW0IJtGZWJUamdKMtn9rro2IQ69H",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "900",
+    "relations": [
+        [
+            "RedHonda",
+            "West6thSt",
+            "in"
+        ],
+        [
+            "RedHonda",
+            "SandvickArchitects",
+            "front"
+        ],
+        [
+            "GreenToyota",
+            "VelvetDog",
+            "behind"
+        ]
+    ]
+}

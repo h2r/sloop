@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "HoytBlock",
+        "JohnsonCourt",
+        "RedHonda"
+    ],
+    "gcar_loc": "1051",
+    "index": 172,
+    "lang": "The RedHonda is with northwest of HoytBlock while . the GreenToyota is along JohnsonCourt.",
+    "lang_original": "The red Honda car is northwest of hoyt block while the green Toyota car is along the Johnson court.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1GQXP5U29TMqYLhxz9IXjcpu-WqI5dA1a",
+    "map_name": "cleveland",
+    "map_num": "5",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1388",
+    "relations": [
+        [
+            "RedHonda",
+            "HoytBlock",
+            "northwest"
+        ],
+        [
+            "GreenToyota",
+            "JohnsonCourt",
+            "along"
+        ]
+    ]
+}

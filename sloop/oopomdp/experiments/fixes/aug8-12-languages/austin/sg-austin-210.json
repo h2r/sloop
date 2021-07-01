@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "LavacaSt",
+        "MaikoSushi",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "415",
+    "index": 520,
+    "lang": "The RedHonda is in front of MaikoSushi while . the GreenToyota is on the corner of West6thSt and LavacaSt.. the GreenToyota is on the corner of West6thSt and LavacaSt.",
+    "lang_original": "The red Honda car is in front of Maiko sushi while the green Toyota car is on the corner of west 6th street and Lavaca street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Nr8z_ivNhk_uKoym8jPMprNpMpO7Mx0T",
+    "map_name": "austin",
+    "map_num": "5",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "486",
+    "relations": [
+        [
+            "RedHonda",
+            "MaikoSushi",
+            "front"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "LavacaSt",
+            "on"
+        ]
+    ]
+}

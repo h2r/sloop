@@ -1,0 +1,50 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "DorisCondominiums",
+        "East12thAvenue",
+        "GothamCityCondos",
+        "GrantSt",
+        "GreenToyota",
+        "LoganSt",
+        "RedHonda"
+    ],
+    "gcar_loc": "746",
+    "index": 1249,
+    "lang": "The GreenToyota is in the parking lot of GothamCityCondos off of East12thAvenue between LoganSt and GrantSt, while . the RedHonda is across the street from the GreenToyota at DorisCondominiums.",
+    "lang_original": "The green Toyota car is in the parking lot of Gotham City Condos off of East 12th Avenue between Logan Street and Grant Street, while the red Toyota car is across the street from the green Toyota car at Doris Condominiums.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1TDhkScPAzdJ8uidUMkzGYgs0s9o1Razt",
+    "map_name": "denver",
+    "map_num": "4",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "669",
+    "relations": [
+        [
+            "GreenToyota",
+            "GothamCityCondos",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "East12thAvenue",
+            "off"
+        ],
+        [
+            "GreenToyota",
+            "LoganSt",
+            "between"
+        ],
+        [
+            "GreenToyota",
+            "GrantSt",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "DorisCondominiums",
+            "at"
+        ]
+    ]
+}

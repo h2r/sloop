@@ -1,0 +1,32 @@
+{
+    "bike_loc": "1006",
+    "entities": [
+        "GreenToyota",
+        "NancyLeeApartments",
+        "RedBike",
+        "StAnneApartments"
+    ],
+    "gcar_loc": "692",
+    "index": 53,
+    "lang": "The RedBike is parked directly with west of StAnneApartments while . the GreenToyota is parked with east of NancyLeeApartments.",
+    "lang_original": "The red bike is parked directly west of the St. Anne Apartments while the green Toyota is parked East of the Nancy Lee Apartments.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1R7eU1L43aSiZe0ALf3XMPc7L7FU3atLa",
+    "map_name": "denver",
+    "map_num": "5",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "StAnneApartments",
+            "west"
+        ],
+        [
+            "GreenToyota",
+            "NancyLeeApartments",
+            "east"
+        ]
+    ]
+}

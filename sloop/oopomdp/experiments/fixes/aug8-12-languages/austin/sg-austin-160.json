@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1381",
+    "entities": [
+        "ChaseTowerParkingGarage",
+        "GreenToyota",
+        "LavacaSt",
+        "RedBike",
+        "West5thSt"
+    ],
+    "gcar_loc": "1348",
+    "index": 1234,
+    "lang": "The RedBike is at the corner of LavacaSt and West5thSt, . the GreenToyota is in ChaseTowerParkingGarage.",
+    "lang_original": "The red bike is at the corner of Lavaca Street and West 5th Street, and the green Toyota car is in the Chase Tower Parking Garage.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1j4WMLibtgUB1TCW82a_RRoO6Ml_vrEWH",
+    "map_name": "austin",
+    "map_num": "2",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "LavacaSt",
+            "at"
+        ],
+        [
+            "RedBike",
+            "West5thSt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "ChaseTowerParkingGarage",
+            "in"
+        ]
+    ]
+}

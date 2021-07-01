@@ -1,0 +1,44 @@
+{
+    "bike_loc": "933",
+    "entities": [
+        "GrantSt",
+        "LoganSt",
+        "LoganStreetApartments",
+        "RedBike",
+        "RedHonda",
+        "StAnneApartments"
+    ],
+    "gcar_loc": "-1",
+    "index": 1390,
+    "lang": "The RedHonda is parked in front of LoganStreetApartments located on LoganSt . the RedBike is parked at StAnneApartments  on GrantSt.",
+    "lang_original": "The red car is parked in front of Logan street Apartments located on Logan Street and the red bike is parked at St. Anne Apartments  on Grant Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SB2MvtAXW2bdt0JVrfjyGMjkNABaylHv",
+    "map_name": "denver",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1114",
+    "relations": [
+        [
+            "RedHonda",
+            "LoganStreetApartments",
+            "front"
+        ],
+        [
+            "RedHonda",
+            "LoganSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "StAnneApartments",
+            "at"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "on"
+        ]
+    ]
+}

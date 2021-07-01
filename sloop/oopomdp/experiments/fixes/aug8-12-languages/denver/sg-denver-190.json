@@ -1,0 +1,32 @@
+{
+    "bike_loc": "731",
+    "entities": [
+        "DorisCondominiums",
+        "GreenToyota",
+        "NancyLeeApartments",
+        "RedBike"
+    ],
+    "gcar_loc": "754",
+    "index": 366,
+    "lang": "The RedBike is inside of NancyLeeApartments.. The GreenToyota is with southeast of DorisCondominiums.",
+    "lang_original": "The red bike is inside of Nancy-lee apartment.The green car is southeast of doris condominiums.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Qv6HNnvYIvcjc6G-kXRs4DIes0lqsTKA",
+    "map_name": "denver",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "NancyLeeApartments",
+            "inside"
+        ],
+        [
+            "GreenToyota",
+            "DorisCondominiums",
+            "southeast"
+        ]
+    ]
+}

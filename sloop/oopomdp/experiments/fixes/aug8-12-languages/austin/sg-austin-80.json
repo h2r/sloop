@@ -1,0 +1,37 @@
+{
+    "bike_loc": "1030",
+    "entities": [
+        "ChaseBankBldg",
+        "ChaseTowerParkingGarage",
+        "GreenToyota",
+        "RedBike"
+    ],
+    "gcar_loc": "1193",
+    "index": 157,
+    "lang": "The RedBike is at ChaseBankBldg, . the GreenToyota is in the same building near ChaseTowerParkingGarage.",
+    "lang_original": "The red bike is at the Chase Bank Building, and the green Toyota car is in the same building near the parking garage.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1A0OLil4IkbUtU0Itv6Rf5Ux4utteFAfm",
+    "map_name": "austin",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "ChaseBankBldg",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "ChaseBankBldg",
+            "in"
+        ],
+        [
+            "GreenToyota",
+            "ChaseTowerParkingGarage",
+            "near"
+        ]
+    ]
+}

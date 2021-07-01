@@ -1,0 +1,50 @@
+{
+    "bike_loc": "1444",
+    "entities": [
+        "20thStreetNorthwest",
+        "CourtyardMarriottFoggyBottom",
+        "FStreetNorthwest",
+        "OldMain",
+        "RedBike",
+        "RedHonda",
+        "SupportBuildingServiceRoad"
+    ],
+    "gcar_loc": "-1",
+    "index": 1639,
+    "lang": "The RedBike is between OldMain and CourtyardMarriottFoggyBottom . and the RedHonda is on 20thStreetNorthwest with north of between SupportBuildingServiceRoad.",
+    "lang_original": "The bicycle is between Old Main and the Courtyard Marriott Foggy Bottom and the red Honda is on 20th street Northwest between F Street Northwest and Support Building Service Road.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Vl396wVsN2zqRnU2aOFbZyoNJGtu8hME",
+    "map_name": "washington_dc",
+    "map_num": "7",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "460",
+    "relations": [
+        [
+            "RedBike",
+            "OldMain",
+            "between"
+        ],
+        [
+            "RedBike",
+            "CourtyardMarriottFoggyBottom",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "20thStreetNorthwest",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "FStreetNorthwest",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "SupportBuildingServiceRoad",
+            "between"
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "bike_loc": "655",
+    "entities": [
+        "West4thSt",
+        "GreenToyota",
+        "BarleyHouse",
+        "RedBike",
+        "West6thSt"
+    ],
+    "gcar_loc": "225",
+    "index": 715,
+    "lang": "The RedBike is on West6thSt, near BarleyHouse. . The GreenToyota is on West4thSt . at ErieBuildingLofts.",
+    "lang_original": "The red bike is on West 6th Street, near Barley House. The green Honda car is on West 4th Street at Erie Building Lofts.",
+    "map_link": "https://drive.google.com/uc?export=view&id=1UYrIslLcIHuUmgBr0V3sSrRk6Wt6D1CT",
+    "map_name": "cleveland",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "West4thSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "ErieBuildingLofts",
+            "at"
+        ],
+        [
+            "RedBike",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "BarleyHouse",
+            "near"
+        ]
+    ]
+}

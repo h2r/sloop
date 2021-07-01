@@ -1,0 +1,44 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "CortBuilding",
+        "GreenToyota",
+        "JohnsonCourt",
+        "RedHonda",
+        "Rumor",
+        "West6thSt"
+    ],
+    "gcar_loc": "698",
+    "index": 1329,
+    "lang": "The GreenToyota is next to CortBuilding on West4thSt.. The RedHonda is in the back of RootMcBrideBuilding that houses Rumor and spring, on JohnsonCourt.",
+    "lang_original": "The green car is next to the Cort building on the West 6th street side.The red car is in the back of the building that houses rumor and spring, on Johnson court.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1jP3NLIuHW7kdfXip0HAbbVNtYHrt435S",
+    "map_name": "cleveland",
+    "map_num": "0",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1013",
+    "relations": [
+        [
+            "GreenToyota",
+            "CortBuilding",
+            "next"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "Rumor",
+            "behind"
+        ],
+        [
+            "RedHonda",
+            "JohnsonCourt",
+            "on"
+        ]
+    ]
+}

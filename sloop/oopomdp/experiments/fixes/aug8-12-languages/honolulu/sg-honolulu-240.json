@@ -1,0 +1,44 @@
+{
+    "bike_loc": "548",
+    "entities": [
+        "BethelSt",
+        "MerchantSt",
+        "PioneerPlaza",
+        "RedBike",
+        "RedHonda",
+        "Walmart"
+    ],
+    "gcar_loc": "-1",
+    "index": 1472,
+    "lang": "The RedHonda is parked at PioneerPlaza on MerchantSt . the RedBike is parked at Walmart on BethelSt.",
+    "lang_original": "The red car is parked at Pioneer Plaza on Merchant Street and the red bike is parked at Walmart on Bethel Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1ck876gOczb8rFncWfWW9JQELpIOfGohw",
+    "map_name": "honolulu",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1058",
+    "relations": [
+        [
+            "RedHonda",
+            "PioneerPlaza",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "MerchantSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "Walmart",
+            "at"
+        ],
+        [
+            "RedBike",
+            "BethelSt",
+            "on"
+        ]
+    ]
+}

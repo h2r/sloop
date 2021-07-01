@@ -1,0 +1,43 @@
+{
+    "bike_loc": "337",
+    "entities": [
+        "20thStreetNorthwest",
+        "FStreetNorthwest",
+        "GreenToyota",
+        "RedBike",
+        "SupportBuildingServiceRoad"
+    ],
+    "gcar_loc": "825",
+    "index": 862,
+    "lang": "The GreenToyota is on FStreetNorthwest past 20thStreetNorthwest . the RedBike is on SupportBuildingServiceRoad before 20thStreetNorthwest.",
+    "lang_original": "The green Toyota is on F Street Northwest past the 20th Street Northwest intersection and the red bike is on Support Building Service Road before 20th Street Northwest.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1VLCp-SpPrNGUSxwpsHgapPpTXdDu5KQv",
+    "map_name": "washington_dc",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "FStreetNorthwest",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "20thStreetNorthwest",
+            "beside"
+        ],
+        [
+            "RedBike",
+            "SupportBuildingServiceRoad",
+            "on"
+        ],
+        [
+            "RedBike",
+            "20thStreetNorthwest",
+            "behind"
+        ]
+    ]
+}

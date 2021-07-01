@@ -1,0 +1,44 @@
+{
+    "bike_loc": "655",
+    "entities": [
+        "CortBuilding",
+        "ErieBuildingLofts",
+        "GreenToyota",
+        "RedBike",
+        "West4thSt",
+        "West6thSt"
+    ],
+    "gcar_loc": "225",
+    "index": 1615,
+    "lang": "The GreenToyota is on West4thSt . in front of ErieBuildingLofts, while the RedBike is on West6thSt . in front of CortBuilding.",
+    "lang_original": "The green Toyota is on West 4th street in front of Erie Building Lofts, while the red bike is on West 6th street in front of the Cort Building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1UYrIslLcIHuUmgBr0V3sSrRk6Wt6D1CT",
+    "map_name": "cleveland",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "West4thSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "ErieBuildingLofts",
+            "front"
+        ],
+        [
+            "RedBike",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "CortBuilding",
+            "front"
+        ]
+    ]
+}

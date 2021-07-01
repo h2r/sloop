@@ -1,0 +1,44 @@
+{
+    "bike_loc": "685",
+    "entities": [
+        "GreenToyota",
+        "Ivy",
+        "RedBike",
+        "RootMcBrideBuilding",
+        "TheBradley",
+        "West6thSt"
+    ],
+    "gcar_loc": "165",
+    "index": 820,
+    "lang": "The GreenToyota is with north of Ivy on West6thSt. . The RedBike is between Robot Mc- Bride building and TheBradley",
+    "lang_original": "The green Toyota car is north of Ivy on West 6th Street. The red bike is between Robot Mc- Bride building and the Bradley",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1biB2JVtK82IeQ06OZh8ibxJQ5K8cgqU9",
+    "map_name": "cleveland",
+    "map_num": "3",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "Ivy",
+            "north"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "RootMcBrideBuilding",
+            "between"
+        ],
+        [
+            "RedBike",
+            "TheBradley",
+            "between"
+        ]
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "bike_loc": "629",
+    "entities": [
+        "GreenToyota",
+        "RedBike",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "429",
+    "index": 1642,
+    "lang": "The RedBike is with east of TheFStreetHouse . the GreenToyota is with north of with east of TheFStreetHouse",
+    "lang_original": "The Red bike is east of The F Street house and the green Toyota is north east of the F street house",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1V628rxPXJ4Z6MUhelQgPsUdMscDOmKz-",
+    "map_name": "washington_dc",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "TheFStreetHouse",
+            "east"
+        ],
+        [
+            "GreenToyota",
+            "TheFStreetHouse",
+            "northeast"
+        ]
+    ]
+}

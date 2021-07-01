@@ -1,0 +1,43 @@
+{
+    "bike_loc": "995",
+    "entities": [
+        "AlohaPacificFederalCreditUnion",
+        "BankofHawaiiHeadquartersMainBranch",
+        "GreenToyota",
+        "RedBike",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "585",
+    "index": 86,
+    "lang": "The RedBike is on SouthKingSt. . The GreenToyota is in front of AlohaPacificFederalCreditUnion in SouthKingSt. . The RedBike is near the bank of Hawaii",
+    "lang_original": "The read bike is on the south King Street. The green Toyota car is in front of Aloha Pacific federal credit union in the south King Street. The red bike is near the bank of Hawaii",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1bnMZJmzQa3P0MZdCYIE0aaSIQ5oHJGt7",
+    "map_name": "honolulu",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "AlohaPacificFederalCreditUnion",
+            "front"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "in"
+        ],
+        [
+            "RedBike",
+            "BankofHawaiiHeadquartersMainBranch",
+            "near"
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "AmericanSavingsBank",
+        "BethelSt",
+        "GreenToyota",
+        "MerchantSt",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "1349",
+    "index": 1177,
+    "lang": "The RedHonda is on BethelSt near the intersection with SouthKingSt, . the GreenToyota is in AmericanSavingsBank on the side of MerchantSt.",
+    "lang_original": "The red Honda car is on Bethel Street near the intersection with South King Street, and the green Toyota car is in American Savings on the side of Merchant Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1d7gLi4MbD0_OF2orqEOCFHzKOzqtXSgN",
+    "map_name": "honolulu",
+    "map_num": "8",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "254",
+    "relations": [
+        [
+            "RedHonda",
+            "BethelSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "SouthKingSt",
+            "near"
+        ],
+        [
+            "GreenToyota",
+            "AmericanSavingsBank",
+            "in"
+        ],
+        [
+            "GreenToyota",
+            "MerchantSt",
+            "beside"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1076",
+    "entities": [
+        "BankofHawaiiHeadquartersMainBranch",
+        "FortStreetMall",
+        "RedBike",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 35,
+    "lang": "The RedHonda is near Bank of Hawaii . the RedBike is near the corner of FortStreetMall and SouthKingSt.",
+    "lang_original": "The red Honda is near Bank of Hawaii and the red Bike is near the corner of Fort Street Mall and South King Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1cfoBpLya7Mo_HKqljAvXqFftG4dEQn-2",
+    "map_name": "honolulu",
+    "map_num": "2",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1448",
+    "relations": [
+        [
+            "RedHonda",
+            "BankofHawaiiHeadquartersMainBranch",
+            "near"
+        ],
+        [
+            "RedBike",
+            "FortStreetMall",
+            "near"
+        ],
+        [
+            "RedBike",
+            "SouthKingSt",
+            "near"
+        ]
+    ]
+}

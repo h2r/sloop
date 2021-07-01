@@ -1,0 +1,31 @@
+{
+    "bike_loc": "548",
+    "entities": [
+        "RedHonda",
+        "SevenEleven",
+        "Walmart"
+    ],
+    "gcar_loc": "-1",
+    "index": 1471,
+    "lang": "The RedHonda is directly with north of SevenEleven . the RedBike is at the center of Walmart.",
+    "lang_original": "The red Honda car is directly north of 7-Eleven and the red bike is at the center of Walmart.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1ck876gOczb8rFncWfWW9JQELpIOfGohw",
+    "map_name": "honolulu",
+    "map_num": "0",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1058",
+    "relations": [
+        [
+            "RedHonda",
+            "SevenEleven",
+            "north"
+        ],
+        [
+            "RedHonda",
+            "Walmart",
+            "within"
+        ]
+    ]
+}

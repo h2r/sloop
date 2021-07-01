@@ -1,0 +1,38 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "BankohParkingCenter",
+        "GreenToyota",
+        "KumuKahuaTheatre",
+        "RedHonda",
+        "SouthKingSt"
+    ],
+    "gcar_loc": "379",
+    "index": 1043,
+    "lang": "The RedHonda is in the Kahua theater, while . the GreenToyota is on SouthKingSt near BankohParkingCenter.",
+    "lang_original": "The red car is in the Kahua theater, while the green toyota is on south king street near Bankou parking center.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dRSqEy559LD1ZT__F8tcp0YvPsBS5AWI",
+    "map_name": "honolulu",
+    "map_num": "2",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "567",
+    "relations": [
+        [
+            "RedHonda",
+            "KumuKahuaTheatre",
+            "in"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "BankohParkingCenter",
+            "near"
+        ]
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "bike_loc": "471",
+    "entities": [
+        "ClaudiaTaylorJohnsonHall",
+        "LavacaSt",
+        "MaikoSushi",
+        "RedBike",
+        "RedHonda",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1210,
+    "lang": "RedBike is between West6thSt . and LavacaSt behind ClaudiaTaylorJohnsonHall.. RedHonda is between West6thSt . and LavacaSt by MaikoSushi",
+    "lang_original": "Red bike is between West 6th Street and Lavaca Street behind Claudia taylor Johnson Hall.Red Honda car is between West 6th Street and Lavaca Street by Maiko Sushi",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1RKZl2eGjZpfgowLkYZVycy0_Me-7FzCT",
+    "map_name": "austin",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "724",
+    "relations": [
+        [
+            "RedBike",
+            "West6thSt",
+            "between"
+        ],
+        [
+            "RedBike",
+            "LavacaSt",
+            "between"
+        ],
+        [
+            "RedBike",
+            "ClaudiaTaylorJohnsonHall",
+            "behind"
+        ],
+        [
+            "RedHonda",
+            "West6thSt",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "LavacaSt",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "MaikoSushi",
+            "near"
+        ]
+    ]
+}

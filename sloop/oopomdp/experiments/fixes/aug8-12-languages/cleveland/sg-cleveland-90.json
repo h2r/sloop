@@ -1,0 +1,44 @@
+{
+    "bike_loc": "753",
+    "entities": [
+        "KleinMarksBuilding",
+        "RedBike",
+        "RedHonda",
+        "TheHatFactory",
+        "West4thSt",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 435,
+    "lang": "The RedHonda is located on West6thSt . in front of TheHatFactory.  . The RedBike is located  on West4thSt . with right of next to the Klein Marks building.",
+    "lang_original": "The red car is located on west sixth street in front of the Hat Factory.  The red bike is located  on West Fourth St. right next to the Klein Marks building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1VoFt9vjmyOZM5ezXxU53jIw-TSkJkhFB",
+    "map_name": "cleveland",
+    "map_num": "6",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "454",
+    "relations": [
+        [
+            "RedHonda",
+            "West6thSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "TheHatFactory",
+            "front"
+        ],
+        [
+            "RedBike",
+            "West4thSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "KleinMarksBuilding",
+            "next"
+        ]
+    ]
+}

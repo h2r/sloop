@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "DresdenApartments",
+        "GreenToyota",
+        "RedHonda",
+        "StradaCondominiums"
+    ],
+    "gcar_loc": "1240",
+    "index": 214,
+    "lang": "The RedHonda is with southeast of StradaCondominiums while . the GreenToyota is at DresdenApartments.",
+    "lang_original": "The red Honda car is southeast of strada condominiums while the green Toyota car is at the  north Dresden apartments.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SnGUXyRXhmTrhoP6wkW1zH6Dx_yAT23L",
+    "map_name": "denver",
+    "map_num": "8",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "1520",
+    "relations": [
+        [
+            "RedHonda",
+            "StradaCondominiums",
+            "southeast"
+        ],
+        [
+            "GreenToyota",
+            "DresdenApartments",
+            "north"
+        ]
+    ]
+}

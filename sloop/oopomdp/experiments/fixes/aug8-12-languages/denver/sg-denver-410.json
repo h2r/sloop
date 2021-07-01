@@ -1,0 +1,44 @@
+{
+    "bike_loc": "731",
+    "entities": [
+        "DorisCondominiums",
+        "GrantSt",
+        "GreenToyota",
+        "LoganSt",
+        "NancyLeeApartments",
+        "RedBike"
+    ],
+    "gcar_loc": "754",
+    "index": 1266,
+    "lang": "The GreenToyota is parked at a building beside DorisCondominiums on LoganSt  . and the RedBike is parked at NancyLeeApartments on GrantSt.",
+    "lang_original": "The green car is parked at a building beside Doris Condominiums on Logan Street  and the red bike is parked at Nancy Lee Apartments on Grant Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1Qv6HNnvYIvcjc6G-kXRs4DIes0lqsTKA",
+    "map_name": "denver",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "DorisCondominiums",
+            "beside"
+        ],
+        [
+            "GreenToyota",
+            "LoganSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "NancyLeeApartments",
+            "at"
+        ],
+        [
+            "RedBike",
+            "GrantSt",
+            "on"
+        ]
+    ]
+}

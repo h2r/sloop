@@ -1,0 +1,38 @@
+{
+    "bike_loc": "1390",
+    "entities": [
+        "ChaseBankBldg",
+        "ChaseTowerParkingGarage",
+        "RedBike",
+        "RedHonda",
+        "West5thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 1014,
+    "lang": "The RedHonda is parked at ChaseBankBldg on LavacaSt  . and the RedBike is parked in front of ChaseTowerParkingGarage on West5thSt.",
+    "lang_original": "The red car is parked at Chase Bank Building on Lavaca Street  and the red bike is parked in front of Chase Tower Parking Garage on West 5th Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1nud4dGvz2a-U-i0LTgAw8uTi_BA3LVhP",
+    "map_name": "austin",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "904",
+    "relations": [
+        [
+            "RedHonda",
+            "ChaseBankBldg",
+            "at"
+        ],
+        [
+            "RedBike",
+            "ChaseTowerParkingGarage",
+            "front"
+        ],
+        [
+            "RedBike",
+            "West5thSt",
+            "on"
+        ]
+    ]
+}

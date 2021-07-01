@@ -1,0 +1,56 @@
+{
+    "bike_loc": "224",
+    "entities": [
+        "AmericanSavingsBank",
+        "BethelSt",
+        "FortStreetMall",
+        "GreenToyota",
+        "MerchantSt",
+        "RedBike",
+        "SouthKingSt",
+        "Walmart"
+    ],
+    "gcar_loc": "1393",
+    "index": 1385,
+    "lang": "The GreenToyota is at AmericanSavingsBank on the corner of MerchantSt and FortStreetMall while . the RedBike is at Walmart at the corner of SouthKingSt and BethelSt.",
+    "lang_original": "The green Toyota is at American Savings on the corner of Merchant Street and Fort Street Mall while the red bike is at Walmart at the corner of South King Street and Bethel Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1bYAbaKNjKoKIYeMW8oBFMeFAvMKp9t5Q",
+    "map_name": "honolulu",
+    "map_num": "4",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "AmericanSavingsBank",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "MerchantSt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "FortStreetMall",
+            "at"
+        ],
+        [
+            "RedBike",
+            "Walmart",
+            "at"
+        ],
+        [
+            "RedBike",
+            "SouthKingSt",
+            "at"
+        ],
+        [
+            "RedBike",
+            "BethelSt",
+            "at"
+        ]
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "bike_loc": "723",
+    "entities": [
+        "FStreetNorthwest",
+        "RedBike",
+        "RedHonda",
+        "SupportBuilding",
+        "TheFStreetHouse"
+    ],
+    "gcar_loc": "-1",
+    "index": 107,
+    "lang": "The RedHonda is just with east of TheFStreetHouse along TheFStreetHouse . the RedBike is in front of SupportBuilding.",
+    "lang_original": "The red Honda is just East of the F Street House along F street and the bicycle is in front of the Support Building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1VWSShTGOVDN9ALm52DXb05BOl_kkldT0",
+    "map_name": "washington_dc",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "667",
+    "relations": [
+        [
+            "RedHonda",
+            "TheFStreetHouse",
+            "east"
+        ],
+        [
+            "RedHonda",
+            "FStreetNorthwest",
+            "along"
+        ],
+        [
+            "RedBike",
+            "SupportBuilding",
+            "front"
+        ]
+    ]
+}

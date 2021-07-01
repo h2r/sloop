@@ -1,0 +1,50 @@
+{
+    "bike_loc": "1353",
+    "entities": [
+        "AnacondaInc",
+        "ChaseTowerParkingGarage",
+        "LavacaSt",
+        "RedBike",
+        "RedHonda",
+        "West5thSt",
+        "West6thSt"
+    ],
+    "gcar_loc": "-1",
+    "index": 748,
+    "lang": "The RedBike is parked at ChaseTowerParkingGarage of West5thSt while . the RedHonda is parked at AnacondaInc on the corner of LavacaSt and West6thSt.",
+    "lang_original": "The red Bike is parked at Chase Tower Parking Garage north of West 5th Street while the red Honda is parked at Anaconda Inc on the corner of Lavaca Street and West 6th Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1tbX5CuAsB1LkeqkkgXwjUov16wwlHvuZ",
+    "map_name": "austin",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "455",
+    "relations": [
+        [
+            "RedBike",
+            "ChaseTowerParkingGarage",
+            "at"
+        ],
+        [
+            "RedBike",
+            "West5thSt",
+            "north"
+        ],
+        [
+            "RedHonda",
+            "AnacondaInc",
+            "at"
+        ],
+        [
+            "RedHonda",
+            "LavacaSt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "West6thSt",
+            "on"
+        ]
+    ]
+}

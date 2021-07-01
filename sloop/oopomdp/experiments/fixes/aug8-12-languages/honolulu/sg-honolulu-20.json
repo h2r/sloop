@@ -1,0 +1,43 @@
+{
+    "bike_loc": "995",
+    "entities": [
+        "FortStreetMall",
+        "GreenToyota",
+        "RedBike",
+        "SouthKingSt",
+        "Walmart"
+    ],
+    "gcar_loc": "585",
+    "index": 85,
+    "lang": "The RedBike is on the corner of SouthKingSt and FortStreetMall while . the GreenToyota is on SouthKingSt in front of Walmart",
+    "lang_original": "The red bike is on the corner of South King Street and Fort Street Mall while the green Toyota is on South King Street in front of Walmart",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1bnMZJmzQa3P0MZdCYIE0aaSIQ5oHJGt7",
+    "map_name": "honolulu",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "RedBike",
+            "FortStreetMall",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "SouthKingSt",
+            "on"
+        ],
+        [
+            "GreenToyota",
+            "Walmart",
+            "front"
+        ]
+    ]
+}

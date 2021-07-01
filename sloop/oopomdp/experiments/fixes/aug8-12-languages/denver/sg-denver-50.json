@@ -1,0 +1,44 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "DennisSheedyMansion",
+        "East12thAvenue",
+        "GrantSt",
+        "GreenToyota",
+        "LoganSt",
+        "RedHonda"
+    ],
+    "gcar_loc": "1222",
+    "index": 1262,
+    "lang": "RedHonda is in between LoganSt and East12thAvenue.. GreenToyota is off GrantSt facing DennisSheedyMansion",
+    "lang_original": "Red Honda car is in between Logan Street and East 12th Avenue.Green Toyota car is off Grant Street facing Dennis Sheedy Mansion",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1SduicQZE6iiU4p1wR1zDVI4F2qvSPVzx",
+    "map_name": "denver",
+    "map_num": "9",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "111",
+    "relations": [
+        [
+            "RedHonda",
+            "LoganSt",
+            "between"
+        ],
+        [
+            "RedHonda",
+            "East12thAvenue",
+            "between"
+        ],
+        [
+            "GreenToyota",
+            "GrantSt",
+            "off"
+        ],
+        [
+            "GreenToyota",
+            "DennisSheedyMansion",
+            "towards"
+        ]
+    ]
+}

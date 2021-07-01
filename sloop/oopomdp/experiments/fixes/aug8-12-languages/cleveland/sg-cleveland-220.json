@@ -1,0 +1,38 @@
+{
+    "bike_loc": "748",
+    "entities": [
+        "JohnsonCourt",
+        "LibertyTextilesBuilding",
+        "RedBike",
+        "RedHonda",
+        "RootMcBrideBuilding"
+    ],
+    "gcar_loc": "-1",
+    "index": 238,
+    "lang": "The RedBike is at the parking lot near LibertyTextilesBuilding, . the RedHonda is on JohnsonCourt by RootMcBrideBuilding.",
+    "lang_original": "The red bike is at the parking lot near the Liberty Textiles Building, and the red Honda car is on Johnson Court by the Root-McBride Building.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1igFtow6mnymbl594_SssZOyB2AaSimWb",
+    "map_name": "cleveland",
+    "map_num": "9",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "810",
+    "relations": [
+        [
+            "RedBike",
+            "LibertyTextilesBuilding",
+            "near"
+        ],
+        [
+            "RedHonda",
+            "JohnsonCourt",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "RootMcBrideBuilding",
+            "beside"
+        ]
+    ]
+}

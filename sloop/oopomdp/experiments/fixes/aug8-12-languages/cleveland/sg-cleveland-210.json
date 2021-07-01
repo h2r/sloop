@@ -1,0 +1,31 @@
+{
+    "bike_loc": "1428",
+    "entities": [
+        "MarionBuilding",
+        "HoytBlock",
+        "RedBike",
+        "GreenToyota"
+    ],
+    "gcar_loc": "157",
+    "index": 1554,
+    "lang": "The RedBike is near HoytBlock. . The GreenToyota is at MarionBuilding.",
+    "lang_original": "The red bike is near Hoyt Block. The green car is at the Marion Building.",
+    "map_link": "https://drive.google.com/uc?export=view&id=1ThEvWxfrhcTOpaQOgK3aR6yQMNGumV9P",
+    "map_name": "cleveland",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "GreenToyota",
+            "MarionBuilding",
+            "is at"
+        ],
+        [
+            "RedBike",
+            "HoytBlock",
+            "is near"
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "bike_loc": "285",
+    "entities": [
+        "Ivy",
+        "RedBike",
+        "RedHonda",
+        "WaringBlock",
+        "West6thSt",
+        "WestSaintClairAvenue"
+    ],
+    "gcar_loc": "-1",
+    "index": 1302,
+    "lang": "The RedHonda is on . WestSaintClairAvenue close to WaringBlock and the RedBike is at Ivy on West6thSt.. WestSaintClairAvenue close to WaringBlock and the RedBike is at Ivy on West6thSt.",
+    "lang_original": "The red car is on West Saint Clair street close to Waring Block and the red bike is at Ivy on West 6th street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1xJrDdyrBJt_C6OXCAs3LHRU52OQWYU8U",
+    "map_name": "cleveland",
+    "map_num": "8",
+    "obj1_name": "bike",
+    "obj2_name": "rcar",
+    "rcar_loc": "1452",
+    "relations": [
+        [
+            "RedHonda",
+            "WestSaintClairAvenue",
+            "on"
+        ],
+        [
+            "RedHonda",
+            "WaringBlock",
+            "close"
+        ],
+        [
+            "RedBike",
+            "Ivy",
+            "at"
+        ],
+        [
+            "RedBike",
+            "West6thSt",
+            "on"
+        ]
+    ]
+}

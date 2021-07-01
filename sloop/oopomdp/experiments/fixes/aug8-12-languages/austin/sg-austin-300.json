@@ -1,0 +1,53 @@
+{
+    "bike_loc": "1037",
+    "entities": [
+        "ChaseBankBldg",
+        "ColoradoSt",
+        "GreenToyota",
+        "RedBike",
+        "West6thSt"
+    ],
+    "gcar_loc": "1039",
+    "index": 600,
+    "lang": "The RedBike and GreenToyota are both at ChaseBankBldg at the corner of West6thSt . and ColoradoSt.",
+    "lang_original": "The red bike and green Toyota car are both at the Chase Bank Building at the corner of West 6th Street and Colorado Street.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dxYbdu5FRtFJzD67D8RYseZPRMSNfT1I",
+    "map_name": "austin",
+    "map_num": "1",
+    "obj1_name": "bike",
+    "obj2_name": "gcar",
+    "rcar_loc": "-1",
+    "relations": [
+        [
+            "RedBike",
+            "ChaseBankBldg",
+            "at"
+        ],
+        [
+            "RedBike",
+            "West6thSt",
+            "at"
+        ],
+        [
+            "RedBike",
+            "ColoradoSt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "ChaseBankBldg",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "West6thSt",
+            "at"
+        ],
+        [
+            "GreenToyota",
+            "ColoradoSt",
+            "at"
+        ]
+    ]
+}

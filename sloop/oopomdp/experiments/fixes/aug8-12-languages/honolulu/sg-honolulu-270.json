@@ -1,0 +1,32 @@
+{
+    "bike_loc": "-1",
+    "entities": [
+        "GreenToyota",
+        "PioneerPlaza",
+        "RedHonda",
+        "Walmart"
+    ],
+    "gcar_loc": "902",
+    "index": 754,
+    "lang": "The RedHonda is on the with right of side of the Walmart building, . the GreenToyota is on the with east of edge of PioneerPlaza.",
+    "lang_original": "The red Honda is on the right side of the Walmart building, and the green Toyota is on the East edge of Pioneer Plaza.",
+    "manual": true,
+    "map_link": "https://drive.google.com/uc?export=view&id=1dGW9HxfwV62HdUz0tw8t4D9s8Yy8_4XG",
+    "map_name": "honolulu",
+    "map_num": "4",
+    "obj1_name": "rcar",
+    "obj2_name": "gcar",
+    "rcar_loc": "475",
+    "relations": [
+        [
+            "RedHonda",
+            "Walmart",
+            "right"
+        ],
+        [
+            "GreenToyota",
+            "PioneerPlaza",
+            "east"
+        ]
+    ]
+}

@@ -1,5 +1,10 @@
-from setuptools import setup
+from setuptools import setup, Extension
 from Cython.Build import cythonize
+
+extensions = [
+    Extension("sloop.oopomdp.models.components",
+              ["sloop/oopomdp/models/components/*.pyx"]),
+]
 
 setup(name='sloop',
       packages=['sloop'],
@@ -25,7 +30,6 @@ setup(name='sloop',
           'nltk',
           'prettytable'
       ],
-      ext_modules=cythonize(['sloop/oopomdp/models/transition_model.pyx',
-                             'sloop/oopomdp/models/components/grid_map.pyx'],
+      ext_modules=cythonize(extensions,
                             build_dir="build",
                             compiler_directives={"language_level": "3"}))

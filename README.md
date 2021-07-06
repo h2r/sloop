@@ -2,21 +2,35 @@
 Code repository to reproduce Spatial Language Object-Oriented POMDPs from [Spatial Language Understanding for Object Search in Partially Observed City-scale Environments](h2r.github.io/docs).
 
 ## Installation
-The required python version is Python 3.6+. Once you've installed the correct version, clone the repository and create and virtual environment with the following lines:
-```
-git clone git@github.com:h2r/sloop.git
-cd sloop;
-virtualenv -p $(which python3) venv/sloop
-source venv/sloop/bin/activate
-```
 
-Then, install the dependencies:
-```
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+The required python version is Python 3.6+.
 
-Install [pomdp-py](https://h2r.github.io/pomdp-py/html/installation.html) by following the steps in the linked website. Following these steps is important for the POMDP to work.
+1. Clone the repository and create and virtual environment with the following lines:
+   ```
+   git clone git@github.com:h2r/sloop.git
+   cd sloop;
+   virtualenv -p $(which python3) venv/sloop
+   source venv/sloop/bin/activate
+   ```
+
+2. Then, install the dependencies in `requirements.txt`; The `>=` symbol in `requirements.txt` assumes backwards compatibility of those packages:
+   ```
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. Install pomdp-py following [these instructions](https://h2r.github.io/pomdp-py/html/installation.html). The test version is `1.2.4.1`. You can specify that version when doing `pip install pomdp-py`.
+
+
+4. Install the `sloop` package.
+
+    ```
+    # Assume you're at the root of the sloop repository
+    pip install -e .
+    ```
+
+
+
 
 Finally, install the repository as a package. Assuming you are at the root directory of this repository,
 ```

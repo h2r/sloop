@@ -13,29 +13,15 @@ The required python version is Python 3.6+.
    source venv/sloop/bin/activate
    ```
 
-2. Then, install the dependencies in `requirements.txt`; The `>=` symbol in `requirements.txt` assumes backwards compatibility of those packages:
-   ```
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-3. Install pomdp-py following [these instructions](https://h2r.github.io/pomdp-py/html/installation.html). The test version is `1.2.4.1`. You can specify that version when doing `pip install pomdp-py`.
-
-
-4. Install the `sloop` package.
+2. Install the `sloop` package.
 
     ```
     # Assume you're at the root of the sloop repository
     pip install -e .
     ```
+    Note that this will install a number of dependencies, including [pomdp-py](https://h2r.github.io/pomdp-py/html/) version 1.2.4.5. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
 
 
-
-
-Finally, install the repository as a package. Assuming you are at the root directory of this repository,
-```
-pip install -e .
-```
 
 ## Downloading Data
 Run the following bash script from the root of the repository to download the SL-OSM (Spatial Language - Open Street Map) dataset in the correct location. This may take a minute or two as the file is around 4GB.

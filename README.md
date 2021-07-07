@@ -123,7 +123,7 @@ You can download the full results (including individual trial results) from [her
 Note that because the experiment is random, the final result may differ slightly from those reported in the paper.
 
 
-## OpenStreetMap Demo <a name="openstreetmap-demo"/>
+## Running on OpenStreetMap <a name="openstreetmap-demo"/>
 You can now start a demo of spatial language object search on an OpenStreetMap by running
 ```
 cd sloop/oopomdp/experiments
@@ -191,15 +191,18 @@ MAP: austin
 ...
 ```
 and the window now may look something like this:
+
 <img src="docs/assets/searching.png" width="400px">
 
 
 
-## AirSim Demo <a name="airsim-demo"/>
+## Running on AirSim <a name="airsim-demo"/>
 
 This requires installation of Unreal Engine 4 and AirSim, following AirSim's documentation. ([Linux](https://microsoft.github.io/AirSim/build_linux/), [Windows](https://microsoft.github.io/AirSim/build_windows/)),
 as well as downloading assets for the UE4 environment e.g. [Neighborhoods](https://www.unrealengine.com/marketplace/en-US/product/modular-neighborhood-pack) and [Urban City](https://www.unrealengine.com/marketplace/en-US/product/urban-city).
 Detailed instructions can be found in [this wiki page](https://github.com/h2r/sloop/wiki/Running-SLOOP-object-search-on-AirSIm-UE4).
+
+The search trial is started by running `python controller.py`.
 
 Here is an example screenshot:
 ![airsim view](https://i.imgur.com/djFTbVu.png)

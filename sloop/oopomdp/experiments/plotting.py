@@ -80,16 +80,16 @@ COLORS = {
 
     "rule#based":                  "orange",
 
-    "keyword":                     "forestgreen",
-    "keyword#auto":                "forestgreen",
+    "keyword":                     "green",
+    "keyword#auto":                "green",
 
-    "uniform":                     "darkgray",
+    "uniform":                     "silver",
 
-    "mixture#basic":               "darkviolet",
-    "mixture#basic#auto":          "darkviolet",
+    "mixture#basic":               "red",
+    "mixture#basic#auto":          "red",
 
-    "mixture#full":                "lightcoral",
-    "mixture#full#auto":           "lightcoral",
+    "mixture#full":                "#800000",
+    "mixture#full#auto":           "#800000",
 }
 
 def get_lighter_color(prior_type):
@@ -143,10 +143,10 @@ def get_zorder(prior_type):
         "rule#based#blind":        2,
         "rule#based#ego#ctx":      4,
         "rule#based#ego#ctx#auto": 4,
-        "mixture#full":            5,
-        "mixture#full#auto":       5,
-        "mixture#basic":           6,
-        "mixture#basic#auto":      6,
+        "mixture#full":            6,
+        "mixture#full#auto":       6,
+        "mixture#basic":           5,
+        "mixture#basic#auto":      5,
         "keyword":                 3,
         "keyword#auto":            3,
         "uniform":                 0

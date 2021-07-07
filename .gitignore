@@ -135,3 +135,6 @@ dmypy.json
 
 sloop/datasets/SL_OSM_Dataset
 results/
+
+\#*
+.\#*

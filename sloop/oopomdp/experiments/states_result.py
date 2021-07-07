@@ -1,5 +1,6 @@
 from sciex import Experiment, Trial, Event, Result,\
     YamlResult, PklResult, PostProcessingResult
+import sloop
 import sloop.oopomdp.problem as mos
 from sloop.oopomdp.experiments.plotting import *
 from sloop.oopomdp.experiments.pd_utils import *
@@ -57,7 +58,7 @@ class StatesResult(PklResult):
         # First, figure out robot id
         robot_id = None
         for objid in states[0].object_states:
-            if isinstance(states[-1].object_states[objid], RobotState):
+            if states[-1].object_states[objid].objclass == "robot":
                 robot_id = objid
                 break
 
@@ -80,7 +81,7 @@ class StatesResult(PklResult):
         target_states = {}
         for objid in state.object_states:
             object_state = state.object_states[objid]
-            if isinstance(object_state, ObjectState):
+            if object_state.objclass != "robot":
                 if object_state.objclass == "target":
                     target_states[objid] = object_state
                     # need to invert y coordinate (for plotting)
@@ -197,7 +198,7 @@ class StatesResult(PklResult):
     @classmethod
     def _get_robot_id(cls, states):
         for objid in states[0].object_states:
-            if isinstance(states[0].object_states[objid], RobotState):
+            if states[0].object_states[objid].objclass == "robot":
                 return objid
 
     @classmethod

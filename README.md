@@ -31,20 +31,23 @@ The required python version is Python 3.6+.
 
 ## Download Dataset & Models <a name="dataset-and-models"/>
 There is one dataset and two models.
-The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
-You can download the dataset (<3MB) from [here](https://drive.google.com/file/d/1ccpGPsXYkJXLFnFLKrWxf7-cElDdZF-u/view?usp=sharing)
-or running the following command at the root directory of `sloop`:
-```
-bash download-osm-data.sh
-```
+* The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
+  Download the dataset (3.6MB) from  [here](https://drive.google.com/file/d/1ccpGPsXYkJXLFnFLKrWxf7-cElDdZF-u/view?usp=sharing), and place it under `sloop/datasets` and extract there.
 
+  Check out [this wiki page](https://github.com/h2r/sloop/wiki/Dataset-Documentation) for documentation about the dataset.
+
+* The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind) and a **left** model (for _left_ and _right_).
+Download the models (36MB) from [here](https://drive.google.com/file/d/1A7Ak00vljHSUjuyzh6DG6QdjPyBACKsV/view?usp=sharing)
+and place it under `sloop/oopomdp/experiments/resources`.
+
+## OpenStreetMap Demo <a name="openstreetmap-demo"/>
+You can now start a demo of spatial language object search on an OpenStreetMap.p
 
 
 ## Download and Process Results <a name="results"/>
 
 
 ## OpenStreetMap Demo <a name="openstreetmap-demo"/>
-
 
 
 ## AirSim Demo <a name="airsim-demo"/>

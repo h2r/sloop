@@ -19,6 +19,7 @@ The required python version is Python 3.6+.
    virtualenv -p $(which python3) venv/sloop
    source venv/sloop/bin/activate
    ```
+   For the last step, you can also do `source setup.bash` for convenience.
 
 2. Install the `sloop` package.
 
@@ -28,6 +29,11 @@ The required python version is Python 3.6+.
     ```
     Note that this will install a number of dependencies, including [pomdp-py](https://h2r.github.io/pomdp-py/html/) version 1.2.4.5. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
 
+3. Download spaCy model. For dependency parsing, we use the [`en_core_web_md` model](https://spacy.io/models/en#en_core_web_md) from spaCy.
+   You can download it by:
+   ```
+   python -m spacy download en_core_web_md
+   ```
 
 ## Download Dataset & Models <a name="dataset-and-models"/>
 There is one dataset and two models.
@@ -118,57 +124,75 @@ Note that because the experiment is random, the final result may differ slightly
 
 
 ## OpenStreetMap Demo <a name="openstreetmap-demo"/>
-You can now start a demo of spatial language object search on an OpenStreetMap.p
+You can now start a demo of spatial language object search on an OpenStreetMap by running
+```
+cd sloop/oopomdp/experiments
+python interface.py
+```
+This starts a terminal interface. We will walk through an example below.
+
+At start, the program loads several things:
+```
+$ python interface.py
+pygame 2.0.1 (SDL 2.0.14, Python 3.8.8)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Loading spacy model...
+Loading spatial keywords...
+Loading symbol to synonyms...
+```
+Then, it asks for a city name. You can enter any one from `austin, cleveland, denver, honolulu, washington_dc`.
+We will enter `austin`.
+```
+map name: austin
+Loading mapinfo
+```
+Then, it asks for number of objects (maximum 3). We will enter 1:
+```
+num objects, max 3 [2]: 1
+```
+Then, sensor range; The is the depth of the fan-shaped sensor with fixed field of view angle of 90 degrees.
+Sensor range of 3 refers to a range of 15m, 4 is 20m, 5 is 25m.
+```
+Sensor range [4]: 3
+```
+You can enter the true x, y location of the target object (a red car). Leave it blank for random.
+```
+x, y for object R [random]:
+```
+Then, a window pops up. The blue circle is the robot. Its starting location is random.
+
+![starting](docs/assets/starting.png)
+
+Then, You are asked to enter a spatial language description of the target's location.
+```
+Hint: the red car is by the lavaca street behind HiLo.
+```
+Now you can enter the method that essentially interprets the language as a prior belief over the target location,
+through one belief update step. The choices are `mixture`, `sloop`, `keyword`, `informed`, `uniform`.
+They correspond to SLOOP(m=4), SLOOP, MOS(keyword), informed, uniform in our experiments.
+```
+Prior type [mixture]:
+Loading ego_ctx_foref_angle model for right
+...
+```
+Then the program processes the language, and then the robot starts to search. You will see
+output similar to this
+```
+...
+Language: "the red car is by the lavaca street behind HiLo."
+MAP: austin
+{'entities': ['RedHonda', 'HiLo', 'LavacaSt'], 'relations': [('RedHonda', 'LavacaSt', None), ('RedHonda', 'HiLo', 'behind')], 'lang': 'the RedHonda is by LavacaSt behind HiLo.'}
+2021-07-07 13:49:44.438213 Event (Normal): Trial interface-mixture_mixture-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle | Step 1:  action: move-vw-TurnRight   reward: -11.000   cum_reward: -11.000   NumSims: 300   PlanTime: 0.61667
+2021-07-07 13:49:45.094287 Event (Normal): Trial interface-mixture_mixture-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle | Step 2:  action: move-vw-TurnRight   reward: -11.000   cum_reward: -22.000   NumSims: 300   PlanTime: 0.61652
+2021-07-07 13:49:45.781581 Event (Normal): Trial interface-mixture_mixture-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle | Step 3:  action: move-vw-TurnRight   reward: -11.000   cum_reward: -33.000   NumSims: 300   PlanTime: 0.64700
+2021-07-07 13:49:46.453592 Event (Normal): Trial interface-mixture_mixture-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle | Step 4:  action: move-vw-Forward   reward: -11.000   cum_reward: -44.000   NumSims: 300   PlanTime: 0.63122
+2021-07-07 13:49:47.136918 Event (Normal): Trial interface-mixture_mixture-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle | Step 5:  action: find   reward: 1000.000   cum_reward: 956.000   NumSims: 300   PlanTime: 0.65474
+2021-07-07 13:49:47.164189 Event (Normal): Trial %s | Task Finished!
+...
+```
+and the window now may look something like this:
+![searching](docs/assets/searching.png)
+
 
 
 ## AirSim Demo <a name="airsim-demo"/>
-
-
-
-
-
-
-
-
-
-
-## Downloading Data
-Run the following bash script from the root of the repository to download the SL-OSM (Spatial Language - Open Street Map) dataset in the correct location. This may take a minute or two as the file is around 4GB.
-
-```
-bash download-osm-data.sh
-```
-
-Next, we download the OO-POMDP resources. Again, running this script from the repo's root will allow you to place it in the right location.
-
-```
-bash download-oopomdp-data.sh
-```
-
-## Troubleshoot
-
-1. Test map_info_dataset.py
-    ```
-    TODO
-    ```
-
-2. Test parsing
-    ```
-    TODO
-    ```
-
-3. Test filepaths
-    ```
-    TODO
-    ```
-
-4. Test interface
-
-    Now, test the setup by running `interface.py`:
-    ```
-    cd spatial_foref/oopomdp/experiments
-    python interface.py
-    ```
-
-## System Parameters
-TODO: something about the extent of what the user can do with interface.py

@@ -161,7 +161,7 @@ x, y for object R [random]:
 ```
 Then, a window pops up. The blue circle is the robot. Its starting location is random.
 
-![start](docs/assets/start.png)
+<img src="docs/assets/start.png" width="400px">
 
 Then, You are asked to enter a spatial language description of the target's location.
 ```
@@ -191,7 +191,7 @@ MAP: austin
 ...
 ```
 and the window now may look something like this:
-![searching](docs/assets/searching.png)
+<img src="docs/assets/searching.png" width="400px">
 
 
 

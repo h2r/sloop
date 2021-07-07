@@ -57,7 +57,7 @@ There is one dataset and two models.
 
 
 * The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind) and a **left** model (for _left_ and _right_).
-Download the models from [here](https://drive.google.com/file/d/1A7Ak00vljHSUjuyzh6DG6QdjPyBACKsV/view?usp=sharing) (models.zip, 36MB)
+Download the models from [here](https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing) (models.zip, 42.4MB)
 and place it under `sloop/oopomdp/experiments/resources`.
 
   After extraction your directory structure should look like:
@@ -76,7 +76,7 @@ and place it under `sloop/oopomdp/experiments/resources`.
 
 ## Download and Process Results <a name="results"/>
 
-You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1K0MUru-x4mkD_k8rjHFB5x41Dy0ufESw/view?usp=sharing)
+You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1Sg3Or5tB5Gublmv2okcWA4-mjIIwS5Oo/view?usp=sharing)
 (all-joint-sloop.zip, 2.0GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:

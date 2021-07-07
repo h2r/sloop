@@ -161,7 +161,7 @@ x, y for object R [random]:
 ```
 Then, a window pops up. The blue circle is the robot. Its starting location is random.
 
-![starting](docs/assets/starting.png)
+![start](docs/assets/start.png)
 
 Then, You are asked to enter a spatial language description of the target's location.
 ```

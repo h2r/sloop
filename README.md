@@ -71,18 +71,50 @@ and place it under `sloop/oopomdp/experiments/resources`.
 ## Download and Process Results <a name="results"/>
 
 You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1K0MUru-x4mkD_k8rjHFB5x41Dy0ufESw/view?usp=sharing)
-(all-joint.zip, 1.92GB), and place it under `sloop/`
+(all-joint-sloop.zip, 1.92GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:
   ```
   / # repository root
     sloop/
         results/
-            all-joint/
+            all-joint-sloop/
                 langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
                 ...
   ```
 
+### To process results:
+1. `cd sloop/results/all-joint-sloop`
+2. `python gather_results.py`
+
+   Expected output:
+   ```
+   ...
+   Warning: <class 'sloop.oopomdp.experiments.reward_result.RewardsResult'> result file rewards.yaml not found in /media/kz-wd-ssd/repo/sloop/results/all-joint-sloop/langprior-austin_380_rule#based#ego>ctx>foref>angle-austin-laser:fov=90:min*range=1:max*range=4:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle
+   Collected results in langprior-austin_380_rule#based#ego>ctx>foref>angle-austin-laser:fov=90:min*range=1:max*range=4:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle
+   Collected results in langprior-cleveland_41_mixture#full#auto-cleveland-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle
+   Collected results in langprior-honolulu_19_informed#5-honolulu-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na
+   Collected results in langprior-honolulu_35_keyword-honolulu-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na
+   Collected results in langprior-washington,dc_33_keyword-washington,dc-laser:fov=90:min*range=1:max*range=4:angle*increment=0.5:occlusion*enabled=False-na
+   Warning: <class 'sloop.oopomdp.experiments.states_result.StatesResult'> result file states.pkl not found in /media/kz-wd-ssd/repo/sloop/results/all-joint-sloop/langprior-austin_380_rule#based#ego>ctx>foref>angle-austin-laser:fov=90:min*range=1:max*range=4:angle*increment=0.5:occlusion*enabled=False-ego>ctx>foref>angle
+   Collected results in langprior-cleveland_39_keyword#auto-cleveland-laser:fov=90:min*range=1:max*range=5:angle*increment=0.5:occlusion*enabled=False-na
+   Collected results in langprior-denver_29_informed#5-denver-laser:fov=90:min*range=1:max*range=4:angle*increment=0.5:occlusion*enabled=False-na
+   Collected results in langprio
+   ...
+   ```
+   This will generate many plots and results in png/csv/yaml/json formats.
+
+3. `python ../refine.py ./`
+   This will generate some more tables that are better organized and readable,
+   using the files generated from the last step as input.
+
+
+### To reproduce the experiment
+
+1. `cd sloop/results/all-joint-sloop`
+2. Notice there are several scripts `run_{1,2,3,4}.sh`. Each contains commands to run individual trials. You can break them up further if you want more parallelization (you can automatically break them up using the `generate_run_scripts.py` and increase the value for the variable `SPLIT`.
+3. Now, run the experiment by running `./run_#.sh` wher `#` is the index of the run file.
+Note that because the experiment is random, the final result may differ slightly from those reported in the paper.
 
 
 ## OpenStreetMap Demo <a name="openstreetmap-demo"/>

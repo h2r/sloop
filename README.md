@@ -1,5 +1,5 @@
 # sloop
-Code repository to reproduce Spatial Language Object-Oriented POMDPs from [Spatial Language Understanding for Object Search in Partially Observed City-scale Environments](h2r.github.io/docs).
+Code repository for [Spatial Language Understanding for Object Search in Partially Observed City-scale Environments](h2r.github.io/sloop/docs)
 
 * [Installation](#installation)
 * [Download Dataset & Models](#dataset-and-models)
@@ -206,6 +206,7 @@ Here is an example screenshot:
 
 
 ## Citation
+Paper link (coming soon)"
 ```
 @inproceedings{zheng2020spatial,
   title={Spatial Language Understanding for Object Search in Partially Observed Cityscale Environments},

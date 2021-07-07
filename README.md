@@ -1,6 +1,13 @@
 # sloop
 Code repository to reproduce Spatial Language Object-Oriented POMDPs from [Spatial Language Understanding for Object Search in Partially Observed City-scale Environments](h2r.github.io/docs).
 
+* [Installation](#installation)
+* [Download Dataset & Models](#dataset-and-models)
+* [Download Results & Reproduce](#results)
+* [OpenStreetMap Demo](#openstreetmap-demo)
+* [AirSim Demo](#airsim-demo)
+
+<a name="installation"/>
 ## Installation
 
 The required python version is Python 3.6+.
@@ -20,6 +27,35 @@ The required python version is Python 3.6+.
     pip install -e .
     ```
     Note that this will install a number of dependencies, including [pomdp-py](https://h2r.github.io/pomdp-py/html/) version 1.2.4.5. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
+
+<a name="dataset-and-models"/>
+## Download Dataset & Models
+There is one dataset and two models.
+The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
+You can download the dataset (<3MB) from [here](https://drive.google.com/file/d/1ccpGPsXYkJXLFnFLKrWxf7-cElDdZF-u/view?usp=sharing)
+or running the following command at the root directory of `sloop`:
+```
+bash download-osm-data.sh
+```
+
+
+<a name="results"/>
+## Download and Process Results
+
+
+<a name="openstreetmap-demo"/>
+## OpenStreetMap Demo
+
+
+<a name="airsim-demo"/>
+## AirSim Demo
+
+
+
+
+
+
+
 
 
 

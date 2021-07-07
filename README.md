@@ -7,8 +7,8 @@ Code repository to reproduce Spatial Language Object-Oriented POMDPs from [Spati
 * [OpenStreetMap Demo](#openstreetmap-demo)
 * [AirSim Demo](#airsim-demo)
 
-<a name="installation"/>
-## Installation
+
+## Installation <a name="installation"/>
 
 The required python version is Python 3.6+.
 
@@ -28,8 +28,8 @@ The required python version is Python 3.6+.
     ```
     Note that this will install a number of dependencies, including [pomdp-py](https://h2r.github.io/pomdp-py/html/) version 1.2.4.5. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
 
-<a name="dataset-and-models"/>
-## Download Dataset & Models
+
+## Download Dataset & Models <a name="dataset-and-models"/>
 There is one dataset and two models.
 The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
 You can download the dataset (<3MB) from [here](https://drive.google.com/file/d/1ccpGPsXYkJXLFnFLKrWxf7-cElDdZF-u/view?usp=sharing)
@@ -39,16 +39,15 @@ bash download-osm-data.sh
 ```
 
 
-<a name="results"/>
-## Download and Process Results
+
+## Download and Process Results <a name="results"/>
 
 
-<a name="openstreetmap-demo"/>
-## OpenStreetMap Demo
+## OpenStreetMap Demo <a name="openstreetmap-demo"/>
 
 
-<a name="airsim-demo"/>
-## AirSim Demo
+
+## AirSim Demo <a name="airsim-demo"/>
 
 
 

@@ -32,13 +32,41 @@ The required python version is Python 3.6+.
 ## Download Dataset & Models <a name="dataset-and-models"/>
 There is one dataset and two models.
 * The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
-  Download the dataset (3.6MB) from  [here](https://drive.google.com/file/d/1ccpGPsXYkJXLFnFLKrWxf7-cElDdZF-u/view?usp=sharing), and place it under `sloop/datasets` and extract there.
+  Download the dataset (3.6MB) from  [here](https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing), and place it under `sloop/datasets` and extract there.
 
-  Check out [this wiki page](https://github.com/h2r/sloop/wiki/Dataset-Documentation) for documentation about the dataset.
+  After extraction your directory structure should look like:
+  ```
+  / # repository root
+    sloop/
+        ...
+        datasets/
+          SL_OSM_Dataset/
+            amt/
+            frame_of_ref/
+            ...
+  ```
+
+  Check out [this wiki page](https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing) for documentation about the dataset.
+
+
 
 * The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind) and a **left** model (for _left_ and _right_).
 Download the models (36MB) from [here](https://drive.google.com/file/d/1A7Ak00vljHSUjuyzh6DG6QdjPyBACKsV/view?usp=sharing)
 and place it under `sloop/oopomdp/experiments/resources`.
+
+  After extraction your directory structure should look like:
+  ```
+  / # repository root
+    sloop/
+        ...
+        oopomdp/
+            experiments/
+                resources/
+                    models/
+                        iter2_ego-ctx-foref-angle:front:austin
+                        ...
+  ```
+
 
 ## OpenStreetMap Demo <a name="openstreetmap-demo"/>
 You can now start a demo of spatial language object search on an OpenStreetMap.p

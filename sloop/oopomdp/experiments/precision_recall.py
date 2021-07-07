@@ -4,8 +4,8 @@
 import os
 import json
 import spacy
-from spatial_lang.parsing.parser import parse, match_spatial_keyword
-from spatial_lang.data.constants import FILEPATHS
+from sloop.parsing.parser import parse, match_spatial_keyword
+from sloop.data.constants import FILEPATHS
 from sloop.models.heuristics.rules import BASIC_RULES
 
 

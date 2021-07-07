@@ -6,7 +6,7 @@ import time
 import yaml
 import pandas as pd
 
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 from sloop.utils import json_safe, smart_json_hook
 from sloop.models.nn.all_models import *
 from sloop.datasets.dataloader import FdMapName, SpatialRelationDataset

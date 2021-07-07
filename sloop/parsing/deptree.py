@@ -1,5 +1,4 @@
-from allennlp.predictors.predictor import Predictor
-import spatial_lang.parsing.spacy_utils as sputils
+from . import spacy_utils as sputils
 import spacy
 
 class DependencyTreeNode:
@@ -227,56 +226,3 @@ class DependencyTree:
                     ch_key += "-%d" % count
                 node.children[ch_key] = ch_node
         return node
-
-# ------------ TESTS ------------
-import os
-
-def unittest_deptree(sentence, predictor):
-    print("UNITTEST building dependency tree:")
-    print("Parsing sentence: %s" % sentence)
-    deptree = DependencyTree.build(sentence, predictor)
-    print("Printing dependency tree:")
-    deptree.pprint()
-    print("----\n")
-    return deptree
-
-def unittest_path(predictor):
-    sentence = "The car is behind the building"
-    print("UNITTEST path between nodes in dependency tree:")
-    print("Parsing sentence: %s" % sentence)
-    deptree = DependencyTree.build(sentence, predictor)
-    print("Printing dependency tree:")
-    deptree.pprint()
-    # Obtain a path from car to building
-    node_car = deptree.lookup("content", "car")
-    node_building = deptree.lookup("content", "building")
-    path = deptree.path_between(node_car, node_building)
-    print("Path between\n  %s\nand\n  %s:" % (node_car, node_building))
-    for i, node in enumerate(path):
-        if i != 0 and i != len(path)-1:
-            print("%d. *%s" % (i+1, node))
-        else:
-            print("%d. %s" % (i+1, node))
-
-
-def main():
-    BIAFF_MODEL_PATH = "./thirdparty/biaffine-dependency-parser-ptb-2018.08.23.tar.gz"
-    if not os.path.exists(BIAFF_MODEL_PATH):
-        print("You haven't downloaded the dependency parser model."
-              "Check out models.txt under thirdparty/ and use `wget`"
-              "to download that model")
-        return
-
-    predictor = Predictor.from_path(BIAFF_MODEL_PATH)
-    unittest_deptree("The car is behind building, next to the tree", predictor)
-    unittest_deptree("The car is behind building and on 30 meters left of the tree", predictor)
-    unittest_deptree("The car is off the side of the street and near the building", predictor)
-    unittest_deptree("The car behind building", predictor)
-    unittest_deptree("The car behind building next to tree", predictor)
-    unittest_deptree("The car was two blocks away from the building", predictor)
-
-    unittest_path(predictor)
-
-if __name__ == "__main__":
-    from pprint import pprint
-    main()

@@ -1,4 +1,4 @@
-from spatial_lang.graph.ego import *
+from ..parsing.graph.ego import *
 import math
 
 nyc_specs = {
@@ -18,32 +18,32 @@ nyc_specs = {
         "coords": [17, 16],
         "divisions": 8,
         "color": 'red',
-        "target": False            
+        "target": False
     },
     "Duane_Reade": {
         "coords": [6, 17],
         "divisions": 8,
         "color": 'red',
-        "target": False                        
+        "target": False
     },
     "Starbucks": {
         "coords": [7, 14],
         "divisions": 8,
         "color": 'red',
-        "target": False                        
+        "target": False
     },
     "Second_Chance": {
         "coords": [12, 7],
         "divisions": 8,
         "color": 'red',
-        "target": False                        
+        "target": False
     },
     "Dunkin_Donuts": {
         "coords": [7, 5],
         "divisions": 8,
         "color": 'red',
-        "target": False                        
-    }        
+        "target": False
+    }
 }
 
 
@@ -52,7 +52,7 @@ def nyc_hardcoded(objects):
     The car is on Lexington between Starbucks and Duane.
 
     The landmarks here are Lexington, Starbucks, and Duane.
-    
+
     objects (set) a set of object ids"""
 
     lexington = EgoGraph("Lexington_Ave",
@@ -76,15 +76,15 @@ def nyc_hardcoded(objects):
     }
     lexington.node_at(1).set_lh(list(objects)[0], 100)
     lexington.node_at(3).set_lh(list(objects)[0], 100)
-    
+
     starbucks_grounding = {
         -1: tuple(nyc_specs[starbucks.name]["coords"]),  # center coordinates
         "phase_shift": 30*math.pi / 180.0
     }
     starbucks.node_at(1).set_lh(list(objects)[0], 200)
     starbucks.node_at(2).set_lh(list(objects)[0], 200)
-    starbucks.node_at(3).set_lh(list(objects)[0], 200)    
-    
+    starbucks.node_at(3).set_lh(list(objects)[0], 200)
+
     duane_grounding = {
         -1: tuple(nyc_specs[duane.name]["coords"]),  # center coordinates
         "phase_shift": 30*math.pi / 180.0
@@ -92,11 +92,8 @@ def nyc_hardcoded(objects):
     duane.node_at(5).set_lh(list(objects)[0], 200)
     duane.node_at(6).set_lh(list(objects)[0], 200)
     duane.node_at(7).set_lh(list(objects)[0], 200)
-    
+
     grounding_specs = [lexington_grounding,
                        starbucks_grounding,
                        duane_grounding]
     return eg_list, grounding_specs
-    
-
-        

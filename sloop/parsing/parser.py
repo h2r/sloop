@@ -4,12 +4,12 @@ import argparse
 import json
 import spacy
 from pprint import pprint
-import spatial_lang.parsing.spacy_utils as sputils
-from spatial_lang.graph.spatial import *
 import os
 import re
-from spatial_lang.parsing.deptree import *
 import time
+from . import spacy_utils as sputils
+from .graph.spatial import *
+from .deptree import *
 
 def parse(lang, map_name,
           kwfile=None,
@@ -18,7 +18,7 @@ def parse(lang, map_name,
           verbose_level=0):
     """Parses the language knowing that there are keywords
     given by the `kwfile` and the keywords dictionary.
-    
+
     spacy_model is the result of `spacy.load`. Supply this
     to avoid repeatedly loading the model.
 
@@ -37,7 +37,7 @@ def parse(lang, map_name,
             all_keywords = json.load(f)
     else:
         assert len(all_keywords) > 0, "Requires either kwfile or keywords"
-        
+
     # Parse the language with spacy and get all the noun phrases.
     # Filter based on distance to keywords
     if spacy_model is None:
@@ -66,7 +66,7 @@ def parse(lang, map_name,
     # Get doc for the new language
     doc_new = spacy_model(lang_new)
     subdocs_new = _break_down(doc_new)
-    
+
     using_new_doc = len(subdocs_new) > len(subdocs_original)
     if using_new_doc:
         subdocs = subdocs_new
@@ -138,7 +138,7 @@ def _break_down(doc):
         for doc in docs:
             splitted_docs.extend(_break_down(doc))
         return splitted_docs
-    
+
     nsubjs = []
     for token in doc:
         if token.dep_.lower().startswith("nsubj"):
@@ -177,7 +177,7 @@ def _simi_thres(catg, all_keywords, default=0.8):
         return default
     else:
         return all_keywords["_thresholds_"][catg]
-    
+
 def _substitute_keywords(doc, all_keywords, spacy_model, map_name, verbose_level=0):
     """Given a spacy Doc, and specification of keywords (all_keywords),
     return a string that is the language in the given doc with synonyms of keywords
@@ -203,13 +203,13 @@ def _substitute_keywords(doc, all_keywords, spacy_model, map_name, verbose_level
         if verbose_level > 0:
             print("Swapping:")
             print("  before swap: \"%s\"" % lang_original)
-            print("  after swap: \"%s\"" % doc.text)            
+            print("  after swap: \"%s\"" % doc.text)
 
     # Match objects, landmarks, relations
     matched_tokens = set({})
 
     start = time.time()
-    
+
     # match objects
     obj_matches = []
     for noun_span in sputils.noun_chunks(doc):
@@ -227,7 +227,7 @@ def _substitute_keywords(doc, all_keywords, spacy_model, map_name, verbose_level
     if verbose_level > 1:
         print("[TIME] Object matching took %.3fs" % (time.time() - start))
         start = time.time()
-        
+
     # match landmarks
     landmark_matches = []
     for noun_span in sputils.noun_chunks(doc):
@@ -238,7 +238,7 @@ def _substitute_keywords(doc, all_keywords, spacy_model, map_name, verbose_level
             matched_tokens.update(list(noun_span))
     if verbose_level > 1:
         print("[TIME] Landmark matching took %.3fs" % (time.time() - start))
-        start = time.time()            
+        start = time.time()
 
     # match relational keywords.
     rel_matches = []
@@ -261,17 +261,17 @@ def _substitute_keywords(doc, all_keywords, spacy_model, map_name, verbose_level
     if verbose_level > 1:
         print("[TIME] Relation matching took %.3fs" % (time.time() - start))
         start = time.time()
-        
+
     if verbose_level > 1:
         print("Original: \"%s\"" % lang_original)
-        print("Parsing: \"%s\"" % doc.text)        
+        print("Parsing: \"%s\"" % doc.text)
         print("Matched objects:")
         print(obj_matches)
         print("Matched Landmarks:")
         pprint(landmark_matches)
         print("Matched Relational Keywords:")
-        pprint(rel_matches)        
-        
+        pprint(rel_matches)
+
     # Replace noun phrases in the original sentence by single symbol.
     lang_new = doc.text
     for obj_symbol, noun_span in obj_matches:
@@ -323,7 +323,7 @@ def _find_paths(deptree, obj_matches, landmark_matches, verbose_level=0):
 
 def _build_spatial_graph(paths, lang_new, obj_matches, landmark_matches, verbose_level=0):
     """
-    Given paths (output of _find_paths), the language (lang_new, it is the 
+    Given paths (output of _find_paths), the language (lang_new, it is the
     substituted version of the original language), and the matches,
     return a SpatialGraph
     """
@@ -348,7 +348,7 @@ def _build_spatial_graph(paths, lang_new, obj_matches, landmark_matches, verbose
             dct["relations"].append((obj_symbol, landmark_symbol, spatial_relation_label))
     if verbose_level > 1:
         print("[TIME] Creating SpatialGraph %.3fs" % (time.time() - start))
-        start = time.time()        
+        start = time.time()
     return SpatialGraph.from_dict(dct)
 
 
@@ -370,7 +370,7 @@ def _match(noun_token, keywords,
                 assert isinstance(synonym, spacy.tokens.Doc),\
                     "Expecting the synonym %s for keyword matching to be a spacy Doc."\
                     % str(synonym)
-                
+
             similarity = noun_token.similarity(synonym)
             if similarity > similarity_thres:
                 similarity_scores[item] = max(similarity_scores[item], similarity)
@@ -402,7 +402,7 @@ def match_spatial_keyword(rel_phrase,
         return re.sub("[\s|\n]+", " ", sent)
 
     if spacy_model is None:
-        spacy_model = spacy.load("en_core_web_sm")    
+        spacy_model = spacy.load("en_core_web_sm")
     keyword_docs = {kw: spacy_model(kw) for kw in spatial_keywords}
     # remove unnecessary words
     rel_phrase = _fix_whitespace(rel_phrase.replace(" of ", " "))
@@ -410,10 +410,10 @@ def match_spatial_keyword(rel_phrase,
     rel_phrase = _fix_whitespace(rel_phrase.replace("right next to", "next"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right behind", "behind"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right above", "above"))
-    rel_phrase = _fix_whitespace(rel_phrase.replace("right below", "below"))    
+    rel_phrase = _fix_whitespace(rel_phrase.replace("right below", "below"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right at", "at"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right in", "in"))
-    rel_phrase = _fix_whitespace(rel_phrase.replace("right by", "by"))    
+    rel_phrase = _fix_whitespace(rel_phrase.replace("right by", "by"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right on", "on"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("right between", "between"))
     rel_phrase = _fix_whitespace(rel_phrase.replace("with ", " "))
@@ -467,10 +467,10 @@ def main():
     parser.add_argument("lang", type=str,
                         help="The sentence you want to parse")
     parser.add_argument("map_name", type=str,
-                        help="map name (e.g. cleveland)")        
+                        help="map name (e.g. cleveland)")
     parser.add_argument("kwfile", type=str,
                         help="Path to JSON a file with definition of keywords"\
-                        "(e.g. landmarks, objects). Normally at spatial_lang/data/language/")
+                        "(e.g. landmarks, objects). Typically the symbol_to_synonyms.json file.")
     args = parser.parse_args()
     print("Loading spacy model...")
     spacy_model = spacy.load("en_core_web_md")
@@ -478,8 +478,7 @@ def main():
     sg = parse(args.lang, args.map_name, args.kwfile,
                spacy_model=spacy_model, verbose_level=1)
     pprint(sg.to_dict())
-    
+
 
 if __name__ == "__main__":
     main()
-        

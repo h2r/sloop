@@ -1,6 +1,6 @@
 import os, sys
 os.environ["SPACY_WARNING_IGNORE"] = "W008"
-from spatial_lang.parsing.parser import parse, match_spatial_keyword
+from sloop.parsing.parser import parse, match_spatial_keyword
 from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
 from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 from sloop.models.heuristics.model import KeywordModel, RuleBasedModel, GaussianPointModel, MixtureSLUModel

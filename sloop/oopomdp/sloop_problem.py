@@ -5,8 +5,8 @@ import sloop.oopomdp.lang2obs as l2o
 from sloop.oopomdp.landmark_specs import nyc_hardcoded
 from sloop.oopomdp.env.env import *
 from sloop.oopomdp.example_worlds import *
-import spatial_lang.graph.util as util
-from spatial_lang.data.constants import FILEPATHS
+import sloop.parsing.graph.util as util
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
 import numpy as np
 import cv2
 

@@ -1,6 +1,6 @@
 # Parses all languages into json files.True
 
-from spatial_lang.parsing.parser import *
+from .parser import *
 import csv
 import argparse
 import os

@@ -4,7 +4,7 @@ import pickle
 from sloop.oopomdp.experiments.experiment_foref_langprior import\
     create_world, make_trial, get_prior, obj_letter_map, obj_id_map
 from sloop.oopomdp.experiments.interface import load_files
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.data.map_info_dicts.map_info_dataset import MapInfoDataset
 from sloop.models.heuristics.model import KeywordModel, GaussianPointModel
 from sloop.oopomdp.experiments.constants import *
 from sloop.oopomdp.experiments.trial import SloopPriorTrial

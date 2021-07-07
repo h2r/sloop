@@ -54,7 +54,7 @@ def run_with_hint(map_name, worldstr, hint, mapinfo,
                                     map_name, mapinfo, **kwargs)
         model_name = "keyword"
 
-    elif prior_type == "rule" or prior_type == "mixture":
+    elif prior_type == "sloop" or prior_type == "mixture":
         basic_rules = BASIC_RULES
         relative_rules = {}
         relative_predicates = {"front", "behind", "left", "right"}
@@ -85,7 +85,7 @@ def run_with_hint(map_name, worldstr, hint, mapinfo,
         print("All Rules (%s):" % (model_name))
         pprint(list(rules.keys()))
 
-        if prior_type == "rule":
+        if prior_type == "sloop":
             model = RuleBasedModel(rules)
         else:
             model = MixtureSLUModel(rules)

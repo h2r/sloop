@@ -4,10 +4,10 @@
 
 import pomdp_py
 from .problem import *
-from spatial_lang.parsing.parser import *
-from spatial_lang.graph.ego import *
-from spatial_lang.graph.spatial import *
-import spatial_lang.graph.util as util
+from ..parsing.parser import *
+from ..parsing.graph.ego import *
+from ..parsing.graph.spatial import *
+from ..parsing.graph import util
 
 
 def splang_to_spgraph(lang):
@@ -16,8 +16,8 @@ def splang_to_spgraph(lang):
     Output: spatial_graph
     """
     raise NotImplementedError("This is the NLP problem Language->SpatialGraph")
-    
-    
+
+
 def spgraph_to_egos(sg, grid_map): # result of parsing the language
     """
     Input: sg (SpatialGraph)
@@ -92,12 +92,12 @@ def compute_score(x, y, objid, geg_list, dist_factor=0.1):
         score += lh / (dist_factor * util.euclidean_dist(
             (x,y), geg.coords_by_viewnum(closest_viewnum)))
     return score
-        
+
 
 def splang_matrix_belief_update(oo_spl_obsrv, agent):
     """Updates agent belief as a matrix operation"""
     assert isinstance(agent.belief, pomdp_py.OOBelief),\
-        "Agent should have OOBelief."    
+        "Agent should have OOBelief."
     for objid in agent.belief.object_beliefs:
         if objid == agent.robot_id:
             continue
@@ -115,4 +115,3 @@ def splang_matrix_belief_update(oo_spl_obsrv, agent):
             new_histogram[state] /= total_prob
         new_belief_obj = pomdp_py.Histogram(new_histogram)
         agent.belief.set_object_belief(objid, new_belief_obj)
-        

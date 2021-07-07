@@ -8,8 +8,8 @@ import argparse
 from sloop.utils import print_info, print_error, print_warning, print_success, \
     print_info_bold, print_error_bold, print_warning_bold, print_success_bold
 import json
-from spatial_lang.data.constants import FILEPATHS
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 import random
 import copy
 from difflib import SequenceMatcher

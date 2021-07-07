@@ -1,7 +1,7 @@
 # Basically returns the annotated frame of reference
 from sloop.datasets.dataloader import *
 from sloop.datasets.utils import *
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 from sloop.models.nn.loss_function import clamp_angle
 from sloop.models.nn.metrics import mean_ci_normal
 import math

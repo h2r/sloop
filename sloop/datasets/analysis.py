@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 import json
 from datetime import datetime as dt
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 from sloop.datasets.dataloader import *
 from sloop.datasets.utils import *
 from sloop.models.nn.plotting import *

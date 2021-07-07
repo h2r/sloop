@@ -77,7 +77,7 @@ and place it under `sloop/oopomdp/experiments/resources`.
 ## Download and Process Results <a name="results"/>
 
 You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1K0MUru-x4mkD_k8rjHFB5x41Dy0ufESw/view?usp=sharing)
-(all-joint-sloop.zip, 1.92GB), and place it under `sloop/`
+(all-joint-sloop.zip, 2.0GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:
   ```
@@ -196,3 +196,22 @@ and the window now may look something like this:
 
 
 ## AirSim Demo <a name="airsim-demo"/>
+
+This requires installation of Unreal Engine 4 and AirSim, following AirSim's documentation. ([Linux](https://microsoft.github.io/AirSim/build_linux/), [Windows](https://microsoft.github.io/AirSim/build_windows/)),
+as well as downloading assets for the UE4 environment e.g. [Neighborhoods](https://www.unrealengine.com/marketplace/en-US/product/modular-neighborhood-pack) and [Urban City](https://www.unrealengine.com/marketplace/en-US/product/urban-city).
+Detailed instructions can be found in [this wiki page](https://github.com/h2r/sloop/wiki/Running-SLOOP-object-search-on-AirSIm-UE4).
+
+Here is an example screenshot:
+![airsim view](https://i.imgur.com/djFTbVu.png)
+
+
+## Citation
+```
+@inproceedings{zheng2020spatial,
+  title={Spatial Language Understanding for Object Search in Partially Observed Cityscale Environments},
+  author={Zheng, Kaiyu and Bayazit, Deniz and Mathew, Rebecca and Pavlick, Ellie and Tellex, Stefanie},
+  booktitle={2021 IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)},
+  year={2021},
+  organization={IEEE}
+}
+```

@@ -10,10 +10,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.base_model import BaseModel
+from sloop.datasets.dataloader import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.base_model import BaseModel
 
 L1 = 64
 L2 = 64
@@ -61,7 +61,7 @@ class PointAbsolutePolarModel(BaseModel):
                  antonym_as_neg=True, **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         data_ops = cls.compute_ops(mapinfo, augment_radius=augment_radius,
                                    augment_dfactor=augment_dfactor,
                                    fill_neg=fill_neg, rotate_amount=rotate_amount,
@@ -71,15 +71,15 @@ class PointAbsolutePolarModel(BaseModel):
                   (FdObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdObjLocPolar, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdAbsLmkLoc, (mapinfo,), {"desired_dims": desired_dims}),
-                  (FdAbsLmkLocPolar, (mapinfo,), {"desired_dims": desired_dims}),                  
+                  (FdAbsLmkLocPolar, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
-                                               data_ops=data_ops)        
+                                               data_ops=data_ops)
         _info_dataset = {keyword: {"fields": fields, "ops": data_ops}}
-        
+
         if antonym_as_neg:
             if keyword == "front":
                 antonym = "behind"
@@ -117,7 +117,7 @@ class PointAbsolutePolarModel(BaseModel):
             inpt = torch.cat([data_sample[FdObjLoc.NAME].float(),
                               data_sample[FdObjLocPolar.NAME].float(),
                               data_sample[FdAbsObjLoc.NAME].float(),
-                              data_sample[FdAbsObjLocPolar.NAME].float(),                              
+                              data_sample[FdAbsObjLocPolar.NAME].float(),
                               data_sample[FdAbsLmkLoc.NAME].float(),
                               data_sample[FdAbsLmkLocPolar.NAME].float()])
         else:
@@ -127,7 +127,7 @@ class PointAbsolutePolarModel(BaseModel):
             lmctr = mapinfo.center_of_mass(landmark_symbol, data_sample[FdMapName.NAME])
             x, y = abs_obj_loc
             rel_x, rel_y = np.array([x-lmctr[0], y-lmctr[1]])
-            
+
             rel_obj_loc = dataset.normalize(FdObjLoc.NAME,
                                             np.array([rel_x, rel_y]))
             rel_obj_loc_polar = dataset.normalize(FdObjLocPolar.NAME,
@@ -162,6 +162,4 @@ class PointAbsolutePolarModel(BaseModel):
     def Plot(cls, keyword, model, dataset, device, save_dirpath,
              suffix="group", **kwargs):
         cls.Plot_OutputPr(keyword, model, dataset, device, save_dirpath,
-                          suffix=suffix, **kwargs)        
-
-    
+                          suffix=suffix, **kwargs)

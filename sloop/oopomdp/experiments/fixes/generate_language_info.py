@@ -6,16 +6,16 @@ import os
 import yaml
 import matplotlib.pyplot as plt
 import numpy as np
-from spatial_foref.oopomdp.experiments.lang_result import LangResult
+from sloop.oopomdp.experiments.lang_result import LangResult
 
 def main():
     parser = argparse.ArgumentParser(description="Remake trial script splits.")
     parser.add_argument("exp_path", type=str, help="Path to experiments")
     args = parser.parse_args()
-    
+
     exp_path = args.exp_path
     if args.exp_path.endswith("/"):
-        exp_path = os.path.dirname(args.exp_path)    
+        exp_path = os.path.dirname(args.exp_path)
 
     for name in os.listdir(exp_path):
         if not os.path.isdir(os.path.join(exp_path, name)):

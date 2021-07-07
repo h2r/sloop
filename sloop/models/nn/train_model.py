@@ -7,9 +7,9 @@ import yaml
 import pandas as pd
 
 from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
-from spatial_foref.utils import json_safe, smart_json_hook
-from spatial_foref.models.nn.all_models import *
-from spatial_foref.datasets.dataloader import FdMapName, SpatialRelationDataset
+from sloop.utils import json_safe, smart_json_hook
+from sloop.models.nn.all_models import *
+from sloop.datasets.dataloader import FdMapName, SpatialRelationDataset
 
 import argparse
 import matplotlib.pyplot as plt

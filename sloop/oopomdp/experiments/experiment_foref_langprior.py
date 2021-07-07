@@ -1,13 +1,13 @@
 import os, sys
 os.environ["SPACY_WARNING_IGNORE"] = "W008"
 from spatial_lang.parsing.parser import parse, match_spatial_keyword
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
-from spatial_foref.models.heuristics.model import KeywordModel, RuleBasedModel, GaussianPointModel, MixtureSLUModel
-from spatial_foref.models.heuristics.rules import BASIC_RULES, ForefRule
-from spatial_foref.oopomdp.env.env import *
-from spatial_foref.oopomdp.experiments.trial import *
-from spatial_foref.oopomdp.experiments.constants import *
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.models.heuristics.model import KeywordModel, RuleBasedModel, GaussianPointModel, MixtureSLUModel
+from sloop.models.heuristics.rules import BASIC_RULES, ForefRule
+from sloop.oopomdp.env.env import *
+from sloop.oopomdp.experiments.trial import *
+from sloop.oopomdp.experiments.constants import *
 import spacy
 import json
 import copy

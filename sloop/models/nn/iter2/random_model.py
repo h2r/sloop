@@ -4,15 +4,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.utils import json_safe
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.models.nn.loss_function import FoRefAngleLoss, clamp_angle
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.heuristics.rules import ForefRule
-from spatial_foref.models.heuristics.model import evaluate as rule_based_evaluate
-from spatial_foref.models.heuristics.model import RuleBasedModel
-from spatial_foref.models.nn.iter2.common import get_common_data
+from sloop.utils import json_safe
+from sloop.models.nn.base_model import BaseModel
+from sloop.models.nn.loss_function import FoRefAngleLoss, clamp_angle
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.heuristics.rules import ForefRule
+from sloop.models.heuristics.model import evaluate as rule_based_evaluate
+from sloop.models.heuristics.model import RuleBasedModel
+from sloop.models.nn.iter2.common import get_common_data
 import numpy as np
 import json
 from pprint import pprint
@@ -45,13 +45,13 @@ class RandomModel(BaseModel):
     def Eval(cls, keyword, model, dataset, device, save_dirpath,
              suffix="group", **kwargs):
         pass
-            
+
     @classmethod
     def Plot(cls, keyword, model, dataset, device,
-             save_dirpath, suffix="plot", **kwargs):    
+             save_dirpath, suffix="plot", **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in dataset.map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         batch_size = 1
         data_loader = DataLoader(dataset=dataset,
                                  batch_size=batch_size,
@@ -72,7 +72,7 @@ class RandomModel(BaseModel):
             os.makedirs(os.path.join(plots_dir))
         metrics_dir = os.path.join(save_dirpath, "metrics", suffix)
         if not os.path.exists(os.path.join(metrics_dir)):
-            os.makedirs(os.path.join(metrics_dir))            
+            os.makedirs(os.path.join(metrics_dir))
 
         # Saving the metrics
         results = {"true_pred_angle_diff": [],
@@ -84,7 +84,7 @@ class RandomModel(BaseModel):
                                    prediction_angle])
             foref_pred = read_foref(dataset, foref_pred)
             foref_pred[2] = prediction_angle  # the prediction angle here is NOT normalized already.
-            
+
             foref_true = read_foref(dataset, torch.cat([batch[FdFoRefOrigin.NAME],
                                                         batch[FdFoRefAngle.NAME]], 1)[0])
             # Record results
@@ -117,15 +117,15 @@ class RandomModel(BaseModel):
         # Plot 1d plots -- These are summary plots
         plot_1d(results["true_pred_angle_diff"], "Angle differences between true and prdicted FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-true_pred_angle_diff.png" % (keyword, suffix)))
-        plt.clf()        
-        
+        plt.clf()
+
         plot_1d(results["true_pred_origin_diff"], "Distances between true and predicted FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-true_pred_origin_diff.png" % (keyword, suffix)))
         plt.clf()
 
         titles = {
             "true_pred_angle_diff": "Angle differences between true and predicted FoRs",
-            "true_pred_origin_diff": "Distances between true and predicted FoRs",            
+            "true_pred_origin_diff": "Distances between true and predicted FoRs",
         }
 
         # Save metrics
@@ -136,11 +136,11 @@ class RandomModel(BaseModel):
             plot_1d(results[catg], titles[catg])
             plt.savefig(os.path.join(plots_dir, "%s-%s-%s.png" % (keyword, suffix, catg)))
             plt.clf()
-            
+
             mean, ci = mean_ci_normal(results[catg], confidence_interval=0.95)
             results["__summary__"][catg] = {
                 "mean": mean,
-                "ci-95": ci                
+                "ci-95": ci
             }
         with open(os.path.join(metrics_dir, "foref_deviation.json"), "w") as f:
             json.dump(json_safe(results), f, indent=4, sort_keys=True)
@@ -148,6 +148,3 @@ class RandomModel(BaseModel):
         print("Summary results:")
         pprint(results["__summary__"])
         plt.close()
-
-    
-        

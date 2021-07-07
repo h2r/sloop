@@ -1,12 +1,12 @@
 from spatial_lang.parsing.parser import parse
 from spatial_lang.parsing.parser import parse, match_spatial_keyword
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
-from spatial_foref.models.heuristics.rules import *
-from spatial_foref.utils import smart_json_hook
-from spatial_foref.datasets.utils import make_context_img
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.metrics import *
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.models.heuristics.rules import *
+from sloop.utils import smart_json_hook
+from sloop.datasets.utils import make_context_img
+from sloop.datasets.dataloader import *
+from sloop.models.nn.metrics import *
 import json
 import spacy
 import os, sys
@@ -498,8 +498,8 @@ def evaluate(model, test_samples, mapinfo, keyword,
 
 def unittest():
     import matplotlib.pyplot as plt
-    from spatial_foref.models.heuristics.test import plot_belief
-    from spatial_foref.models.nn.plotting import plot_foref
+    from sloop.models.heuristics.test import plot_belief
+    from sloop.models.nn.plotting import plot_foref
 
     print("Loading synonyms...")
     with open(FILEPATHS["relation_keywords"]) as f:
@@ -513,7 +513,7 @@ def unittest():
     print(mapinfo.center_of_mass(landmark))
 
     # Load a frame of reference prediction model
-    trial_path = "/home/kaiyuzh/repo/spatial-foref/spatial_foref/"\
+    trial_path = "/home/kaiyuzh/repo/spatial-foref/sloop/"\
         "models/nn/logs/iter_1/context_foref/front/20200715092519288/"
     path_to_foref_model =\
         os.path.join(trial_path, "front_model.pt")

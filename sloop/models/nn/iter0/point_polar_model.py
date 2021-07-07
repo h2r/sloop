@@ -10,11 +10,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.datasets.utils import *
+from sloop.datasets.dataloader import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.base_model import BaseModel
+from sloop.datasets.utils import *
 
 L1 = 48
 L2 = 48
@@ -58,7 +58,7 @@ class PointPolarModel(BaseModel):
                  antonym_as_neg=True, **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         data_ops = cls.compute_ops(mapinfo, augment_radius=augment_radius,
                                    augment_dfactor=augment_dfactor,
                                    fill_neg=fill_neg, rotate_amount=rotate_amount,
@@ -67,13 +67,13 @@ class PointPolarModel(BaseModel):
                   (FdObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdObjLocPolar, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
-                                               data_ops=data_ops)        
+                                               data_ops=data_ops)
         _info_dataset = {keyword: {"fields": fields, "ops": data_ops}}
-        
+
         if antonym_as_neg:
             if keyword == "front":
                 antonym = "behind"
@@ -119,7 +119,7 @@ class PointPolarModel(BaseModel):
             rel_obj_loc = np.array([x-lmctr[0], y-lmctr[1]])
             rel_obj_loc_polar = to_polar(rel_obj_loc)
             rel_obj_loc = dataset.normalize(FdObjLoc.NAME, rel_obj_loc)
-            rel_obj_loc_polar = dataset.normalize(FdObjLocPolar.NAME, rel_obj_loc)            
+            rel_obj_loc_polar = dataset.normalize(FdObjLocPolar.NAME, rel_obj_loc)
             inpt = torch.cat([torch.tensor(rel_obj_loc).float(),
                               torch.tensor(rel_obj_loc_polar).float()])
         if as_batch:
@@ -138,6 +138,4 @@ class PointPolarModel(BaseModel):
     def Plot(cls, keyword, model, dataset, device, save_dirpath,
              suffix="group", **kwargs):
         cls.Plot_OutputPr(keyword, model, dataset, device, save_dirpath,
-                          suffix=suffix, **kwargs)        
-
-    
+                          suffix=suffix, **kwargs)

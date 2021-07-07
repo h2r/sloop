@@ -3,17 +3,17 @@ import torch
 import os, sys
 os.environ["SPACY_WARNING_IGNORE"] = "W008"
 
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 
-from spatial_foref.oopomdp.experiments.experiment_foref_langprior import\
+from sloop.oopomdp.experiments.experiment_foref_langprior import\
     create_world, make_trial, get_prior, obj_letter_map, obj_id_map
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.oopomdp.env.env import interpret as interpret_env
-from spatial_foref.oopomdp.env.env import make_laser_sensor, equip_sensors
-from spatial_foref.oopomdp.models.transition_model import RobotTransitionModel
-from spatial_foref.models.heuristics.rules import BASIC_RULES, ForefRule
-from spatial_foref.models.heuristics.model import KeywordModel, RuleBasedModel, MixtureSLUModel
+import sloop.oopomdp.problem as mos
+from sloop.oopomdp.env.env import interpret as interpret_env
+from sloop.oopomdp.env.env import make_laser_sensor, equip_sensors
+from sloop.oopomdp.models.transition_model import RobotTransitionModel
+from sloop.models.heuristics.rules import BASIC_RULES, ForefRule
+from sloop.models.heuristics.model import KeywordModel, RuleBasedModel, MixtureSLUModel
 import spacy
 import json
 import random

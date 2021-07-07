@@ -4,13 +4,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.heuristics.rules import ForefRule
-from spatial_foref.models.heuristics.model import evaluate as rule_based_evaluate
-from spatial_foref.models.heuristics.model import RuleBasedModel
+from sloop.models.nn.base_model import BaseModel
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.heuristics.rules import ForefRule
+from sloop.models.heuristics.model import evaluate as rule_based_evaluate
+from sloop.models.heuristics.model import RuleBasedModel
 import numpy as np
 import json
 from pprint import pprint
@@ -60,7 +60,7 @@ class PointForefModel(BaseModel):
                  antonym_as_neg=True, **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         data_ops = cls.compute_ops(mapinfo, keyword=keyword,
                                    augment_radius=augment_radius,
                                    augment_dfactor=augment_dfactor,
@@ -71,9 +71,9 @@ class PointForefModel(BaseModel):
                   (FdBdgImg, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdFoRefOrigin, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdAbsLmkLoc, (mapinfo,), {"desired_dims": desired_dims}),
-                  (FdFoRefAngle, tuple()),                  
+                  (FdFoRefAngle, tuple()),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
@@ -89,7 +89,7 @@ class PointForefModel(BaseModel):
         criterion = FoRefLoss(trainset, reduction="sum", device=device)
         return super(PointForefModel, cls).Train(model, trainset, device,
                                                       criterion=criterion,
-                                                      **kwargs)    
+                                                      **kwargs)
 
     @classmethod
     def make_input(cls, data_sample, dataset, mapinfo,
@@ -140,19 +140,18 @@ class PointForefModel(BaseModel):
                                       map_dims=map_dims,
                                       foref_model_path=os.path.join(save_dirpath, "%s_model.pt" % keyword),
                                       device=device)
-        
+
         metrics_dir = os.path.join(save_dirpath, "metrics", suffix)
         if not os.path.exists(metrics_dir):
-            os.makedirs(metrics_dir)                    
+            os.makedirs(metrics_dir)
         with open(os.path.join(metrics_dir, "rule_based_infomation_metrics.json"), "w") as f:
             json.dump(json_safe(results), f, sort_keys=True, indent=4)
         print("Summary results (Rule based evaluation):")
-        pprint(results["__summary__"])            
-        
-            
+        pprint(results["__summary__"])
+
+
     @classmethod
     def Plot(cls, keyword, model, dataset, device,
-             save_dirpath, suffix="plot", **kwargs):    
+             save_dirpath, suffix="plot", **kwargs):
         cls.Plot_OutputForef(keyword, model, dataset, device,
                              save_dirpath, suffix=suffix, relative=False, **kwargs)
-

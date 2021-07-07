@@ -1,9 +1,9 @@
 # Basically returns the annotated frame of reference
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.datasets.utils import *
+from sloop.datasets.dataloader import *
+from sloop.datasets.utils import *
 from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
-from spatial_foref.models.nn.loss_function import clamp_angle
-from spatial_foref.models.nn.metrics import mean_ci_normal
+from sloop.models.nn.loss_function import clamp_angle
+from sloop.models.nn.metrics import mean_ci_normal
 import math
 from pprint import pprint
 

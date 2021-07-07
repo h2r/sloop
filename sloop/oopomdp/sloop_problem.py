@@ -1,10 +1,10 @@
 # Similar to problem.py, except considering also language input.
 
-import spatial_foref.oopomdp.problem as mos
-import spatial_foref.oopomdp.lang2obs as l2o
-from spatial_foref.oopomdp.landmark_specs import nyc_hardcoded
-from spatial_foref.oopomdp.env.env import *
-from spatial_foref.oopomdp.example_worlds import *
+import sloop.oopomdp.problem as mos
+import sloop.oopomdp.lang2obs as l2o
+from sloop.oopomdp.landmark_specs import nyc_hardcoded
+from sloop.oopomdp.env.env import *
+from sloop.oopomdp.example_worlds import *
 import spatial_lang.graph.util as util
 from spatial_lang.data.constants import FILEPATHS
 import numpy as np
@@ -55,7 +55,7 @@ def sloop_solve(lang,
               max_steps=max_steps)
               # step_func=sloop_step_func,
               # step_func_args={"geg_list": geg_list})
-    
+
 
 def sloop_step_func(oopomdp, real_action,
                     real_observation, reward, viz,
@@ -109,8 +109,8 @@ def sloop_step_func(oopomdp, real_action,
 def unittest():
     bg_path=FILEPATHS["nyc"]["map_png"]
     grid_map, robot_char = world_becky #random_world(14, 14, 3, 5)
-    laserstr = make_laser_sensor(90, (1, 5), 0.5, False)    
-    proxstr = make_proximity_sensor(3, False)    
+    laserstr = make_laser_sensor(90, (1, 5), 0.5, False)
+    proxstr = make_proximity_sensor(3, False)
     oopomdp = mos.MosOOPOMDP(robot_char,  # r is the robot character
                              sigma=0.01,  # observation model parameter
                              epsilon=1.0, # observation model parameter
@@ -122,7 +122,7 @@ def unittest():
                              reward_small=1)
     # THIS EXAMPLE IS HARD CODED.
     lang = "The green car is on Lexington between Starbucks and Duane"
-    planner, viz = mos.setup_solve(oopomdp, 
+    planner, viz = mos.setup_solve(oopomdp,
                                    max_depth=30,  # planning horizon
                                    discount_factor=0.95,
                                    planning_time=1.0,       # amount of time (s) to plan each step
@@ -136,7 +136,7 @@ def unittest():
                 planner,
                 viz=viz,
                 default_dist=1,
-                max_time=120, 
+                max_time=120,
                 max_steps=500)
 
 if __name__ == "__main__":

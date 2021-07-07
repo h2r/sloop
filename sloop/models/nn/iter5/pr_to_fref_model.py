@@ -4,12 +4,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.iter5.common import *
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
-from spatial_foref.utils import json_safe
+from sloop.datasets.dataloader import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.iter5.common import *
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.utils import json_safe
 import json
 import matplotlib.pyplot as plt
 import numpy as np
@@ -25,7 +25,7 @@ class PrToFrefModel(nn.Module):
         self.layer_half_abs = HalfModel(map_dims=map_dims)
         self.layer_half_ego = HalfModel(map_dims=map_dims)
         self.layer_combine = nn.Sequential(nn.Linear(HALF_FEAT_SIZE2*2 + 1, FULL_FEAT_SIZE),
-                                           nn.ReLU(),                                            
+                                           nn.ReLU(),
                                            nn.Linear(FULL_FEAT_SIZE, FULL_FEAT_SIZE2),
                                            nn.ReLU(),
                                            nn.Linear(FULL_FEAT_SIZE2, 3))  # tentative
@@ -60,7 +60,7 @@ class PrToFrefModel(nn.Module):
               val_ratio=0.2, num_epochs=500, batch_size=10, shuffle=True,
               save_dirpath=None, loss_threshold=1e-4, early_stopping=False,
               valset=None):
-        
+
         """
         model (nn.Module): The network
         trainset (Dataset)
@@ -76,8 +76,8 @@ class PrToFrefModel(nn.Module):
             trainset, valset = trainset.split(val_ratio)
         assert trainset.normalizers == valset.normalizers, "Train / validation sets have different normalizers."
         print("Train set size: %d" % len(trainset))
-        print("Validation set size: %d" % len(valset))        
-        
+        print("Validation set size: %d" % len(valset))
+
         train_loader = DataLoader(dataset=trainset, batch_size=batch_size, shuffle=shuffle)
         val_loader = DataLoader(dataset=valset, batch_size=batch_size, shuffle=shuffle)
 
@@ -122,7 +122,7 @@ class PrToFrefModel(nn.Module):
             if loss_threshold is not None and epoch % window == 0:
                 if len(train_losses) >= window * 2:
                     t_now = np.mean(train_losses[-window:])
-                    t_prev = np.mean(train_losses[-2*window:-window])                    
+                    t_prev = np.mean(train_losses[-2*window:-window])
                     loss_diff = abs(t_now - t_prev)
                     if loss_diff < loss_threshold:
                         train_done = True
@@ -157,7 +157,7 @@ class PrToFrefModel(nn.Module):
                             # Validation loss increased. Stop
                             print("Validation loss incrased (window size = %d). Stop." % window)
                             train_done = True
-            
+
             if train_done:
                 break
 
@@ -167,7 +167,7 @@ class PrToFrefModel(nn.Module):
             torch.save(model, os.path.join(save_dirpath, model.keyword + "_model.pt"))
         return train_losses, val_losses, trainset, valset
 
-    
+
     @classmethod
     def get_data(cls, keyword, data_dirpath, map_names,
                  augment_radius=0,
@@ -182,13 +182,13 @@ class PrToFrefModel(nn.Module):
         normalizers: If given, then the loaded dataset will use this set of normalizers.
             Otherwise, normalizers will be computed.
         """
-        
+
         mapinfo = MapInfoDataset()
         for map_name in map_names:
             mapinfo.load_by_name(map_name.strip())
 
-        _info_dataset = {keyword: {"fields":[], "ops":[]}}  # Use to record data collection information            
-        data_ops = []            
+        _info_dataset = {keyword: {"fields":[], "ops":[]}}  # Use to record data collection information
+        data_ops = []
         if augment_radius > 0:
             op = (OpAugPositive,
                   (mapinfo, augment_radius),
@@ -219,7 +219,7 @@ class PrToFrefModel(nn.Module):
                                                fields=fields,
                                                data_ops=data_ops)
         _info_dataset[keyword]["fields"] = fields
-        _info_dataset[keyword]["ops"] = data_ops        
+        _info_dataset[keyword]["ops"] = data_ops
 
         # Make a negative dataset using the antonym
         if keyword == "front":
@@ -256,7 +256,7 @@ class PrToFrefModel(nn.Module):
     def Eval(cls, keyword, model, dataset, device,
              save_dirpath, suffix="metrics", **kwargs):
         print("Eval for class %s is done together through Plot." % cls.__name__)
-            
+
     @classmethod
     def Plot(cls, keyword, model, dataset, device,
              save_dirpath, suffix="plot", **kwargs):
@@ -276,14 +276,14 @@ class PrToFrefModel(nn.Module):
             os.makedirs(os.path.join(plots_dir))
         metrics_dir = os.path.join(save_dirpath, "metrics", suffix)
         if not os.path.exists(os.path.join(metrics_dir)):
-            os.makedirs(os.path.join(metrics_dir))            
+            os.makedirs(os.path.join(metrics_dir))
 
         # Saving the metrics
         results = {"pos_neg_angle_diff": [],
                    "true_pred_angle_diff": [],
                    "pos_neg_origin_diff": [],
                    "true_pred_origin_diff": []}
-            
+
         for i, batch in enumerate(data_loader):
             # Get prediction
             prob = dataset.normalize(FdProbSR.NAME, 0.99)
@@ -320,13 +320,13 @@ class PrToFrefModel(nn.Module):
 
             foref_true = read_foref(dataset, torch.cat([batch[FdFoRefOrigin.NAME],
                                                         batch[FdFoRefAngle.NAME]], 1)[0])
-            
+
             # Record results
             results["pos_neg_angle_diff"].append(
                 math.degrees(clamp_angle(abs(foref_pos[2] - foref_neg[2]))))
             results["pos_neg_origin_diff"].append(
                 euclidean_dist(foref_pos[:2], foref_neg[:2]))
-                
+
             results["true_pred_angle_diff"].append(
                 math.degrees(clamp_angle(abs(foref_true[2] - foref_data[2]))))
             results["true_pred_origin_diff"].append(
@@ -370,15 +370,15 @@ class PrToFrefModel(nn.Module):
         plot_1d(results["pos_neg_angle_diff"], "Angle differences between positive and negative FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-pos_neg_angle_diff.png" % (keyword, suffix)))
         plt.clf()
-        
+
         plot_1d(results["pos_neg_origin_diff"], "Distances between positive and negative FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-pos_neg_origin_diff.png" % (keyword, suffix)))
-        plt.clf()        
-        
+        plt.clf()
+
         plot_1d(results["true_pred_angle_diff"], "Angle differences between true and prdicted FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-true_pred_angle_diff.png" % (keyword, suffix)))
-        plt.clf()        
-        
+        plt.clf()
+
         plot_1d(results["true_pred_origin_diff"], "Distances between true and predicted FoRs")
         plt.savefig(os.path.join(plots_dir, "%s-%s-true_pred_origin_diff.png" % (keyword, suffix)))
         plt.clf()
@@ -387,7 +387,7 @@ class PrToFrefModel(nn.Module):
             "pos_neg_angle_diff": "Angle differences between positive and negative FoRs",
             "pos_neg_origin_diff": "Distances between positive and negative FoRs",
             "true_pred_angle_diff": "Angle differences between true and predicted FoRs",
-            "true_pred_origin_diff": "Distances between true and predicted FoRs",            
+            "true_pred_origin_diff": "Distances between true and predicted FoRs",
         }
 
         # Save metrics
@@ -398,11 +398,11 @@ class PrToFrefModel(nn.Module):
             plot_1d(results[catg], titles[catg])
             plt.savefig(os.path.join(plots_dir, "%s-%s-%s.png" % (keyword, suffix, catg)))
             plt.clf()
-            
+
             mean, ci = mean_ci_normal(results[catg], confidence_interval=0.95)
             results["__summary__"][catg] = {
                 "mean": mean,
-                "ci-95": ci                
+                "ci-95": ci
             }
         with open(os.path.join(metrics_dir, "foref_deviation.json"), "w") as f:
             json.dump(json_safe(results), f, indent=4, sort_keys=True)
@@ -410,5 +410,3 @@ class PrToFrefModel(nn.Module):
         print("Summary results:")
         pprint(results["__summary__"])
         plt.close()
-    
-    

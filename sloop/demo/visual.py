@@ -1,6 +1,6 @@
 import cv2
-from spatial_foref.oopomdp.env.visual import MosViz
-from spatial_foref.demo.utils import cv2shape
+from sloop.oopomdp.env.visual import MosViz
+from sloop.demo.utils import cv2shape
 
 class AirSimSearchViz(MosViz):
 

@@ -32,7 +32,7 @@ The required python version is Python 3.6+.
 ## Download Dataset & Models <a name="dataset-and-models"/>
 There is one dataset and two models.
 * The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
-  Download the dataset (3.6MB) from  [here](https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing), and place it under `sloop/datasets` and extract there.
+  Download the dataset from  [here](https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing) (SL\_OSM\_Dataset, 3.6MB), and place it under `sloop/datasets` and extract there.
 
   After extraction your directory structure should look like:
   ```
@@ -51,7 +51,7 @@ There is one dataset and two models.
 
 
 * The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind) and a **left** model (for _left_ and _right_).
-Download the models (36MB) from [here](https://drive.google.com/file/d/1A7Ak00vljHSUjuyzh6DG6QdjPyBACKsV/view?usp=sharing)
+Download the models from [here](https://drive.google.com/file/d/1A7Ak00vljHSUjuyzh6DG6QdjPyBACKsV/view?usp=sharing) (models.zip, 36MB)
 and place it under `sloop/oopomdp/experiments/resources`.
 
   After extraction your directory structure should look like:
@@ -68,14 +68,25 @@ and place it under `sloop/oopomdp/experiments/resources`.
   ```
 
 
-## OpenStreetMap Demo <a name="openstreetmap-demo"/>
-You can now start a demo of spatial language object search on an OpenStreetMap.p
-
-
 ## Download and Process Results <a name="results"/>
 
+You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1K0MUru-x4mkD_k8rjHFB5x41Dy0ufESw/view?usp=sharing)
+(all-joint.zip, 1.92GB), and place it under `sloop/`
+
+  After extraction your directory structure should look like:
+  ```
+  / # repository root
+    sloop/
+        results/
+            all-joint/
+                langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
+                ...
+  ```
+
+
 
 ## OpenStreetMap Demo <a name="openstreetmap-demo"/>
+You can now start a demo of spatial language object search on an OpenStreetMap.p
 
 
 ## AirSim Demo <a name="airsim-demo"/>

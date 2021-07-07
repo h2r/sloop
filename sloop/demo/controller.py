@@ -6,23 +6,23 @@ import os, sys
 os.environ["SPACY_WARNING_IGNORE"] = "W008"
 os.environ['SDL_VIDEO_WINDOW_POS'] = str(0) + "," + str(0)
 
-from spatial_foref.oopomdp.experiments.interface import input_problem_config, load_files
-from spatial_foref.oopomdp.experiments.constants import obj_id_map
-from spatial_foref.oopomdp.experiments.experiment_foref_langprior import\
+from sloop.oopomdp.experiments.interface import input_problem_config, load_files
+from sloop.oopomdp.experiments.constants import obj_id_map
+from sloop.oopomdp.experiments.experiment_foref_langprior import\
     create_world, make_trial, get_prior, obj_letter_map, obj_id_map
-from spatial_foref.oopomdp.env.env import MosEnvironment, interpret
-from spatial_foref.oopomdp.env.env import make_laser_sensor, equip_sensors
-from spatial_foref.oopomdp.env.visual import MosViz
-from spatial_foref.oopomdp.domain.action import *
-from spatial_foref.models.heuristics.rules import BASIC_RULES, ForefRule
-from spatial_foref.models.heuristics.model import KeywordModel, RuleBasedModel, MixtureSLUModel
-from spatial_foref.demo.problem import AirSimSearchEnvironment
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
-from spatial_foref.demo.utils import quat_to_euler, to_radians
-from spatial_foref.demo.visual import AirSimSearchViz
-from spatial_foref.demo.maps.topological_graph import rrt_topo
-from spatial_foref.demo.runner import AirSimDemo
+from sloop.oopomdp.env.env import MosEnvironment, interpret
+from sloop.oopomdp.env.env import make_laser_sensor, equip_sensors
+from sloop.oopomdp.env.visual import MosViz
+from sloop.oopomdp.domain.action import *
+from sloop.models.heuristics.rules import BASIC_RULES, ForefRule
+from sloop.models.heuristics.model import KeywordModel, RuleBasedModel, MixtureSLUModel
+from sloop.demo.problem import AirSimSearchEnvironment
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.demo.utils import quat_to_euler, to_radians
+from sloop.demo.visual import AirSimSearchViz
+from sloop.demo.maps.topological_graph import rrt_topo
+from sloop.demo.runner import AirSimDemo
 import time
 from pprint import pprint
 

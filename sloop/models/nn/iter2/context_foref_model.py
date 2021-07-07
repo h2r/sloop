@@ -4,15 +4,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.utils import json_safe
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.models.nn.loss_function import FoRefAngleLoss, clamp_angle
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.heuristics.rules import ForefRule
-from spatial_foref.models.heuristics.model import evaluate as rule_based_evaluate
-from spatial_foref.models.heuristics.model import RuleBasedModel
-from spatial_foref.models.nn.iter2.common import *
+from sloop.utils import json_safe
+from sloop.models.nn.base_model import BaseModel
+from sloop.models.nn.loss_function import FoRefAngleLoss, clamp_angle
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.heuristics.rules import ForefRule
+from sloop.models.heuristics.model import evaluate as rule_based_evaluate
+from sloop.models.heuristics.model import RuleBasedModel
+from sloop.models.nn.iter2.common import *
 import numpy as np
 import json
 from pprint import pprint

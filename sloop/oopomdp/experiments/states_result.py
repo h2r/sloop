@@ -1,11 +1,11 @@
 from sciex import Experiment, Trial, Event, Result,\
     YamlResult, PklResult, PostProcessingResult
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.oopomdp.experiments.plotting import *
-from spatial_foref.oopomdp.experiments.pd_utils import *
-from spatial_foref.oopomdp.env.env import *
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+import sloop.oopomdp.problem as mos
+from sloop.oopomdp.experiments.plotting import *
+from sloop.oopomdp.experiments.pd_utils import *
+from sloop.oopomdp.env.env import *
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 import numpy as np
 import math
 import json

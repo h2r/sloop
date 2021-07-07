@@ -1,13 +1,13 @@
 import argparse
 import os
 import pickle
-from spatial_foref.oopomdp.experiments.experiment_foref_langprior import\
+from sloop.oopomdp.experiments.experiment_foref_langprior import\
     create_world, make_trial, get_prior, obj_letter_map, obj_id_map
-from spatial_foref.oopomdp.experiments.interface import load_files
+from sloop.oopomdp.experiments.interface import load_files
 from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
-from spatial_foref.models.heuristics.model import KeywordModel, GaussianPointModel
-from spatial_foref.oopomdp.experiments.constants import *
-from spatial_foref.oopomdp.experiments.trial import SloopPriorTrial
+from sloop.models.heuristics.model import KeywordModel, GaussianPointModel
+from sloop.oopomdp.experiments.constants import *
+from sloop.oopomdp.experiments.trial import SloopPriorTrial
 import matplotlib.pyplot as plt
 import numpy as np
 from sciex import Experiment
@@ -29,20 +29,20 @@ def make_name(oldname, prior_type):
     chunks[0] = prior_type
     parts[2] = "-".join(chunks)
     return "_".join(parts)
-    
+
 
 def main():
     parser = argparse.ArgumentParser(description="generate informed gaussian trials.")
     parser.add_argument("exp_path", type=str, help="Path to experiments")
     args = parser.parse_args()
-    
+
     all_trials = []
     exp_path = args.exp_path
     if args.exp_path.endswith("/"):
         exp_path = os.path.dirname(args.exp_path)
 
     mapinfo = MapInfoDataset()
-        
+
     for name in os.listdir(exp_path):
         if not os.path.isdir(os.path.join(exp_path, name)):
             continue
@@ -50,7 +50,7 @@ def main():
         prior_type = specific_name.split("-")[0]
         if prior_type != "informed":
             continue
-        
+
         print("Opening trial %s" % specific_name)
         with open(os.path.join(exp_path, name, "trial.pkl"), "rb") as f:
             trial = pickle.load(f)
@@ -90,12 +90,12 @@ def main():
         config15 = copy.deepcopy(config)
         config15["prior"] = inf15_prior
         trial_inf15 = SloopPriorTrial(make_name(name, "informed#15"), config15)
-        
+
         # # To verify, uncomment these
         # map_dim = mapinfo.map_dims(map_name)
         # plot_prior(trial_inf5.config["prior"], map_dim, factor=100)
-        # plot_prior(trial_inf15.config["prior"], map_dim, factor=200)        
-        
+        # plot_prior(trial_inf15.config["prior"], map_dim, factor=200)
+
         all_trials.append(trial_inf5)
         all_trials.append(trial_inf15)
 
@@ -106,9 +106,6 @@ def main():
     exp = Experiment(exp_name, all_trials, outdir, verbose=True, add_timestamp=False)
     exp.generate_trial_scripts(split=400, prefix="run_longer", exist_ok=True)
     print("Find multiple computers to run these experiments.")
-            
+
 if __name__ == "__main__":
     main()
-        
-
-    

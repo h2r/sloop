@@ -10,8 +10,8 @@ import json
 import shutil
 
 
-refpath = "/home/kaiyuzh/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/aug8-12_summary/all-joint"
-path = "/home/kaiyuzh/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/aug8-12_summary/LANGUAGES2/GGG"
+refpath = "/home/kaiyuzh/repo/spatial-foref/sloop/oopomdp/experiments/results/aug8-12_summary/all-joint"
+path = "/home/kaiyuzh/repo/spatial-foref/sloop/oopomdp/experiments/results/aug8-12_summary/LANGUAGES2/GGG"
 outdir = path.split("/")[-1]
 
 # Get a (map_name, lang, target) -> seed mapping from ref path
@@ -44,20 +44,20 @@ for filename in os.listdir(path):
 
     with open(os.path.join(path, filename, "trial.pkl"), "rb") as f:
         trial = pickle.load(f)
-        
+
     lang = trial.config["language"]
     map_name = trial.config["map_name"]
     for letter in {"R", "G", "B"}:
         if letter in trial.config["world"]:
             target = letter
             break
-    try:        
+    try:
         seed = mapping[(map_name, lang, letter)]
     except KeyError as ex:
         if lang == 'The green car is next to the Cort building on the West 6th street side. The red car is in the back of the building that houses rumor and spring, on Johnson court.':
             continue
         import pdb; pdb.set_trace()
-        
+
     new_filename = "%s_%s_%s" % (filename.split("_")[0], seed, filename.split("_")[2])
 
     src = os.path.join(path, filename)

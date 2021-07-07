@@ -7,11 +7,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.iter1.common import *
+from sloop.models.nn.base_model import BaseModel
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.iter1.common import *
 import numpy as np
 import json
 from pprint import pprint
@@ -44,9 +44,9 @@ class ContextPrModel(BaseModel):
         self.layer_final = nn.Sequential(nn.Linear(1 + 18 + 64, 256),
                                          nn.ReLU(),
                                          nn.Linear(256, 64),
-                                         nn.ReLU(),                                         
+                                         nn.ReLU(),
                                          nn.Linear(64, 20),
-                                         nn.ReLU(),                                         
+                                         nn.ReLU(),
                                          nn.Linear(20, 1))
         self.input_size = map_dims[0]*map_dims[1]
         self.optimizer = torch.optim.Adam(self.parameters(), learning_rate)
@@ -56,7 +56,7 @@ class ContextPrModel(BaseModel):
         x_map = x[:, :-5]
         x_point = x[:, -5:-3]
         x_foref = x[:, -3:]
-        
+
         x_map = self.map_layer(x_map)
         x_map = self.layer_map_compress(x_map)
 
@@ -92,7 +92,7 @@ class ContextPrModel(BaseModel):
                  antonym_as_neg=True, **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         data_ops = cls.compute_ops(mapinfo, keyword=keyword,
                                    augment_radius=augment_radius,
                                    augment_dfactor=augment_dfactor,
@@ -101,11 +101,11 @@ class ContextPrModel(BaseModel):
         fields = [(FdAbsObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdCtxImg, (mapinfo,), {"desired_dims": desired_dims}),
-                  (FdCtxEgoImg, (mapinfo,), {"desired_dims": desired_dims}),                                    
+                  (FdCtxEgoImg, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdFoRefOrigin, (mapinfo,), {"desired_dims": desired_dims}),
-                  (FdFoRefAngle, tuple()),                  
+                  (FdFoRefAngle, tuple()),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
@@ -151,7 +151,7 @@ class ContextPrModel(BaseModel):
         criterion = nn.MSELoss(reduction="sum")
         return super(ContextPrModel, cls).Train(model, trainset, device,
                                                 criterion=criterion,
-                                                **kwargs)    
+                                                **kwargs)
 
     @classmethod
     def make_input(cls, data_sample, dataset, mapinfo,
@@ -187,4 +187,4 @@ class ContextPrModel(BaseModel):
     def Plot(cls, keyword, model, dataset, device, save_dirpath,
              suffix="group", **kwargs):
         cls.Plot_OutputPr(keyword, model, dataset, device, save_dirpath,
-                          suffix=suffix, **kwargs)        
+                          suffix=suffix, **kwargs)

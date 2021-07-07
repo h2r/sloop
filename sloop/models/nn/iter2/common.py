@@ -3,10 +3,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.models.nn.base_model import BaseModel
+from sloop.datasets.dataloader import *
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
 
 # ROUND 1 PARAMS: does not generalize well
 CONV1_PLAIN = 6

@@ -17,7 +17,7 @@ for map_name in {"austin", "cleveland", "honolulu", "denver", "washington_dc"}:
 
 
 prior_type = "rule#based#ego>ctx>foref>angle"
-# path = "/media/kz-wd-ssd/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/sep9/all-joint" #aug8-12_summary/LANGUAGES2/auto-parse2"
+# path = "/media/kz-wd-ssd/repo/spatial-foref/sloop/oopomdp/experiments/results/sep9/all-joint" #aug8-12_summary/LANGUAGES2/auto-parse2"
 path = "../results/NewEvalpomdpAA--onetarget_20210331003649075"
 # outdir = "./aug8-12-languages2"
 outdir = "./march31_2021-languages-%s" % prior_type

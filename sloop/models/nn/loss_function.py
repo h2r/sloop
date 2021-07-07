@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import math
-from spatial_foref.datasets.dataloader import FdFoRefAngle
+from sloop.datasets.dataloader import FdFoRefAngle
 
 def clamp_angle_tensor(angle):
     """Given an arbitrary angle (tensor), return an equivalent angle
@@ -10,7 +10,7 @@ def clamp_angle_tensor(angle):
     angle = torch.abs(angle)
     angle = (angle % (math.pi*2))
     for i, a in enumerate(angle):
-        if a > math.pi: 
+        if a > math.pi:
             a = math.pi*2 - a
         angle[i] = a
     return angle
@@ -41,7 +41,7 @@ class FoRefLoss(nn.Module):
         zeros = torch.zeros(angle_diff.shape).to(self.device)
 
         pred_vector = torch.cat([prediction[:,:2], angle_diff], 1)
-        label_vector = torch.cat([label[:,:2], zeros], 1)        
+        label_vector = torch.cat([label[:,:2], zeros], 1)
         return self.mse_loss(pred_vector, label_vector)
 
 

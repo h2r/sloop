@@ -4,10 +4,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.iter5.common import *
+from sloop.datasets.dataloader import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.iter5.common import *
 from pprint import pprint
 import matplotlib.pyplot as plt
 import numpy as np
@@ -25,7 +25,7 @@ class FrefToPrModel(nn.Module):
         self.layer_half_abs = HalfModel(map_dims=map_dims)
         self.layer_half_ego = HalfModel(map_dims=map_dims)
         self.layer_combine = nn.Sequential(nn.Linear(HALF_FEAT_SIZE2*2 + 3, FULL_FEAT_SIZE),
-                                           nn.ReLU(),                                            
+                                           nn.ReLU(),
                                            nn.Linear(FULL_FEAT_SIZE, FULL_FEAT_SIZE2),
                                            nn.ReLU(),
                                            nn.Linear(FULL_FEAT_SIZE2, 1))  # tentative
@@ -60,7 +60,7 @@ class FrefToPrModel(nn.Module):
               val_ratio=0.2, num_epochs=500, batch_size=10, shuffle=True,
               save_dirpath=None, loss_threshold=1e-4, early_stopping=False,
               valset=None):
-        
+
         """
         model (nn.Module): The network
         trainset (Dataset)
@@ -76,10 +76,10 @@ class FrefToPrModel(nn.Module):
             print("Splitting training set by 1:%.2f to get validation set." % val_ratio)
             trainset, valset = trainset.split(val_ratio)
         print("Train set size: %d" % len(trainset))
-        print("Validation set size: %d" % len(valset))        
-        
+        print("Validation set size: %d" % len(valset))
+
         train_loader = DataLoader(dataset=trainset, batch_size=batch_size, shuffle=shuffle)
-        val_loader = DataLoader(dataset=valset, batch_size=batch_size, shuffle=shuffle)    
+        val_loader = DataLoader(dataset=valset, batch_size=batch_size, shuffle=shuffle)
 
         train_losses = []
         val_losses = []
@@ -120,7 +120,7 @@ class FrefToPrModel(nn.Module):
             if loss_threshold is not None and epoch % window == 0:
                 if len(train_losses) >= window * 2:
                     t_now = np.mean(train_losses[-window:])
-                    t_prev = np.mean(train_losses[-2*window:-window])                    
+                    t_prev = np.mean(train_losses[-2*window:-window])
                     loss_diff = abs(t_now - t_prev)
                     if loss_diff < loss_threshold:
                         train_done = True
@@ -155,7 +155,7 @@ class FrefToPrModel(nn.Module):
                             # Validation loss increased. Stop
                             print("Validation loss incrased (window size = %d). Stop." % window)
                             train_done = True
-            
+
             if train_done:
                 break
 
@@ -165,7 +165,7 @@ class FrefToPrModel(nn.Module):
             torch.save(model, os.path.join(save_dirpath, model.keyword + "_model.pt"))
         return train_losses, val_losses, trainset, valset
 
-    
+
     @classmethod
     def get_data(cls, keyword, data_dirpath, map_names,
                  augment_radius=0,
@@ -180,13 +180,13 @@ class FrefToPrModel(nn.Module):
         normalizers: If given, then the loaded dataset will use this set of normalizers.
             Otherwise, normalizers will be computed.
         """
-        
+
         mapinfo = MapInfoDataset()
         for map_name in map_names:
             mapinfo.load_by_name(map_name.strip())
 
-        _info_dataset = {keyword: {"fields":[], "ops":[]}}  # Use to record data collection information            
-        data_ops = []            
+        _info_dataset = {keyword: {"fields":[], "ops":[]}}  # Use to record data collection information
+        data_ops = []
         if augment_radius > 0:
             op = (OpAugPositive,
                   (mapinfo, augment_radius),
@@ -213,13 +213,13 @@ class FrefToPrModel(nn.Module):
                   (FdFoRefOrigin, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdFoRefAngle, tuple()),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
                                                data_ops=data_ops)
         _info_dataset[keyword]["fields"] = fields
-        _info_dataset[keyword]["ops"] = data_ops        
+        _info_dataset[keyword]["ops"] = data_ops
 
         # Make a negative dataset using the antonym
         if keyword == "front":
@@ -265,9 +265,9 @@ class FrefToPrModel(nn.Module):
         if map_dims is None:
             map_dims = mapinfo.map_dims(map_name)
         heatmap = np.zeros(map_dims, dtype=np.float64)
-        
+
         lmctr = mapinfo.center_of_mass(landmark_symbol, data_sample[FdMapName.NAME])
-        
+
         all_inputs = []
         for idx in range(map_dims[0]*map_dims[1]):
             x = idx // map_dims[1]
@@ -284,7 +284,7 @@ class FrefToPrModel(nn.Module):
                               torch.tensor(abs_obj_loc).float(),
                               data_sample[FdBdgImg.NAME].float()])
             all_inputs.append(inpt.reshape(1,-1))
-        # We are concatenating the tensors by rows.            
+        # We are concatenating the tensors by rows.
         all_inputs = torch.cat(all_inputs, 0)
         prediction = model(all_inputs.to(device))
 
@@ -308,7 +308,7 @@ class FrefToPrModel(nn.Module):
 
         metrics_dir = os.path.join(save_dirpath, "metrics", suffix)
         if not os.path.exists(metrics_dir):
-            os.makedirs(metrics_dir)            
+            os.makedirs(metrics_dir)
 
         results = {"perplex_true": [],  # The perplexity of a distribution for the true object location
                    "perplex_pred": [],  # The perplexity of the predicted heatmap
@@ -344,13 +344,13 @@ class FrefToPrModel(nn.Module):
             objloc_pred = max(pred_dist, key=lambda x: pred_dist[x])
             dist = euclidean_dist(objloc_pred, objloc)
             results["distance"].append(dist)
-            
+
             sys.stdout.write("Computing heatmaps & metrics...[%d/%d]\r" % (i+1, len(dataset)))
-        
+
         results = compute_mean_ci(results)
         with open(os.path.join(metrics_dir, "information_metrics.json"), "w") as f:
             json.dump(json_safe(results), f, indent=4, sort_keys=True)
-        
+
         print("Summary results:")
         pprint(results["__summary__"])
 
@@ -384,7 +384,7 @@ class FrefToPrModel(nn.Module):
         prediction = model(all_inputs.to(device))
 
         # Make plots
-        map_dims = kwargs.get("map_dims", None)        
+        map_dims = kwargs.get("map_dims", None)
         for i in range(len(prediction)):
             data_sample = dataset[i]
             pred_prob = dataset.rescale(FdProbSR.NAME, prediction[i].item())

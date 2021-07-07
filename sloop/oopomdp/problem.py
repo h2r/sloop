@@ -3,13 +3,13 @@ Uses the domain, models, and agent/environment
 to actually define the POMDP problem for multi-object search.
 Then, solve it using POUCT or POMCP."""
 import pomdp_py
-from spatial_foref.oopomdp.env.env import *
-from spatial_foref.oopomdp.env.visual import *
-from spatial_foref.oopomdp.agent.agent import *
-from spatial_foref.oopomdp.example_worlds import *
-from spatial_foref.oopomdp.domain.observation import *
-from spatial_foref.oopomdp.models.components.grid_map import *
-from spatial_foref.datasets.utils import scale_point
+from sloop.oopomdp.env.env import *
+from sloop.oopomdp.env.visual import *
+from sloop.oopomdp.agent.agent import *
+from sloop.oopomdp.example_worlds import *
+from sloop.oopomdp.domain.observation import *
+from sloop.oopomdp.models.components.grid_map import *
+from sloop.datasets.utils import scale_point
 import argparse
 import time
 import random
@@ -38,7 +38,7 @@ class MosOOPOMDP(pomdp_py.OOPOMDP):
             robot_id (int or str): the id of the agent that will solve this MosOOPOMDP.
                 If it is a `str`, it will be interpreted as an integer using `interpret_robot_id`
                 in env/env.py.
-            env (MosEnvironment): the environment. 
+            env (MosEnvironment): the environment.
             grid_map (str): Search space description. See env/env.py:interpret. An example:
                 rx...
                 .x.xT
@@ -116,7 +116,7 @@ class MosOOPOMDP(pomdp_py.OOPOMDP):
 def rescale_world(worldstr, dimension, obstacle_resolve_method="vote"):
     """
     Given a worldstr and a dimension, return a new worldstr
-    with the given dimension. 
+    with the given dimension.
 
     When reducing worldstr into a smaller dimension, multiple
     locations will map to the same new location:
@@ -142,7 +142,7 @@ def rescale_world(worldstr, dimension, obstacle_resolve_method="vote"):
                 locmap[(new_x, new_y)] = []
             locmap[(new_x, new_y)].append(worldlines[y][x])
 
-    # Resolve object collisions. 
+    # Resolve object collisions.
     while True:
         # First, count objects
         objcounts = {}
@@ -153,13 +153,13 @@ def rescale_world(worldstr, dimension, obstacle_resolve_method="vote"):
                 if ch.isupper():
                     objcounts[loc].append(i)
                 if ch.islower():
-                    objcounts[loc].append(i)                    
+                    objcounts[loc].append(i)
                 if len(objcounts[loc]) > 1:
                     has_collision = True
 
         if not has_collision:
             break
-                    
+
         # For locations with greater than 1 objects, shift them to others
         for loc in objcounts:
             if len(objcounts[loc]) > 1:
@@ -253,7 +253,7 @@ def belief_update(agent, real_action, real_observation, next_robot_state, planne
                 else:
                     # This is doing
                     #    B(si') = normalizer * O(oi|si',sr',a) * sum_s T(si'|s,a)*B(si)
-                    # 
+                    #
                     # Notes: First, objects are static; Second,
                     # O(oi|s',a) ~= O(oi|si',sr',a) according to the definition
                     # of the observation model in models/observation.py.  Note
@@ -295,7 +295,7 @@ def belief_update(agent, real_action, real_observation, next_robot_state, planne
 
 ### Solve the problem with POUCT/POMCP planner ###
 ### This is the main online POMDP solver logic ###
-def setup_solve(problem, 
+def setup_solve(problem,
                 max_depth=10,  # planning horizon
                 discount_factor=0.99,
                 planning_time=-1.,       # amount of time (s) to plan each step
@@ -338,18 +338,18 @@ def setup_solve(problem,
                    None,
                    None,
                    None,
-                   problem.agent.cur_belief)        
+                   problem.agent.cur_belief)
         viz.on_render()
 
     return planner, viz
-    
-    
+
+
 def solve(problem, planner,
           viz=None,
           step_func=None, # makes this function more extensible.
           step_func_args={},
           max_time=120,  # maximum amount of time allowed to solve the problem
-          max_steps=500): # maximum number of planning steps the agent can take.):   
+          max_steps=500): # maximum number of planning steps the agent can take.):
     """
     This function terminates when:
     - maximum time (max_time) reached; This time includes planning and updates
@@ -420,7 +420,7 @@ def solve(problem, planner,
         if step_func is not None:
             step_func(problem, real_action, real_observation, reward, viz,
                       **step_func_args)
-            
+
         # Termination check
         if set(problem.env.state.object_states[robot_id].objects_found)\
            == problem.env.target_objects:
@@ -433,13 +433,13 @@ def solve(problem, planner,
             print("Maximum time reached.")
             break
     return _total_reward
-            
+
 # Test
 def unittest(bg_path=None):
     # random world
     grid_map, robot_char = random_world(20, 20, 20, 10)
     laserstr = make_laser_sensor(90, (1, 3), 0.5, False)
-    proxstr = make_proximity_sensor(5, False)    
+    proxstr = make_proximity_sensor(5, False)
     problem = MosOOPOMDP(robot_char,  # r is the robot character
                          sigma=0.01,  # observation model parameter
                          epsilon=1.0, # observation model parameter
@@ -450,7 +450,7 @@ def unittest(bg_path=None):
                          reward_small=10,
                          agent_has_map=True,
                          dimension=(10,10))
-    planner, viz = setup_solve(problem, 
+    planner, viz = setup_solve(problem,
                                max_depth=20,  # planning horizon
                                discount_factor=0.95,
                                num_sims=500,  # Number of simulations per step

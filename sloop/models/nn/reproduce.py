@@ -1,5 +1,5 @@
 # Script used to reproduce plots / other metric results by
-# loading a saved model. 
+# loading a saved model.
 
 import os
 import json
@@ -8,8 +8,8 @@ import numpy as np
 import torch
 import argparse
 import pandas as pd
-from spatial_foref.models.nn.train_model import get_model_class
-from spatial_foref.datasets.dataloader import SpatialRelationDataset
+from sloop.models.nn.train_model import get_model_class
+from sloop.datasets.dataloader import SpatialRelationDataset
 from pprint import pprint
 
 def cli():
@@ -30,13 +30,13 @@ def cli():
     parser.add_argument("data_kind", type=str,
                         help="is the data train, validation, or test?")
     parser.add_argument("config_path", type=str,
-                        help="Path to config yaml file")        
+                        help="Path to config yaml file")
     parser.add_argument("train_metadata_path", type=str,
                         help="Path to train_meta.json file.")
     parser.add_argument("-o", "--output-dir", type=str, default="./reproduce",
                         help="Directory to output ")
     parser.add_argument("--cuda", type=str, default="0",
-                        help="Cuda to use, if available.")        
+                        help="Cuda to use, if available.")
     args = parser.parse_args()
     return args
 
@@ -82,7 +82,7 @@ def reproduce(args):
                      suffix=args.data_kind,
                      map_dims=config["data_params"]["shared"]["desired_dims"],
                      **config["plot_params"])
-    
+
 if __name__ == "__main__":
     args = cli()
     reproduce(args)

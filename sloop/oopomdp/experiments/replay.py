@@ -5,11 +5,11 @@ import yaml
 import re
 import time
 import pomdp_py
-from spatial_foref.oopomdp.domain.action import NAME_TO_ACTION
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
-import spatial_foref.utils as util
+from sloop.oopomdp.domain.action import NAME_TO_ACTION
+import sloop.oopomdp.problem as mos
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+import sloop.utils as util
 import subprocess
 
 

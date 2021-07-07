@@ -1,11 +1,11 @@
 from sciex import Experiment, Trial, Event, Result,\
     YamlResult, PklResult, PostProcessingResult
-from spatial_foref.oopomdp.experiments.result_types import *
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
-from spatial_foref.datasets.utils import euclidean_dist
-from spatial_foref.demo.problem import AirSimSearchEnvironment, AirSimSearchProblem
+from sloop.oopomdp.experiments.result_types import *
+import sloop.oopomdp.problem as mos
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.datasets.utils import euclidean_dist
+from sloop.demo.problem import AirSimSearchEnvironment, AirSimSearchProblem
 import random
 import pomdp_py
 import time

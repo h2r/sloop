@@ -1,9 +1,9 @@
 from sciex import Experiment, Trial, Event, Result,\
     YamlResult, PklResult, PostProcessingResult
-from spatial_foref.oopomdp.experiments.result_types import RewardsResult, StatesResult
-from spatial_foref.oopomdp.experiments.plotting import *
-from spatial_foref.oopomdp.experiments.pd_utils import *
-from spatial_foref.oopomdp.experiments.constants import *
+from sloop.oopomdp.experiments.result_types import RewardsResult, StatesResult
+from sloop.oopomdp.experiments.plotting import *
+from sloop.oopomdp.experiments.pd_utils import *
+from sloop.oopomdp.experiments.constants import *
 import pandas as pd
 import yaml
 import matplotlib.pyplot as plt

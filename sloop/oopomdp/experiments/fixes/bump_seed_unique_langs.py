@@ -8,10 +8,10 @@ import shutil
 
 
 # Path that contains languages you DON't want to duplicate with.
-refpath = "/home/kaiyuzh/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/aug8-12_summary/all-joint"
+refpath = "/home/kaiyuzh/repo/spatial-foref/sloop/oopomdp/experiments/results/aug8-12_summary/all-joint"
 
 # Path that contains trials you want to bump up the seeds
-path = "/home/kaiyuzh/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/aug8-12_summary/LANGUAGES2/auto-parse2"
+path = "/home/kaiyuzh/repo/spatial-foref/sloop/oopomdp/experiments/results/aug8-12_summary/LANGUAGES2/auto-parse2"
 
 # Path to save bumped trials
 outdir = path.split("/")[-1]
@@ -32,7 +32,7 @@ for filename in os.listdir(refpath):
 for filename in os.listdir(path):
     if not os.path.isdir(os.path.join(path, filename)):
         continue
-    
+
     with open(os.path.join(path, filename, "trial.pkl"), "rb") as f:
         trial = pickle.load(f)
 
@@ -55,7 +55,7 @@ for filename in os.listdir(path):
     if src != dst:
         print("Renaming %s to %s" % (src, dst))
         # shutil.move(src, dst)
-        
+
         # trial.name = new_filename
         # with open(os.path.join(path, new_filename, "trial.pkl"), "wb") as f:
-        #     pickle.dump(trial, f)    
+        #     pickle.dump(trial, f)

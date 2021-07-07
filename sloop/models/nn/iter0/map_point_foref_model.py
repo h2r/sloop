@@ -1,6 +1,6 @@
 # A model that looks like:
 #
-# Map --> CNN --> FOR 
+# Map --> CNN --> FOR
 #          |         \
 #          -----------> FCN --> Pr
 #                    /
@@ -12,11 +12,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.base_model import BaseModel
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
+from sloop.datasets.dataloader import *
+from sloop.models.nn.base_model import BaseModel
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
 import json
 from pprint import pprint
 
@@ -37,7 +37,7 @@ class MapPointForefModel(BaseModel):
         super(MapPointForefModel, self).__init__()
         self.keyword = keyword
         self.map_dims = map_dims
-        
+
         self.conv1 = nn.Conv2d(1, CONV1_PLAIN,
                                kernel_size=CONV1_KERNEL)
         self.pool = nn.MaxPool2d(CONV1_KERNEL)
@@ -51,8 +51,8 @@ class MapPointForefModel(BaseModel):
         self.fc4 = nn.Linear(MAP_FEATURE_SIZE + 3 + 2, FINAL_FCN_L1)
         self.fc5 = nn.Linear(FINAL_FCN_L1, FINAL_FCN_L2)
         self.fcn_pr = nn.Linear(FINAL_FCN_L2, 1)
-        
-        self.optimizer = torch.optim.Adam(self.parameters(), learning_rate)        
+
+        self.optimizer = torch.optim.Adam(self.parameters(), learning_rate)
 
     def forward(self, x, map_only=False, return_foref=False):
         """
@@ -69,8 +69,8 @@ class MapPointForefModel(BaseModel):
         else:
             point = x[:, -2:]
             x_map = x[:, :-2]
-            
-        x_map = x_map.view(-1, 1, self.map_dims[0], self.map_dims[1])        
+
+        x_map = x_map.view(-1, 1, self.map_dims[0], self.map_dims[1])
         x_map = self.pool(F.relu(self.conv1(x_map)))
         x_map = self.pool(F.relu(self.conv2(x_map)))
         x_map = x_map.view(x_map.shape[0], -1)
@@ -114,7 +114,7 @@ class MapPointForefModel(BaseModel):
                  antonym_as_neg=True, **kwargs):
         mapinfo = MapInfoDataset()
         for map_name in map_names:
-            mapinfo.load_by_name(map_name.strip())        
+            mapinfo.load_by_name(map_name.strip())
         data_ops = cls.compute_ops(mapinfo, keyword=keyword,
                                    augment_radius=augment_radius,
                                    augment_dfactor=augment_dfactor,
@@ -124,9 +124,9 @@ class MapPointForefModel(BaseModel):
                   (FdObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdMapImg, (mapinfo,), {"desired_dims": desired_dims}),
                   (FdFoRefOrigin, (mapinfo,), {"desired_dims": desired_dims}),
-                  (FdFoRefAngle, tuple()),                  
+                  (FdFoRefAngle, tuple()),
                   (FdLmSym, tuple()),
-                  (FdMapName, tuple()),                  
+                  (FdMapName, tuple()),
                   (FdProbSR, tuple())]
         dataset = SpatialRelationDataset.build(keyword, map_names, data_dirpath,
                                                fields=fields,
@@ -158,9 +158,9 @@ class MapPointForefModel(BaseModel):
                                                  **kwargs)
         all_train_losses["map_to_fref"] = train_losses
         all_val_losses["map_to_fref"] = val_losses
-        
+
         # Next, train the probability prediction module
-        print("Training the probability prediction")        
+        print("Training the probability prediction")
         criterion = nn.MSELoss(reduction="sum")
         input_fields = [FdMapImg.NAME,
                         FdAbsObjLoc.NAME]
@@ -195,7 +195,7 @@ class MapPointForefModel(BaseModel):
             return inpt.reshape(1,-1)
         else:
             return inpt
-    
+
 
     @classmethod
     def Eval(cls, keyword, model, dataset, device, save_dirpath,
@@ -207,7 +207,7 @@ class MapPointForefModel(BaseModel):
 
         metrics_dir = os.path.join(save_dirpath, "metrics", suffix)
         if not os.path.exists(metrics_dir):
-            os.makedirs(metrics_dir)            
+            os.makedirs(metrics_dir)
 
         results = {"perplex_true": [],  # The perplexity of a distribution for the true object location
                    "perplex_pred": [],  # The perplexity of the predicted heatmap
@@ -243,13 +243,13 @@ class MapPointForefModel(BaseModel):
             objloc_pred = max(pred_dist, key=lambda x: pred_dist[x])
             dist = euclidean_dist(objloc_pred, objloc)
             results["distance"].append(dist)
-            
+
             sys.stdout.write("Computing heatmaps & metrics...[%d/%d]\r" % (i+1, len(dataset)))
-        
+
         results = compute_mean_ci(results)
         with open(os.path.join(metrics_dir, "information_metrics.json"), "w") as f:
             json.dump(json_safe(results), f, indent=4, sort_keys=True)
-        
+
         print("Summary results:")
         pprint(results["__summary__"])
 
@@ -279,7 +279,7 @@ class MapPointForefModel(BaseModel):
         prediction_pr, prediction_foref = model(all_inputs.to(device), return_foref=True)
 
         # Make plots
-        map_dims = kwargs.get("map_dims", None)        
+        map_dims = kwargs.get("map_dims", None)
         for i in range(len(prediction_pr)):
             data_sample = dataset[i]
             pred_prob = dataset.rescale(FdProbSR.NAME, prediction_pr[i].item())
@@ -289,7 +289,7 @@ class MapPointForefModel(BaseModel):
                                           map_dims=map_dims)
 
             # Plot map
-            ax = plt.gca()            
+            ax = plt.gca()
             if FdBdgImg.NAME in data_sample:
                 map_img_normalized = data_sample[FdBdgImg.NAME].reshape(heatmap.shape)
                 mapimg = dataset.rescale(FdBdgImg.NAME, map_img_normalized)
@@ -303,11 +303,11 @@ class MapPointForefModel(BaseModel):
             plot_map(ax, heatmap, alpha=0.6)
 
             # Plot object location
-            objloc = dataset.rescale(FdAbsObjLoc.NAME, data_sample[FdAbsObjLoc.NAME])                        
-            ax.scatter([objloc[0].item()], [objloc[1].item()], s=100, c="cyan")            
+            objloc = dataset.rescale(FdAbsObjLoc.NAME, data_sample[FdAbsObjLoc.NAME])
+            ax.scatter([objloc[0].item()], [objloc[1].item()], s=100, c="cyan")
 
             # Plot frame of reference
-            if FdFoRefOrigin.NAME in data_sample:                
+            if FdFoRefOrigin.NAME in data_sample:
                 foref_true = read_foref(dataset,
                                         [*data_sample[FdFoRefOrigin.NAME],
                                          data_sample[FdFoRefAngle.NAME]])
@@ -322,4 +322,3 @@ class MapPointForefModel(BaseModel):
             plt.savefig(os.path.join(plotsdir, "%s-%s-%d.png" % (keyword, suffix, i+1)))
             plt.clf()
             sys.stdout.write("Plotting ...[%d/%d]\r" % (i+1, len(prediction_pr)))
-

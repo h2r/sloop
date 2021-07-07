@@ -5,7 +5,7 @@
 
 import os
 import argparse
-from spatial_foref.utils import print_info, print_error, print_warning, print_success, \
+from sloop.utils import print_info, print_error, print_warning, print_success, \
     print_info_bold, print_error_bold, print_warning_bold, print_success_bold
 import json
 from spatial_lang.data.constants import FILEPATHS
@@ -55,7 +55,7 @@ def do_annotation(sg_dict, mapinfo, spatial_keywords):
             if target not in TARGETS:
                 print_error("Error: target %s is not recognized." % target)
                 continue
-            valid_landmarks = mapinfo.landmarks_for(sg_dict["map_name"])            
+            valid_landmarks = mapinfo.landmarks_for(sg_dict["map_name"])
             if landmark not in valid_landmarks:
                 print_error("Error: landmark %s is not recognized in %s." % (landmark, sg_dict["map_name"]))
                 print_error("    Suggestions: %s" % str(suggestions(valid_landmarks, landmark)))
@@ -87,15 +87,15 @@ def print_sg_dict(sg_dict):
     print_info("    " + str(sg_dict["entities"]))
     print_warning("Relations:")
     for rel in sg_dict["relations"]:
-        print_info("    " + "(%s, %s, %s)" % (rel[0], rel[2], rel[1]))    
+        print_info("    " + "(%s, %s, %s)" % (rel[0], rel[2], rel[1]))
 
 def print_sg_ann(sg_ann):
     print_warning("Entities:")
     print_success("    " + str(sg_ann["entities"]))
     print_warning("Relations:")
     for rel in sg_ann["relations"]:
-        print_success("    " + "(%s, %s, %s)" % (rel[0], rel[2], rel[1]))        
-    
+        print_success("    " + "(%s, %s, %s)" % (rel[0], rel[2], rel[1]))
+
 
 def main():
     parser = argparse.ArgumentParser(description="Annotate languages")
@@ -153,6 +153,6 @@ def main():
                 json.dump(sg_dict, f, indent=4, sort_keys=True)
                 print_info("saved %s" % filename)
         print_success("DONE!")
-        
+
 if __name__ == "__main__":
     main()

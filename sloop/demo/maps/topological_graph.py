@@ -1,5 +1,5 @@
-from spatial_foref.demo.maps.graph import Node, Graph, Edge
-from spatial_foref.demo.utils import euclidean_dist
+from sloop.demo.maps.graph import Node, Graph, Edge
+from sloop.demo.utils import euclidean_dist
 import json
 import yaml
 import os

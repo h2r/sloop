@@ -1,9 +1,9 @@
 from sciex import Experiment, Trial, Event, Result,\
     YamlResult, PklResult, PostProcessingResult
-from spatial_foref.oopomdp.experiments.result_types import *
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
-from spatial_foref.datasets.utils import euclidean_dist
+from sloop.oopomdp.experiments.result_types import *
+import sloop.oopomdp.problem as mos
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.utils import euclidean_dist
 import random
 import pomdp_py
 import time

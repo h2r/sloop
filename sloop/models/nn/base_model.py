@@ -2,10 +2,10 @@ import torch
 import torch.nn as nn
 import numpy as np
 from torch.utils.data import DataLoader
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.metrics import *
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.datasets.dataloader import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.metrics import *
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
 from pprint import pprint
 import matplotlib.pyplot as plt
 import sys

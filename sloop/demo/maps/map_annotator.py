@@ -7,8 +7,8 @@ import json
 import shutil
 import numpy as np
 from pprint import pprint
-from spatial_foref.oopomdp.env.visual import MosViz
-from spatial_foref.utils import random_unique_color, hex_to_rgb
+from sloop.oopomdp.env.visual import MosViz
+from sloop.utils import random_unique_color, hex_to_rgb
 
 MAP_IMG = "./neighborhoods_topdown.png"
 

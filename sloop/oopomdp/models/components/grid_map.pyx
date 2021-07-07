@@ -11,13 +11,6 @@ cdef class GridMap:
     the agent has a map. This map does not contain information
     about the object locations."""
 
-    cdef public int width
-    cdef public int length
-    cdef public dict _obstacles
-    cdef public dict _obstacle_states
-    cdef public set _free_poses
-    cdef public set _obstacle_poses
-
     def __init__(self, width, length, obstacles):
         """
         Args:

@@ -6,11 +6,11 @@ import json
 import spacy
 from spatial_lang.parsing.parser import parse, match_spatial_keyword
 from spatial_lang.data.constants import FILEPATHS
-from spatial_foref.models.heuristics.rules import BASIC_RULES
+from sloop.models.heuristics.rules import BASIC_RULES
 
 
 def main():
-    print("Loading spacy model...")    
+    print("Loading spacy model...")
     spacy_model = spacy.load("en_core_web_md")
 
     # Load language symbol files
@@ -39,7 +39,7 @@ def main():
 
         sg_auto = parse(lang, map_name,
                     all_keywords=symbol_to_synonyms,
-                    spacy_model=spacy_model).to_dict()            
+                    spacy_model=spacy_model).to_dict()
         for i, rel in enumerate(sg_auto["relations"]):
             rel_phrase = rel[2]
             if rel_phrase is not None and\
@@ -59,7 +59,7 @@ def main():
             if rel[2] not in BASIC_RULES:
                 continue
             lang2case[lang]["auto"].add(rel)
-        sg_annot = annot_sgs[lang]        
+        sg_annot = annot_sgs[lang]
         for rel in sg_annot["relations"]:
             if rel[2] not in BASIC_RULES:
                 continue
@@ -91,7 +91,7 @@ def main():
 
     print("---- Landmark Recognition ----")
     print("precision: %.3f" % (true_pos_lmk / (true_pos_lmk + false_pos_lmk)))
-    print("recall: %.3f" % (true_pos_lmk / (true_pos_lmk + false_neg_lmk)))    
+    print("recall: %.3f" % (true_pos_lmk / (true_pos_lmk + false_neg_lmk)))
 
     # Calculate precision/recall of (f,r,g) tuples
     true_pos_rel = 0

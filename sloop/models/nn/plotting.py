@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from spatial_foref.datasets.dataloader import *
+from sloop.datasets.dataloader import *
 
 def plot_foref(foref, ax, c1="magenta", c2="lime",
                width=3.0, label=None, plot_perp=True, alpha=1.0,
@@ -51,7 +51,7 @@ def read_foref(dataset, foref_norm, relative=False):
 
 def plot_1d(values, title):
     minval = np.min(values)
-    maxval = np.max(values)            
+    maxval = np.max(values)
     plt.hlines(0, minval - 0.1, maxval + 0.1)
     plt.xlim(minval - 0.1, maxval + 0.1)
     plt.ylim(-0.2, 0.2)
@@ -60,7 +60,7 @@ def plot_1d(values, title):
     plt.gca().set_yticks([])
     plt.title(title)
 
-    
+
 def plot_multiple(mapimg, forefs, objloc, colors, ax,
                   map_dims=(21,21), width_factor=1.0,
                   plot_perp=True, plot_obj=True,
@@ -109,4 +109,3 @@ def plot_map(ax, m, alpha=1.0):
     ax.set_xlim(0, m.shape[0])
     ax.set_ylim(0, m.shape[1])
     ax.invert_yaxis()
-    

@@ -1,12 +1,12 @@
 import pomdp_py
 import airsim
-import spatial_foref.oopomdp.problem as mos
-from spatial_foref.oopomdp.env.env import MosEnvironment
+import sloop.oopomdp.problem as mos
+from sloop.oopomdp.env.env import MosEnvironment
 from .utils import quat_to_euler, to_radians, to_degrees
-from spatial_foref.oopomdp.env.env import MosEnvironment
-from spatial_foref.oopomdp.domain.action import *
-from spatial_foref.oopomdp.models.transition_model import RobotTransitionModel
-from spatial_foref.oopomdp.domain.state import *
+from sloop.oopomdp.env.env import MosEnvironment
+from sloop.oopomdp.domain.action import *
+from sloop.oopomdp.models.transition_model import RobotTransitionModel
+from sloop.oopomdp.domain.state import *
 import copy
 
 class AirSimSearchProblem(pomdp_py.POMDP):

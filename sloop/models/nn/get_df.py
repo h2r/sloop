@@ -3,10 +3,10 @@ import os
 import itertools
 import numpy as np
 from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
-from spatial_foref.datasets.dataloader import *
-from spatial_foref.datasets.utils import *
-from spatial_foref.models.nn.plotting import *
-from spatial_foref.models.nn.loss_function import FoRefLoss, clamp_angle
+from sloop.datasets.dataloader import *
+from sloop.datasets.utils import *
+from sloop.models.nn.plotting import *
+from sloop.models.nn.loss_function import FoRefLoss, clamp_angle
 
 datadir = "../../datasets/SL-OSM-Dataset/not_blind/FOR_only/sg_processed"
 outdir = "./data/not_blind"
@@ -16,15 +16,15 @@ for map_name in maps:
     mapinfo.load_by_name(map_name)
 
 os.makedirs(outdir, exist_ok=True)
-    
+
 desired_dims=(28,28)
 fields = [(FdAbsObjLoc, (mapinfo,), {"desired_dims": desired_dims}),
           (FdCtxImg, (mapinfo,), {"desired_dims": desired_dims,
                                   "use_nbr": True}),
           (FdCtxEgoImg, (mapinfo,), {"desired_dims": desired_dims}),
-          (FdBdgEgoImg, (mapinfo,), {"desired_dims": desired_dims}),                  
+          (FdBdgEgoImg, (mapinfo,), {"desired_dims": desired_dims}),
           (FdFoRefOrigin, (mapinfo,), {"desired_dims": desired_dims}),
-          (FdFoRefAngle, tuple()),                  
+          (FdFoRefAngle, tuple()),
           (FdLmSym, tuple()),
           (FdMapName, tuple())]
 for keyword in {"front", "left"}:

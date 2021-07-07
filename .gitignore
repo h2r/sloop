@@ -132,3 +132,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+sloop/datasets/SL_OSM_Dataset
+results/

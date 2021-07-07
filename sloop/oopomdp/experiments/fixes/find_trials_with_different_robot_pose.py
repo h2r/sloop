@@ -9,13 +9,13 @@ import os
 import json
 import pickle
 import yaml
-from spatial_foref.oopomdp.env.env import *
-from spatial_foref.oopomdp.experiments.constants import obj_id_map
+from sloop.oopomdp.env.env import *
+from sloop.oopomdp.experiments.constants import obj_id_map
 from pprint import pprint
 import sys
 
-# results_path = "/media/kz-wd-ssd/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/sep9/all-joint"
-results_path = "/media/kz-wd-ssd/repo/spatial-foref/spatial_foref/oopomdp/experiments/results/april-1-2021/all-joint"
+# results_path = "/media/kz-wd-ssd/repo/spatial-foref/sloop/oopomdp/experiments/results/sep9/all-joint"
+results_path = "/media/kz-wd-ssd/repo/spatial-foref/sloop/oopomdp/experiments/results/april-1-2021/all-joint"
 robot_poses_path = "./april1_2021-robot_poses"  # output
 os.makedirs(robot_poses_path, exist_ok=True)
 

@@ -2,8 +2,8 @@ from setuptools import setup, Extension
 from Cython.Build import cythonize
 
 extensions = [
-    Extension("sloop.oopomdp.models.components",
-              ["sloop/oopomdp/models/components/*.pyx"]),
+    Extension("sloop.oopomdp.models.components.grid_map",
+              ["sloop/oopomdp/models/components/grid_map.pyx"]),
 ]
 
 setup(name='sloop',
@@ -27,4 +27,6 @@ setup(name='sloop',
       ],
       ext_modules=cythonize(extensions,
                             build_dir="build",
-                            compiler_directives={"language_level": "3"}))
+                            compiler_directives={"language_level": "3"}),
+      package_data={"sloop": ["*.pxd", "*.pyx"]},
+      zip_safe=False)

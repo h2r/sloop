@@ -20,6 +20,11 @@ The required python version is Python 3.6+.
    source venv/sloop/bin/activate
    ```
    For the last step, you can also do `source setup.bash` for convenience.
+   
+2. Install [pomdp-py](https://github.com/h2r/pomdp-py)
+   ```
+   pip install pomdp-py==1.2.4.5
+   ```
 
 2. Install the `sloop` package.
 

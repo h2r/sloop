@@ -39,6 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description="replay a trial")
     parser.add_argument("trial_path", type=str, help="Path to trial directory")
     parser.add_argument("--save", action="store_true")
+    parser.add_argument("-F", "--show-foref", help="show frame of reference", action="store_true")
     args = parser.parse_args()
 
     with open(os.path.join(args.trial_path, "states.pkl"), "rb") as f:
@@ -56,7 +57,13 @@ def main():
     # Create visualization
     map_name = config["map_name"]
     bg_path = FILEPATHS[map_name]["map_png"]
-    viz = mos.MosViz(problem.env, controllable=False, bg_path=bg_path, res=25)
+
+    if args.show_foref and "prior_metadata" in config:
+        forefs = config["prior_metadata"].get("forefs", [])
+    else:
+        forefs = []
+
+    viz = mos.MosViz(problem.env, controllable=False, bg_path=bg_path, res=25, forefs=forefs)
     if viz.on_init() == False:
         raise Exception("Environment failed to initialize")
     viz.update(robot_id,

@@ -309,28 +309,83 @@ class StatesResult(PklResult):
 
         cls.plot_success_count_vs_step_limit(df_success_count_steps,
                                              path, has_map=False,
+                                             baselines={"uniform"},
+                                             suffix="step1")
+
+        cls.plot_success_count_vs_step_limit(df_success_count_steps,
+                                             path, has_map=False,
                                              baselines={"informed#5",
-                                                        "uniform",
+                                                        "uniform"},
+                                             suffix="step2")
+
+        cls.plot_success_count_vs_step_limit(df_success_count_steps,
+                                             path, has_map=False,
+                                             baselines={"informed#5",
+                                                        "keyword#auto",
+                                                        "uniform"},
+                                             suffix="step25")
+
+        cls.plot_success_count_vs_step_limit(df_success_count_steps,
+                                             path, has_map=False,
+                                             baselines={"informed#5",
                                                         "keyword",
                                                         "keyword#auto",
-                                                        "rule#based#ego#ctx",
-                                                        "rule#based#ego#ctx#auto",
-                                                        "mixture#basic",
-                                                        "mixture#basic#auto",
-                                                        "mixture#full",
-                                                        "mixture#full#auto"})
-        cls.plot_success_count_vs_step_limit(df_success_count_steps_map,
-                                             path, has_map=True,
+                                                        "uniform"},
+                                             suffix="step3")
+
+        cls.plot_success_count_vs_step_limit(df_success_count_steps,
+                                             path, has_map=False,
                                              baselines={"informed#5",
-                                                        "uniform",
                                                         "keyword",
                                                         "keyword#auto",
-                                                        "rule#based#ego#ctx",
-                                                        "rule#based#ego#ctx#auto",
-                                                        "mixture#basic",
-                                                        "mixture#basic#auto",
+                                                        "uniform",
+                                                        "mixture#full#auto"},
+                                             suffix="step35")
+
+        cls.plot_success_count_vs_step_limit(df_success_count_steps,
+                                             path, has_map=False,
+                                             baselines={"informed#5",
+                                                        "keyword",
+                                                        "keyword#auto",
+                                                        "uniform",
                                                         "mixture#full",
-                                                        "mixture#full#auto"})
+                                                        "mixture#full#auto"},
+                                             suffix="step4")
+
+                                                        # "keyword",
+                                                        # "keyword#auto",
+                                                        # "rule#based#ego#ctx",
+                                                        # "rule#based#ego#ctx#auto",
+                                                        # "mixture#basic",
+                                                        # "mixture#basic#auto",
+                                                        # "mixture#full",
+                                                        # "mixture#full#auto"})
+
+        # cls.plot_success_count_vs_step_limit(df_success_count_steps,
+        #                                      path, has_map=False,
+        #                                      baselines={"informed#5",
+        #                                                 "uniform",
+        #                                                 "keyword",
+        #                                                 "keyword#auto",
+        #                                                 "rule#based#ego#ctx",
+        #                                                 "rule#based#ego#ctx#auto",
+        #                                                 "mixture#basic",
+        #                                                 "mixture#basic#auto",
+        #                                                 "mixture#full",
+        #                                                 "mixture#full#auto"})
+
+        # cls.plot_success_count_vs_step_limit(df_success_count_steps_map,
+        #                                      path, has_map=True,
+        #                                      baselines={"informed#5",
+        #                                                 "uniform",
+        #                                                 "keyword",
+        #                                                 "keyword#auto",
+        #                                                 "rule#based#ego#ctx",
+        #                                                 "rule#based#ego#ctx#auto",
+        #                                                 "mixture#basic",
+        #                                                 "mixture#basic#auto",
+        #                                                 "mixture#full",
+        #                                                 "mixture#full#auto"})
 
 
     @classmethod
@@ -465,7 +520,7 @@ class StatesResult(PklResult):
         df["cumulative_count"] = cumcount_column
 
     @classmethod
-    def plot_success_count_vs_step_limit(cls, df, path, has_map=False, baselines=None):
+    def plot_success_count_vs_step_limit(cls, df, path, has_map=False, baselines=None, suffix=""):
 
         sensor_ranges = df["sensor_range"].unique()
         map_names = ["test"]
@@ -534,6 +589,6 @@ class StatesResult(PklResult):
                 if has_map is not True:
                     plt.ylim(0, 205)
                 plt.tight_layout()
-                figname = "detection_success_vs_step_limit-%d-%s" % (sensor_range, map_name)
+                figname = "detection_success_vs_step_limit-%d-%s%s" % (sensor_range, map_name, suffix)
                 plt.savefig(os.path.join(path, figname), dpi=300)
                 plt.clf()

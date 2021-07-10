@@ -33,7 +33,7 @@ class MosViz:
 
     def __init__(self, env,
                  res=30, fps=30, controllable=False,
-                 bg_path=None):
+                 bg_path=None, forefs=[]):
         """
         Args:
             env (MosEnvironment): The MOS Environment
@@ -46,6 +46,10 @@ class MosViz:
                 (e.g. an image of a map). The image will be rescaled
                 to fit the width and length of the search space scaled
                 by the resolution.
+            forefs (list): List of (landmark, keyword, foref) tuples,
+                where foref is a tuple (x, y, th) that represents the frame
+                of reference for the spatial keyword given landmark. Supply
+                to visualize forefs.
         """
         self._env = env
         self._res = res
@@ -53,6 +57,7 @@ class MosViz:
         self._last_viz_observation = {}  # map from robot id to MosOOObservation
         self._last_action = {}  # map from robot id to Action
         self._last_belief = {}  # map from robot id to OOBelief
+        self._forefs = forefs
 
         self._controllable = controllable
         self._running = False
@@ -365,10 +370,28 @@ class MosViz:
             if last_observation is not None:
                 MosViz.draw_observation(img, last_observation,
                                         rx, ry, rth, r, r//8, color=(20, 20, 180))
-
+            if len(self._forefs) > 0:
+                for landmark_, spatial_keyword, foref in self._forefs:
+                    img = self.render_foref(img, foref)
             MosViz.draw_robot(img, rx*r, ry*r, rth, r, color=(12, 12, 255*(0.8*(i+1))))
         pygame.surfarray.blit_array(display_surf, img)
         return img
+
+    def render_foref(self, img, foref):
+        """foref: (x, y, theta)"""
+        x, y, th = foref
+
+        r = self._res
+        radius = int(round(r / 4))
+
+        cv2.circle(img, (int(round(y*r))+radius,
+                         int(round(x*r))+radius), radius, (255, 145, 145), thickness=-1)
+        endpoint = (int(round(y*r)) + int(round(r*math.sin(th))*6),
+                    int(round(x*r)) + int(round(r*math.cos(th))*6))
+        cv2.arrowedLine(img, (int(round(y)*r)+radius, int(round(x)*r)+radius),
+                      endpoint, (255, 145, 145), 10)
+        return img
+
 
     def update_gridworld_image(self, img):
         if img.shape == self._img.shape:

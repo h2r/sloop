@@ -4,13 +4,13 @@ import http.server
 import math
 from io import StringIO
 from urllib.parse import urlsplit, parse_qs
-from spatial_lang.data.annotator.amt_csv_loader import *
-from spatial_lang.utils import pixel2grid, grid2pixels
-from spatial_lang.data.constants import FILEPATHS
-from spatial_lang.data.map_info_dicts.map_info_dataset import MapInfoDataset
+from sloop.datasets.annotator.amt_csv_loader import *
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.datasets.SL_OSM_Dataset.mapinfo.map_info_dataset import MapInfoDataset
+from sloop.datasets.osm_scripts.map_utils import pixel2grid, grid2pixels
 
 AMT_LOADER = AMTCSVLoader(spacy_model_name="en_core_web_md")
-        
+
 class RequestHandler(http.server.SimpleHTTPRequestHandler):
     """The test example handler."""
 
@@ -39,23 +39,23 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
-        self.flush_headers()                    
+        self.flush_headers()
         self.wfile.write(json.dumps(samples_json).encode())
 
-        
+
     def do_save(self, params):
         length = int(self.headers.get_all('content-length')[0])
         data_string = self.rfile.read(length)
         data_string = data_string.decode("UTF-8")
 
         output = json.loads(data_string)
-        
+
         img_width = output["metadata"]["img_width"]
         img_length = output["metadata"]["img_length"]
         pixel_origin = output["metadata"]["pixel_origin"]
 
         map_info = MapInfoDataset()
-        
+
         # Go over each sample
         try:
             for sample in output["samples"]:
@@ -79,16 +79,16 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.send_response(500)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.flush_headers()                    
+            self.flush_headers()
             self.wfile.write(json.dumps(output).encode())
             return
 
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
-        self.flush_headers()                    
+        self.flush_headers()
         self.wfile.write(json.dumps(output).encode())
-        
+
 
     def do_POST(self):
         """Handle a post request by returning the square of the number."""
@@ -99,7 +99,7 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             self.do_upload_csv_action(params)
         elif action == "save":
             self.do_save(params)
-        
+
         # print(length)
         # data_string = self.rfile.read(length)
         # try:
@@ -109,10 +109,10 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
         # self.send_response(200)
         # self.send_header("Content-type", "text/plain")
         # self.end_headers()
-        # self.flush_headers()        
+        # self.flush_headers()
         # self.wfile.write(str(result).encode())
 
-        
+
 
 FILE = 'webpage/index.html'
 PORT = 8000

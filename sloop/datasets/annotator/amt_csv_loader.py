@@ -3,9 +3,9 @@ import json
 import spacy
 import copy
 import os
-from spatial_lang.data.constants import FILEPATHS
-from spatial_lang.parsing.parser import *
 import argparse
+from sloop.datasets.SL_OSM_Dataset.mapinfo.constants import FILEPATHS
+from sloop.parsing.parser import *
 
 class DataSample:
     def __init__(self, hint, sg, map_link, map_name):
@@ -25,10 +25,10 @@ class AMTCSVLoader:
         if spacy_model_name is not None:
             print("Loading spacy model...")
             self.spacy_model = spacy.load(spacy_model_name)
-        
+
             print("Loading symbol to synonyms...")
             with open(FILEPATHS["symbol_to_synonyms"]) as f:
-                self.symbol_to_synonyms = json.load(f)        
+                self.symbol_to_synonyms = json.load(f)
 
     def get_result(self, reader, row_start, row_end, keyword=None):
         samples = []
@@ -61,9 +61,9 @@ class AMTCSVLoader:
             # If the hint is already stored, then there is a duplication.
             # Mark it, and skip this sample later.
             if row["hint"] in data:
-                duplicated_hints.add(row["hint"])                
+                duplicated_hints.add(row["hint"])
             data[row["hint"]] = row
-        
+
         with open(path_to_result) as f:
             saved_result = json.load(f)
 
@@ -73,7 +73,7 @@ class AMTCSVLoader:
             if hint in duplicated_hints:
                 print("Hint: \"%s\" has duplications. Skipped." % hint)
                 continue
-            
+
             if hint in data:
                 output_sample = copy.deepcopy(data[hint])
                 output_sample["entities"] = sample["sg"]["entities"]
@@ -87,7 +87,7 @@ class AMTCSVLoader:
                 json.dump(output_sample, f, indent=4, sort_keys=True)
                 print("Saved sample %d to %s" % (i, save_path))
 
-            
+
 
 def unittest():
     with open(FILEPATHS["amt_fau_dor_csv"]) as f:

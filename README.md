@@ -20,12 +20,12 @@ The required python version is Python 3.6+.
    source venv/sloop/bin/activate
    ```
    For the last step, you can also do `source setup.bash` for convenience.
-   
+
 2. Install [pomdp-py](https://github.com/h2r/pomdp-py)
    ```
    pip install pomdp-py==1.2.4.5
    ```
-   
+
    **TODO:** cython classes cannot be imported.
 
 2. Install the `sloop` package.
@@ -218,7 +218,7 @@ Here is an example screenshot:
 ## Citation
 Paper link (coming soon)"
 ```
-@inproceedings{zheng2020spatial,
+@inproceedings{sloop-roman-2020,
   title={Spatial Language Understanding for Object Search in Partially Observed Cityscale Environments},
   author={Zheng, Kaiyu and Bayazit, Deniz and Mathew, Rebecca and Pavlick, Ellie and Tellex, Stefanie},
   booktitle={2021 IEEE International Conference on Robot and Human Interactive Communication (RO-MAN)},

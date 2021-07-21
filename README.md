@@ -7,6 +7,8 @@
 Department of Computer Science, Brown University<br>
 30th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), 2021
 
+**Website:** [https://h2r.github.io/sloop/](https://h2r.github.io/sloop/)
+
 **Github repository:** [https://github.com/h2r/sloop](https://github.com/h2r/sloop)
 
 **ArXiv:** [https://arxiv.org/abs/2012.02705](https://arxiv.org/abs/2012.02705)

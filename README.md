@@ -1,4 +1,4 @@
-## [**Spatial Language Understanding for Object Search in Partially Observed City-scale Environments**](h2r.github.io/sloop/docs)
+## [**Spatial Language Understanding for Object Search in Partially Observed City-scale Environments**](https://arxiv.org/abs/2012.02705)
 [Kaiyu Zheng](https://kaiyuzheng.me/),
 [Deniz Bayazit](https://bayazitdeniz.github.io/),
 [Rebecca Mathew](https://github.com/beckymathew),
@@ -7,7 +7,9 @@
 Department of Computer Science, Brown University<br>
 30th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), 2021
 
-Github repository: [https://github.com/h2r/sloop](https://github.com/h2r/sloop)
+**Github repository:** [https://github.com/h2r/sloop](https://github.com/h2r/sloop)
+
+**ArXiv:** [https://arxiv.org/abs/2012.02705](https://arxiv.org/abs/2012.02705)
 
 
 ## Table of Contents:

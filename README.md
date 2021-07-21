@@ -7,7 +7,6 @@ Code repository for [Spatial Language Understanding for Object Search in Partial
 * [OpenStreetMap Demo](#openstreetmap-demo)
 * [AirSim Demo](#airsim-demo)
 
-
 ## Installation <a name="installation"/>
 
 The required python version is Python 3.6+.
@@ -25,8 +24,6 @@ The required python version is Python 3.6+.
    ```
    pip install pomdp-py==1.2.4.5
    ```
-
-   **TODO:** cython classes cannot be imported.
 
 2. Install the `sloop` package.
 

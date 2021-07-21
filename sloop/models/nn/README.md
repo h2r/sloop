@@ -30,3 +30,8 @@ You can build any model as long as they have a `get_data` function, `Train` func
 
 Once you created a model, you should edit the `models/nn/__init__.py` file,
 import your model, and append it to the `MODELS_BY_ITER` dictionary with the appropriate iteration number as the key.
+
+
+# Note
+
+The models we ended up using are in `iter2`.

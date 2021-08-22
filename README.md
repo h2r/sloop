@@ -68,18 +68,19 @@ There is one dataset and two models.
 
 * The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
   Download the dataset from  [here](https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing) (SL\_OSM\_Dataset, 3.6MB), and place it under `sloop/datasets` and extract there.
+
    After extraction your directory structure should look like:
 
-    ```
-    / # repository root
-      sloop/
-          ...
-          datasets/
-            SL_OSM_Dataset/
-              amt/
-              frame_of_ref/
-              ...
-    ```
+      ```
+      / # repository root
+        sloop/
+            ...
+            datasets/
+              SL_OSM_Dataset/
+                amt/
+                frame_of_ref/
+                ...
+      ```
 
      Check out [this wiki page](https://github.com/h2r/sloop/wiki/Dataset-Documentation) for documentation about the dataset.
 
@@ -110,14 +111,15 @@ You can download the full results (including individual trial results) from [her
 (all-joint-sloop.zip, 2.0GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:
-  ```
-  / # repository root
-    sloop/
-        results/
-            all-joint-sloop/
-                langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
-                ...
-  ```
+
+    ```
+    / # repository root
+      sloop/
+          results/
+              all-joint-sloop/
+                  langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
+                  ...
+    ```
 
 ### To process results:
 

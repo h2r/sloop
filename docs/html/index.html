@@ -80,20 +80,24 @@ source venv/sloop/bin/activate</code></pre>
 <h2>2. Download Dataset &amp; Models <a name="dataset-and-models"/></h2>
 <p>There is one dataset and two models.</p>
 <ul>
-<li>
-<p>The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
-  Download the dataset from  <a href="https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing">here</a> (SL_OSM_Dataset, 3.6MB), and place it under <code>sloop/datasets</code> and extract there.
-   After extraction your directory structure should look like:</p>
-<pre><code>/ # repository root
-  sloop/
-      ...
-      datasets/
-        SL_OSM_Dataset/
-          amt/
-          frame_of_ref/
-          ...</code></pre>
-<p>Check out <a href="https://github.com/h2r/sloop/wiki/Dataset-Documentation">this wiki page</a> for documentation about the dataset.</p>
-</li>
+<li>The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
+  Download the dataset from  <a href="https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing">here</a> (SL_OSM_Dataset, 3.6MB), and place it under <code>sloop/datasets</code> and extract there.</li>
+</ul>
+<p>After extraction your directory structure should look like:</p>
+<pre><code>  ```
+  / # repository root
+    sloop/
+        ...
+        datasets/
+          SL_OSM_Dataset/
+            amt/
+            frame_of_ref/
+            ...
+  ```
+
+ Check out [this wiki page](https://github.com/h2r/sloop/wiki/Dataset-Documentation) for documentation about the dataset.
+</code></pre>
+<ul>
 <li>
 <p>The models are the frame of reference prediction models. There is a <strong>front</strong> model (for <em>front</em> and <em>behind</em>) and a <strong>left</strong> model (for <em>left</em> and <em>right</em>).
 Download the models from <a href="https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing">here</a> (models.zip, 42.4MB)
@@ -113,13 +117,16 @@ and place it under <code>sloop/oopomdp/experiments/resources</code>.</p>
 <h2>3. Download and Process Results <a name="results"/></h2>
 <p>You can download the full results (including individual trial results) from <a href="https://drive.google.com/file/d/1Sg3Or5tB5Gublmv2okcWA4-mjIIwS5Oo/view?usp=sharing">here</a>
 (all-joint-sloop.zip, 2.0GB), and place it under <code>sloop/</code></pre>
-<p>After extraction your directory structure should look like:
-  <code>/ # repository root
-    sloop/
-        results/
-            all-joint-sloop/
-                langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
-                ...</code></pre>
+<p>After extraction your directory structure should look like:</p>
+<pre><code>```
+/ # repository root
+  sloop/
+      results/
+          all-joint-sloop/
+              langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
+              ...
+```
+</code></pre>
 <h3>To process results:</h3>
 <ol>
 <li>

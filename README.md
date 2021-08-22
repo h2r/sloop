@@ -110,16 +110,23 @@ You can download the full results (including individual trial results) from [her
 (all-joint-sloop.zip, 2.0GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:
+  ```
+  / # repository root
+    sloop/
+        results/
+            all-joint-sloop/
+                langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
+                ...
+  ```
 
-    / # repository root
-      sloop/
-          results/
-              all-joint-sloop/
-                  langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
-                  ...
+### To process results:
 
-#### To process results:
+0.  Install [sciex](https://github.com/zkytony/sciex), a experiment framework, with
+
+     `pip install sciex`
+
 1. `cd sloop/results/all-joint-sloop`
+
 2. `python gather_results.py`
 
     Expected output

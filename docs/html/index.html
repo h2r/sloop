@@ -113,17 +113,22 @@ and place it under <code>sloop/oopomdp/experiments/resources</code>.</p>
 <h2>3. Download and Process Results <a name="results"/></h2>
 <p>You can download the full results (including individual trial results) from <a href="https://drive.google.com/file/d/1Sg3Or5tB5Gublmv2okcWA4-mjIIwS5Oo/view?usp=sharing">here</a>
 (all-joint-sloop.zip, 2.0GB), and place it under <code>sloop/</code></pre>
-<p>After extraction your directory structure should look like:</p>
-<pre><code>/ # repository root
-  sloop/
-      results/
-          all-joint-sloop/
-              langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
-              ...
-</code></pre>
-<h4>To process results:</h4>
+<p>After extraction your directory structure should look like:
+  <code>/ # repository root
+    sloop/
+        results/
+            all-joint-sloop/
+                langprior-austin_00_informed#5-austin-laser:fov=90:min*range=1:max*range=3:angle*increment=0.5:occlusion*enabled=False-na/
+                ...</code></pre>
+<h3>To process results:</h3>
 <ol>
-<li><code>cd sloop/results/all-joint-sloop</code></li>
+<li>
+<p>Install <a href="https://github.com/zkytony/sciex">sciex</a>, a experiment framework, with</p>
+<pre><code>pip install sciex</code></pre>
+</li>
+<li>
+<pre><code>cd sloop/results/all-joint-sloop</code></pre>
+</li>
 <li>
 <pre><code>python gather_results.py</code></pre>
 <p>Expected output</p>

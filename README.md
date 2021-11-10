@@ -13,6 +13,8 @@ Department of Computer Science, Brown University<br>
 
 **ArXiv:** [https://arxiv.org/abs/2012.02705](https://arxiv.org/abs/2012.02705)
 
+Humans use spatial language to naturally describe object locations and their relations. Interpreting spatial language not only adds a perceptual modality for robots, but also reduces the barrier of interfacing with humans. Previous work primarily considers spatial language as goal specification for instruction following tasks in fully observable domains, often paired with reference paths for reward-based learning. However, spatial language is inherently subjective and potentially ambiguous or misleading. Hence, in this paper, we consider spatial language as a form of stochastic observation. We propose SLOOP (Spatial Language Object-Oriented POMDP), a new framework for partially observable decision making with a probabilistic observation model for spatial language. We apply SLOOP to object search in city-scale environments. To interpret ambiguous, context-dependent prepositions (e.g. front), we design a simple convolutional neural network that predicts the language provider's latent frame of reference (FoR) given the environment context. Search strategies are computed via an online POMDP planner based on Monte Carlo Tree Search. Evaluation based on crowdsourced language data, collected over areas of five cities in OpenStreetMap, shows that our approach achieves faster search and higher success rate compared to baselines, with a wider margin as the spatial language becomes more complex. Finally, we demonstrate the proposed method in AirSim, a realistic simulator where a drone is tasked to find cars in a neighborhood environment.
+
 
 ## Table of Contents:
 

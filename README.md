@@ -40,7 +40,8 @@ The required python version is Python 3.6+.
     ```
     git clone git@github.com:h2r/sloop.git
     cd sloop;
-    virtualenv -p $(which python3) venv/sloop
+    mkdir -p venv/sloop
+    virtualenv -p python3 venv/sloop
     source venv/sloop/bin/activate
     ```
 
@@ -49,7 +50,7 @@ The required python version is Python 3.6+.
 2. Install [pomdp-py](https://github.com/h2r/pomdp-py)
 
     ```
-    pip install pomdp-py>=1.2.4.5
+    pip install pomdp-py==1.2.4.5
     ```
 
 3. Install the `sloop` package. Assume you're at the root of the sloop repository.
@@ -58,7 +59,7 @@ The required python version is Python 3.6+.
     pip install -e .
     ```
 
-    Note that this will install a number of dependencies, including [pomdp-py](https://h2r.github.io/pomdp-py/html/) version 1.2.4.5. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
+    Note that this will install a number of dependencies. See `setup.py` for the list of packages. The `>=` symbol assumes backwards compatibility of those packages.
 
 
 4. Download spaCy model. For dependency parsing, we use the [`en_core_web_md` model](https://spacy.io/models/en#en_core_web_md) from spaCy.
@@ -93,7 +94,7 @@ There is one dataset and two models.
 
 * The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind_) and a **left** model (for _left_ and _right_).
 Download the models from [here](https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing) (models.zip, 42.4MB)
-and place it under `sloop/oopomdp/experiments/resources`.
+and place it under `sloop/oopomdp/experiments/resources` (you will need to create a directory called 'resources').
 
     After extraction your directory structure should look like:
 

@@ -58,18 +58,19 @@ Department of Computer Science, Brown University<br>
 <p>Clone the repository and create and virtual environment with the following lines.</p>
 <pre><code>git clone git@github.com:h2r/sloop.git
 cd sloop;
-virtualenv -p $(which python3) venv/sloop
+mkdir -p venv/sloop
+virtualenv -p python3 venv/sloop
 source venv/sloop/bin/activate</code></pre>
 <p>For the last step, you can also do <code>source setup.bash</code> for convenience.</p>
 </li>
 <li>
 <p>Install <a href="https://github.com/h2r/pomdp-py">pomdp-py</a></p>
-<pre><code>pip install pomdp-py&gt;=1.2.4.5</code></pre>
+<pre><code>pip install pomdp-py==1.2.4.5</code></pre>
 </li>
 <li>
 <p>Install the <code>sloop</code> package. Assume you're at the root of the sloop repository.</p>
 <pre><code>pip install -e .</code></pre>
-<p>Note that this will install a number of dependencies, including <a href="https://h2r.github.io/pomdp-py/html/">pomdp-py</a> version 1.2.4.5. See <code>setup.py</code> for the list of packages. The <code>&gt;=</code> symbol assumes backwards compatibility of those packages.</p>
+<p>Note that this will install a number of dependencies. See <code>setup.py</code> for the list of packages. The <code>&gt;=</code> symbol assumes backwards compatibility of those packages.</p>
 </li>
 <li>
 <p>Download spaCy model. For dependency parsing, we use the <a href="https://spacy.io/models/en#en_core_web_md"><code>en_core_web_md</code> model</a> from spaCy.
@@ -101,7 +102,7 @@ source venv/sloop/bin/activate</code></pre>
 <li>
 <p>The models are the frame of reference prediction models. There is a <strong>front</strong> model (for <em>front</em> and <em>behind</em>) and a <strong>left</strong> model (for <em>left</em> and <em>right</em>).
 Download the models from <a href="https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing">here</a> (models.zip, 42.4MB)
-and place it under <code>sloop/oopomdp/experiments/resources</code>.</p>
+and place it under <code>sloop/oopomdp/experiments/resources</code> (you will need to create a directory called 'resources').</p>
 <p>After extraction your directory structure should look like:</p>
 <pre><code>/ # repository root
    sloop/

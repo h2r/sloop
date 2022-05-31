@@ -3,7 +3,7 @@ import yaml
 
 def parse_json(js):
     data = json.dumps(js['elements'])
-    y = yaml.load(data)
+    y = yaml.load(data, Loader=yaml.Loader)
     return y
 
 nodes = {}

@@ -25,13 +25,13 @@ class LangResult(YamlResult):
         # Collect both language as well as reward info and states info
         trial_path = os.path.dirname(path)
         with open(os.path.join(trial_path, RewardsResult.FILENAME())) as f:
-            rewards = yaml.load(f)
+            rewards = yaml.load(f, Loader=yaml.Loader)
         # Collect the states info
         with open(os.path.join(trial_path, StatesResult.FILENAME()), "rb") as f:
             states = pickle.load(f)
         # Collect the pickle file
         with open(path) as f:
-            langres = yaml.load(f)
+            langres = yaml.load(f, Loader=yaml.Loader)
         return (langres, rewards, states)
 
 
@@ -123,7 +123,7 @@ class LangResult(YamlResult):
   #          path = path[:-1]
 #        exp_path = os.path.dirname(path)
         with open(os.path.join(path, "good_foref_predictions.yaml")) as f:
-            good_forefs = yaml.load(f)
+            good_forefs = yaml.load(f, Loader=yaml.Loader)
         cls.do_it(gathered_results, path)
         print("--goood---")
         cls.do_it(gathered_results, path, good_forefs=good_forefs)

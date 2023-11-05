@@ -1,4 +1,10 @@
-## [**Spatial Language Understanding for Object Search in Partially Observed City-scale Environments**](https://arxiv.org/abs/2012.02705)
+## Update: Watch [50:57 - 51:55](https://youtu.be/ndtJ78CGbKY?t=3057) for Demo with Comparison on Spot
+
+[<img src='https://github.com/h2r/sloop/assets/7720184/45b70f09-de03-4279-b62a-029fe86814c1' width='600px'/>](https://youtu.be/ndtJ78CGbKY?t=3057)
+
+Click image above to watch video on Youtube.
+
+# [**Spatial Language Understanding for Object Search in Partially Observed City-scale Environments**](https://arxiv.org/abs/2012.02705)
 [Kaiyu Zheng](https://kaiyuzheng.me/),
 [Deniz Bayazit](https://bayazitdeniz.github.io/),
 [Rebecca Mathew](https://github.com/beckymathew),

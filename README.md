@@ -79,7 +79,7 @@ The required python version is Python 3.6+.
 There is one dataset and two models.
 
 * The dataset contains OpenStreetMap data and AMT spatial language descriptions and annotations.
-  Download the dataset from  [here](https://drive.google.com/file/d/1K1SRR3rHcM8Jndjhb-YTB5kqefDNYYbH/view?usp=sharing) (SL\_OSM\_Dataset, 3.6MB), and place it under `sloop/datasets` and extract there.
+  Download the dataset from  [here](https://drive.google.com/file/d/1Za9FZRurkDFMnj6WcUULg_U9Ey2VCHI6/view?usp=sharing) (SL\_OSM\_Dataset, 3.6MB), and place it under `sloop/datasets` and extract there.
 
    After extraction your directory structure should look like:
 
@@ -99,7 +99,7 @@ There is one dataset and two models.
 
 
 * The models are the frame of reference prediction models. There is a **front** model (for _front_ and _behind_) and a **left** model (for _left_ and _right_).
-Download the models from [here](https://drive.google.com/file/d/1XfOUa0xtRstUxJHBdNmk4SLJw970-4vV/view?usp=sharing) (models.zip, 42.4MB)
+Download the models from [here](https://drive.google.com/file/d/11VvlilG-1IUOpcxxWeJlOYrOA4W6dLrY/view?usp=sharing) (models.zip, 42.4MB)
 and place it under `sloop/oopomdp/experiments/resources` (you will need to create a directory called 'resources').
 
     After extraction your directory structure should look like:
@@ -119,7 +119,7 @@ and place it under `sloop/oopomdp/experiments/resources` (you will need to creat
 
 ## 3. Download and Process Results <a name="results"/>
 
-You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1Sg3Or5tB5Gublmv2okcWA4-mjIIwS5Oo/view?usp=sharing)
+You can download the full results (including individual trial results) from [here](https://drive.google.com/file/d/1j7FMCUPIpXTJp1quEN4yWi0J9hNsfvfS/view?usp=sharing)
 (all-joint-sloop.zip, 2.0GB), and place it under `sloop/`
 
   After extraction your directory structure should look like:
